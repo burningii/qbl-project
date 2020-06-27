@@ -1,0 +1,41 @@
+<view class="landlord-container">
+
+    <view class="my-flex-col">
+        <view class="my-flex-spa-be item-wrapper top-info">
+            <view class="my-flex-col" style="align-items: flex-start">
+                <view style="font-size: 44rpx;color: #ffffff">我是租户</view>
+                <view style="font-size: 24rpx;color: #ffffff;opacity: 0.6">Tenant</view>
+            </view>
+            <image class="img-wrapper" src="https://api5.qibuluo.net/addons/zjhj_mall/tanant.png"/>
+        </view>
+        <!--        菜单页面-->
+        <view class="center-menus item-wrapper2">
+            <view bindtap="goPage1" class="my-flex center-shenbao">
+                <image class="img-wrapper2" src="https://api5.qibuluo.net/addons/zjhj_mall/shenbao-tanant.png"/>
+                <view class="my-flex-col" style="align-items: flex-start;margin-left: 25px">
+                    <view style="color: #000000;font-size: 32rpx">租户信息申报</view>
+                    <view style="color: #969696;font-size: 24rpx;margin-top: 7px">点击进行租户信息申报</view>
+                </view>
+            </view>
+            <view bindtap="goPage2" style="margin-top: 15px" class="my-flex center-shenbao">
+                <image class="img-wrapper2" src="https://api5.qibuluo.net/addons/zjhj_mall/shenpi.png"/>
+                <view class="my-flex-col" style="align-items: flex-start;margin-left: 25px">
+                    <view style="color: #000000;font-size: 32rpx">审批查询</view>
+                    <view style="color: #969696;font-size: 24rpx;margin-top: 7px">点击进行房屋申报查询</view>
+                </view>
+            </view>
+            <view bindtap="goPage3" style="margin-top: 15px" class="my-flex center-shenbao">
+                <image class="img-wrapper2" src="https://api5.qibuluo.net/addons/zjhj_mall/zhongshen.png"/>
+                <view class="my-flex-col" style="align-items: flex-start;margin-left: 25px">
+                    <view style="color: #000000;font-size: 32rpx">终审预约</view>
+                    <view style="color: #969696;font-size: 24rpx;margin-top: 7px">点击进行房屋终审预约</view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+<!--    <view class="center"><van-button bind:click="goPage1" color="#F86732" round>租户信息申报登记</van-button></view>-->
+<!--    <view class="center"><van-button bind:click="goPage2" color="#F86732" round>申报查询</van-button></view>-->
+<!--    <view class="center"><van-button bind:click="goPage3" color="#F86732" round>预约查询</van-button></view>-->
+   <!-- <view class="center"><van-button bind:click="goPage4" color="#F86732" round>租赁备案凭证查询</van-button></view> -->
+</view>

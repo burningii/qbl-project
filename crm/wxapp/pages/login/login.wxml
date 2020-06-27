@@ -1,0 +1,29 @@
+<view class="login-container">
+    <van-cell-group>
+        <van-field
+            value="{{username}}"
+            size="large"
+            placeholder="请输入账号"
+            label="账号"
+            data-f="1"
+            bind:change="onChangeField"
+        />
+        <van-field
+                value="{{pwd}}"
+                size="large"
+                placeholder="请输入密码"
+                type="password"
+                label="密码"
+                data-f="2"
+                bind:change="onChangeField"
+        />
+    </van-cell-group>
+    <view style="margin-top: 18px">
+        <van-button
+                disabled="{{btnFlag}}"
+                bind:click="loginNow"
+                size="large"
+                round
+                color="#429488">立即登录</van-button>
+    </view>
+</view>

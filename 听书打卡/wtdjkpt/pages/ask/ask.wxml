@@ -1,0 +1,47 @@
+<view class='item-wrap'>
+   <view class="item-ask-description"><view class="txt">问题描述：</view><textarea class="description"></textarea></view>
+   <view class="item-ask-pic">
+      <view class="txt">问题配图：</view>
+      <view class="addImg">
+         <view class="addTxt">
+         <block wx:if='{{tempFilePaths.length!=0}}' wx:for='{{tempFilePaths}}' wx:key='*this' >
+            <image src="{{item}}">
+               <text data-id='{{index}}' catchtap='delEvent'>x</text>
+            </image>
+         </block>
+         <block>
+         <image  src="../.././images/add.png" bindtap="upload"></image>
+         </block>
+         </view>
+      </view>
+   </view>
+   <view class="item-ask-video">
+   <view class="txt">添加视频：</view>
+   <view class="video-wrap">
+        <video wx:if='{{src}}' controls src='{{src}}' autoplay='{{status}}'>
+        </video> 
+        <image src="../.././images/upVideo.png" bindtap='chooseVideo' wx:else></image>
+        <view class="video-txt" bindtap="delVideo" wx:if='{{src}}'>x</view>   
+   </view>
+   </view>
+   <view class="item-ask-speak">
+      <view class="txt">添加音频：</view>
+      <view class="speak-btn">
+         <button bindtap="start" class='btn'>开始录音</button>
+         <button bindtap="stop" class='btn'>停止录音</button>
+         <button bindtap="play" class='btn'>播放录音</button>
+      </view>
+   </view>
+   <view class="saveQuestion" bindtap="saveQuestion">发起提问</view>
+</view>
+<modal bindconfirm='confirmEvent' bindcancel='cancelEvent' hidden='{{isModal}}' confirm-text='支付'>
+     <view class="item-til">提示</view>
+     <view class="pay-box">
+        <view class="pay-left">
+        <view class="expert-user">专家：张三</view>
+        <view class="expert-item">类目：牙科</view>
+        </view>
+        <view class="expert-price">￥：100.00</view>
+     </view>
+     <view class="withdraw">此窗口为专家问答窗口，需付费后，专家才会为您提供解惑！</view>
+</modal>

@@ -1,0 +1,30 @@
+<view class='item-wrap'>
+      <view class="item-top">
+             <image src="../.././images/1.png" mode="widthFix"></image>
+      </view>
+      <view class="item-til">
+          <view class="item-til-txt">家庭版的手撕鸡</view>
+      </view>
+      <view class="item-author">
+           <view class="item-author-top">
+              <view class="item-author-left"><image src="" ></image></view>
+              <view class="item-author-right">
+                    <view class="item-author-txt">讲师</view>
+                    <view class="item-author-name">星级大厨wenjiming</view>
+              </view>
+           </view>
+              <view class="item-author-description">
+                     最常见的家常菜做法简单易懂，菜谱中很多材料都是适量，每个人口味轻重不同更具自己喜好加多加少
+              </view>
+              <view class="item-group">
+                    <view class="item-group-til">图解1</view>
+                    <view class="item-group-img"><image src="../.././images/1.png" mode='widthFix'></image></view>
+                    <view class="item-group-description">两个大鸡腿洗干净 最常见的家常菜做法简单易懂，菜谱中很多材料都是适量，每个人口味轻重不同更具自己喜好加多加少</view>
+              </view>
+               <view class="item-group">
+                    <view class="item-group-til">图解1</view>
+                    <view class="item-group-img"><image src="../.././images/1.png" mode='widthFix'></image></view>
+                    <view class="item-group-description">两个大鸡腿洗干净 最常见的家常菜做法简单易懂，菜谱中很多材料都是适量，每个人口味轻重不同更具自己喜好加多加少</view>
+              </view>
+           </view>
+</view>

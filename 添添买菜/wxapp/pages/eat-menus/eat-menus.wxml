@@ -1,0 +1,71 @@
+<import src="/components/common/index"></import>
+<view class="eat-menus-container">
+    <include src="/components/common/common"></include>
+    <include src="/components/header/header"></include>
+    <view bindtap="goSearch" class='top-search-wrapper'>
+        <van-search shape="round"
+                    disabled
+                    field-class="search-wrapper"
+                    placeholder="搜索菜谱, 食材"/>
+    </view>
+    <view style="height: 100rpx"></view>
+    <!--    循环专题-->
+    <view class="zuanti-wrapper">
+        <scroll-view scroll-x style="white-space: nowrap">
+            <view class="my-flex" style="flex-wrap: nowrap">
+                <view wx:for="{{zuantiArr}}"
+                      bindtap="goZuanti"
+                      data-name="{{item.sub_title}}"
+                      data-id="{{item.id}}"
+                      class="zuanti-item"
+                      wx:key="index"
+                >
+                    <image style="width: 100%;height: 100%;border-radius: 8px" src="{{item.cover_pic}}"/>
+                    <view class="sub_title-posi"># {{item.sub_title}}</view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <!--    做饭灵感-->
+    <view class="scroll-cookie cookie-container">
+        <view class="cookie-pa">
+            <view class="cookie-title cookie-mg">做饭灵感</view>
+        </view>
+        <!--        菜单栏-->
+        <van-sticky offset-top="50">
+            <view class="my-flex-spa-be menus-cookie">
+                <van-tabs border="{{false}}" class="my-tabs" active="{{ active }}" line-height="2" color="#00c203"
+                          bind:change="onChangeMenus">
+                    <van-tab
+                            wx:for="{{foodsCategory}}"
+                            wx:key="index"
+                            data-id="{{item.id}}"
+                            title="{{item.name}}"/>
+                </van-tabs>
+                <view bindtap="goAllMenus">
+                    <van-icon size="17" style="position: relative;top: 6rpx" name="apps-o"/>
+                    全部菜谱
+                </view>
+            </view>
+        </van-sticky>
+        <!--        菜谱列表页面-->
+        <view class="menus-content-wrapper">
+            <view class="my-flex cookie-pa menus-content">
+                <view class="my-flex-col menus-item {{index%2!==0 ? 'menus-item-marg':''}}"
+                      wx:for="{{foodsList}}"
+                      bindtap="goInfo"
+                      data-id="{{item.id}}"
+                      data-name="{{item.title}}"
+                      wx:key="index"
+                >
+                    <image class="item-img" src="{{item.cover_pic}}"/>
+                    <view class="my-flex-col item-bottom-info">
+                        <view style="font-size: 27rpx">{{item.title}}</view>
+                        <view class="item-time">{{item.difficulty}} · {{item.duration}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <include src="/components/footer/footer"></include>
+</view>

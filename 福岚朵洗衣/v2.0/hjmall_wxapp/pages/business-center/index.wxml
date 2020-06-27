@@ -1,0 +1,26 @@
+<view class="buinness-container">
+    <view class="form-top">
+        <van-cell-group>
+            <van-field
+                value="{{username}}"
+                label="账号"
+                size="large"
+                placeholder="请输入账号"
+                bind:change="onChangeInput"
+                data-f="1"
+            />
+            <van-field
+                    value="{{pwd}}"
+                    label="密码"
+                    size="large"
+                    placeholder="请输入密码"
+                    bind:change="onChangeInput"
+                    type="password"
+                    data-f="2"
+            />
+        </van-cell-group>
+    </view>
+    <view class="submit-btn">
+        <van-button size="large" bind:click="goLogin" round color="#F86732">立即登录</van-button>
+    </view>
+</view>

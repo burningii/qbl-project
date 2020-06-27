@@ -1,0 +1,97 @@
+<view class="apply-role-container">
+    <view class="top-banner">
+        <image mode="widthFix" style="width: 100%;height: 180px;" src="https://api5.qibuluo.net/addons/zjhj_mall/core/web/uploads/image/store_2/c7a2631d2b3ca07fc419a8fe91cd50bdbc872959.png"/>
+    </view>
+    <block wx:if="{{roleFlag}}">
+        <view class="apply-role-content">
+            <view>
+                <picker bindchange="bindRoleChange" value="{{roleIndex}}" range="{{roleArrayTemp}}">
+                    <view class="picker">
+                        当前选择：{{roleArrayTemp[roleIndex]}}
+                    </view>
+                </picker>
+            </view>
+        </view>
+            <!--收件点申请-->
+            <block wx:if="{{0==roleIndex}}">
+                <view class="service-wrapper">
+                    <van-cell-group>
+                        <van-field
+                                value="{{ serviceName }}"
+                                required
+                                clearable
+                                label="名称"
+                                bind:change="onChangeServiceName"
+                                placeholder="请输入收件点名称"
+                        />
+                        <view bindtap="showAddressModal" class="service-address-wrapper">
+                            <view>地址: </view>
+                            <view style="margin-left: 120rpx;" wx:if="{{''==serviceAddressSelected}}"><van-button size="small" custom-style="border-radius: 15px;" >选择地址</van-button></view>
+                            <view wx:else class="province-city">{{serviceAddressSelected}}</view>
+                        </view>
+                        <!--<van-field-->
+                                <!--value="{{ serviceAddress }}"-->
+                                <!--wx:if="{{serviceAddressSelected!=''}}"-->
+                                <!--required-->
+                                <!--clearable-->
+                                <!--label="详细地址"-->
+                                <!--bind:change="onChangeServiceAddress"-->
+                                <!--placeholder="请输入详细地址"-->
+                        <!--/>-->
+                        <van-field
+                                value="{{ serviceNickname }}"
+                                required
+                                clearable
+                                label="简称"
+                                bind:change="onChangeServiceNickname"
+                                placeholder="请输入简称"
+                        />
+                        <van-field
+                                value="{{ servicePhone }}"
+                                required
+                                type="number"
+                                clearable
+                                label="联系人电话"
+                                bind:change="onChangeServicePhone"
+                                placeholder="请输入手机号"
+                        />
+                    </van-cell-group>
+                </view>
+            </block>
+            <block wx:if="{{1==roleIndex}}">
+            <view class="service-wrapper">
+                <van-cell-group>
+                    <van-field
+                            value="{{ wuliuName }}"
+                            required
+                            clearable
+                            label="名称"
+                            bind:change="onChangeWuliuName"
+                            placeholder="请输入您的名称"
+                    />
+                    <van-field
+                            value="{{ wuliuPhone }}"
+                            required
+                            clearable
+                            label="手机"
+                            bind:change="onChangeWuliuPhone"
+                            placeholder="请输入您的手机号"
+                    />
+                </van-cell-group>
+            </view>
+        </block>
+            <view class="now-apply-btn-wrapper">
+                <van-button bind:click="now_Apply" type="default" size="large" color="#FD7237" custom-style="width: 95%;border-radius: 8px;">立即申请</van-button>
+            </view>
+    </block>
+    <block wx:else>
+        <view class="wait-wrapper">
+            <image class="wait-icon" src="https://api5.qibuluo.net/addons/zjhj_mall/wait.png"/>
+            <text>审核中...</text>
+        </view>
+    </block>
+</view>
+
+<van-popup show="{{ showAddressVisible }}" position="bottom" z-index="2001" custom-class="my-class-popup" bind:close="onClose">
+    <van-area bind:cancel="hideAddressModal" bind:confirm="confirmAddress" area-list="{{ areaList }}" />
+</van-popup>

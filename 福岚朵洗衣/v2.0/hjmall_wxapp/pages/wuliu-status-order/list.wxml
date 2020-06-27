@@ -1,0 +1,14 @@
+<view class="status-cotainer">
+    <view class="my-flex-col status-list">
+        <view wx:for="{{list}}"
+              wx:key="index"
+              class="status-item"
+              wx:if="{{list.length>0}}"
+              bindtap="goInfo"
+              data-id="{{item.count}}">
+            <view>条码: {{item.shape}}</view>
+            <view>客户手机号: {{item.phone}}</view>
+        </view>
+        <view wx:if="{{0==list.length}}" class="my-no-more">没有更多了</view>
+    </view>
+</view>

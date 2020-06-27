@@ -1,0 +1,26 @@
+page{
+    /*background-color: #F2F6FC;*/
+}
+.welcome-login-wrapper{
+    padding: 80rpx 63rpx;
+}
+.home-title{
+    text-align: center;
+    padding-top: 15rpx;
+}
+
+.input-wrapper{
+    padding: 35rpx;
+}
+
+.btn-submit,.regis{
+    margin-top: 30rpx;
+}
+
+.btn-override{
+    width: 100%!important;
+}
+.btn-class-my{
+    color: #F86732;
+    border: 0!important;
+}

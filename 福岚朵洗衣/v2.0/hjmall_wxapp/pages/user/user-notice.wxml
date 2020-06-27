@@ -1,0 +1,18 @@
+<view class="user-notice-container">
+    <block wx:if="{{'1'==flag}}">
+        <view wx:for="{{order1}}" wx:if="{{order1.length>0}}" wx:key="index" class="my-flex-spa-btw order-item">
+            <view>订单号: {{item.order_no}}</view>
+            <view>时间: {{item.created_at}}</view>
+            <view>所得佣金: {{item.amount}}元</view>
+        </view>
+    </block>
+    <block wx:else>
+        <view wx:for="{{order2}}" wx:if="{{order2.length>0}}" wx:key="index" class="my-flex-spa-btw order-item">
+            <view>时间: {{item.created_at}}</view>
+            <view>金额: {{item.amount}}元</view>
+        </view>
+    </block>
+    <block wx:if="{{order1.length==0 && order2.length==0}}">
+        <view style="text-align: center;margin-top: 200rpx;color: #888888;">暂时没有数据</view>
+    </block>
+</view>

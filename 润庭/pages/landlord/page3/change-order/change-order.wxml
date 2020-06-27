@@ -1,0 +1,74 @@
+<view class="change-order-container">
+    <view class="order-info-wrapper">
+        <van-cell-group>
+            <!--<van-field-->
+                    <!--value="{{ streetName }}"-->
+                    <!--placeholder="请输入街道名称"-->
+                    <!--label="街道名称"-->
+                    <!--name="streetName"-->
+                    <!--size="large"-->
+                    <!--disabled-->
+            <!--/>-->
+            <!--<van-field-->
+                    <!--value="{{ communityName }}"-->
+                    <!--placeholder="请输入社区名称"-->
+                    <!--label="社区名称"-->
+                    <!--name="communityName"-->
+                    <!--size="large"-->
+                    <!--disabled-->
+            <!--/>-->
+            <!--<van-field-->
+                    <!--value="{{ buildName }}"-->
+                    <!--placeholder="请输入小区名称"-->
+                    <!--label="小区名称"-->
+                    <!--name="buildName"-->
+                    <!--size="large"-->
+                    <!--disabled-->
+            <!--/>-->
+            <!--<van-field-->
+                    <!--value="{{ taskInfo }}"-->
+                    <!--placeholder="请输入办理事项"-->
+                    <!--label="办理事项"-->
+                    <!--name="taskInfo"-->
+                    <!--size="large"-->
+                    <!--disabled-->
+            <!--/>-->
+            <van-field
+                    value="{{ orderTime }}"
+                    label="预约时间"
+                    name="orderTime"
+                    size="large"
+                    bindtap="showTimePicker"
+                    disabled
+            />
+            <view style="color: #F86732;font-size: 26rpx;text-align: center;margin: 10px 0">注意: 时间只能变更一次</view>
+        </van-cell-group>
+    </view>
+    <view class="submit-btn">
+        <van-button custom-class="btn-override" bind:click="checkSubmit" size="large" round color="#F86732">提交</van-button>
+    </view>
+</view>
+
+<van-popup
+        show="{{ showTimePickerVisible }}"
+        position="bottom"
+        bind:close="onCloseTimePicker"
+>
+    <view>
+        <van-picker
+                title="选择时间"
+                show-toolbar
+                columns="{{ timeArr }}"
+                bind:cancel="onCloseTimePicker"
+                bind:confirm="onConfirmTimeCheck"
+        />
+        <!--<van-datetime-picker-->
+                <!--type="date"-->
+                <!--value="{{ currentDate }}"-->
+                <!--bind:confirm="onInputTime"-->
+                <!--bind:cancel="onCloseTimePicker"-->
+                <!--min-date="{{ minDate }}"-->
+                <!--formatter="{{ formatter }}"-->
+        <!--/>-->
+    </view>
+</van-popup>

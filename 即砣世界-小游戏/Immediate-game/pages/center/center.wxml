@@ -1,0 +1,13 @@
+<view class="room-container">
+    <view class="room-content">
+        <view class="room-item"
+              wx:for="{{roomList}}"
+              bindtap="goRoom"
+              data-id="{{item}}"
+              data-name="{{item}}"
+              wx:key="index"
+        >
+            {{item}}
+        </view>
+    </view>
+</view>

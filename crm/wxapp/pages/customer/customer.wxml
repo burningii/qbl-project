@@ -1,0 +1,19 @@
+<view class="customer-container">
+    <view>
+        <van-button bind:click="addCustomer" size="large" color="#429488">客户录入</van-button>
+    </view>
+    <view class="custom-content">
+        <view style="color: #888888;font-size: 30rpx;padding: 28rpx">客户列表</view>
+        <view>
+            <view wx:for="{{customList}}"
+                  wx:key="index"
+                  bindtap="goCustomerInfo"
+                  data-id="{{item.id}}"
+                  class="custom-item"
+            >
+                {{item.name}}
+            </view>
+        </view>
+    </view>
+    <include src="/components/tabbar/tabbar.wxml"/>
+</view>

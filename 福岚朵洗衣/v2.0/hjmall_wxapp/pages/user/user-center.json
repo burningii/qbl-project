@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "用户中心",
+  "usingComponents": {
+    "van-button": "/vant/button/index",
+    "van-cell": "/vant/cell/index",
+    "van-cell-group":"/vant/cell-group/index",
+    "van-field": "/vant/field/index",
+    "van-dialog": "/vant/dialog/index"
+  }
+}

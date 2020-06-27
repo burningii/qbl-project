@@ -1,0 +1,17 @@
+<view class="my-course-container">
+    <view class="my-flex-col">
+        <view class="my-flex-spa-be lession-item"
+              wx:for="{{course}}"
+              bindtap="goCourseInfo"
+              data-item="{{item}}"
+              wx:key="index">
+            <image class="img-item" src="{{item.cover_pic}}"/>
+            <view class="lession-item-right">
+                <view class="item-title">《{{item.goodsname}}》</view>
+                <view>作者: {{item.author}}</view>
+                <view>{{item.description}}</view>
+            </view>
+           <view class="lession-info"><text style="color: red">已学到第{{item.artcles_id}}节</text> / 共{{item.count}}节</view>
+        </view>
+    </view>
+</view>

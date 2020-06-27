@@ -1,0 +1,6 @@
+<view class="landlord-container">
+    <view class="center"><van-button bind:click="goPage1" color="#F86732" round>房屋信息申报审核</van-button></view>
+    <view class="center"><van-button bind:click="goPage2" color="#F86732" round>租户信息申报审核</van-button></view>
+    <view class="center"><van-button bind:click="goPage3" color="#F86732" round>终审预约</van-button></view>
+<!--    <view class="center"><van-button bind:click="goPage4" color="#F86732" round>租赁备案查询</van-button></view>-->
+</view>

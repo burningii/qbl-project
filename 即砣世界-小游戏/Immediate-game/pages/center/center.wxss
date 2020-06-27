@@ -1,0 +1,15 @@
+/* pages/center/center.wxss */
+page{
+    background-color: #EBEEF5;
+}
+
+.room-item{
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 14px;
+    padding: 28rpx;
+}
+
+.room-content>view.room-item:first-child{
+    margin-top: 1px;
+}

@@ -1,0 +1,23 @@
+<view class="nav" style="height: {{navH}}px;background-color: #FD7237;">
+    <view class="nav-wrapper">
+        <view class="nav-avatar"><image mode='' style="width:50rpx;height: 50rpx;border-radius: 50%;border: 1px solid #fff;" src="https://s2.ax1x.com/2019/10/12/uOBW24.jpg"/></view>
+        <view class="nav-title">物流员</view>
+    </view>
+</view>
+
+<view class="service-point-container" style="margin-top: {{navH}}px">
+    <view class="service-top-wrapper">
+
+    </view>
+    <view class="service-bottom-wrapper">
+        <view class="service-jiedan">
+            <button class="btn-normal-style"><text>接单</text></button>
+        </view>
+        <view class="service-songjian">
+            <button class="btn-normal-style"><text>送件</text></button>
+        </view>
+        <view class="service-jiejian">
+            <button class="btn-normal-style"><text>接件</text></button>
+        </view>
+    </view>
+</view>

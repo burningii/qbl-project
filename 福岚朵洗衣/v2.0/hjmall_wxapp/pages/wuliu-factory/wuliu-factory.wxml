@@ -1,0 +1,10 @@
+<view class="wuliu-factory-container">
+    <view class="content">
+        <view><van-button custom-style="border-radius: 25px;" bind:click="showQrCode" type="default">出示二维码</van-button></view>
+        <view><van-button bind:click="navToScanPage" custom-style="border-radius: 25px;" type="primary">扫一扫出库</van-button></view>
+    </view>
+</view>
+
+<van-popup show="{{ showQrCodeVisible }}" z-index="2001" custom-class="my-class-popup" bind:close="onClose">
+    <image style="width: 500rpx;height: 500rpx;" src="{{qrCodeSrc}}"/>
+</van-popup>

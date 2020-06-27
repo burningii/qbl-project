@@ -1,0 +1,21 @@
+<view class="calendar-container">
+    <view>
+        <calendar
+                calendarConfig="{{calendarConfig}}"
+                bind:afterTapDay="onTapDay"
+        ></calendar>
+    </view>
+    <!--    展示待办事项-->
+    <view class="todo-list-container">
+        <view class="my-flex todo-item"
+              wx:for="{{todoList}}"
+              wx:key="index"
+        >
+            <van-icon size="28" color="#429488" name="orders-o" />
+            <view class="mar-le">{{item.year}}年{{item.month}}月{{item.day}}日</view>
+            <view class="mar-le">{{item.todoText}}</view>
+        </view>
+    </view>
+    <view style="height: 80px"></view>
+    <include src="/components/tabbar/tabbar.wxml"/>
+</view>

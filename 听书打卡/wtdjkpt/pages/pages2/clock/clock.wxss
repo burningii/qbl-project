@@ -1,0 +1,19 @@
+page {
+    background-color: #fff;
+}
+.top-nums{
+    background-color: #FC7868;
+    color: #ffffff;
+    padding: 75rpx;
+    font-size: 32rpx;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.days{
+    font-size: 60rpx;
+}
+
+.form-wrapper{
+    margin-top: 10px;
+}

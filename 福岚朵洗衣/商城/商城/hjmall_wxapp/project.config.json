@@ -1,0 +1,109 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.3",
+	"appid": "wx62694ded1f7f74a6",
+	"projectname": "%E7%A6%8F%E5%B2%9A%E6%9C%B5%E5%95%86%E5%9F%8E",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 3,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/user/user",
+					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "bargain/goods/goods",
+					"pathName": "bargain/goods/goods",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/list/list",
+					"pathName": "pages/list/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/goods/goods",
+					"pathName": "pages/goods/goods",
+					"query": "id=378",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "pages/cat/cat",
+					"pathName": "pages/cat/cat",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "pages/pay-type/pay-type",
+					"pathName": "pages/pay-type/pay-type",
+					"query": "order_id=[426,427]&money=40.00",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order_wash/order-wash",
+					"pathName": "pages/order_wash/order-wash",
+					"query": "status=-1",
+					"scene": null
+				}
+			]
+		}
+	}
+}

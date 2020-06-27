@@ -1,0 +1,62 @@
+.page2-top-time{
+    margin-top: 25rpx;
+}
+
+.check-time-input{
+    width: 255rpx;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 38rpx;
+    padding: 10rpx;
+    font-size: 25rpx;
+    color: #666;
+    text-align: center;
+    margin-top: 15rpx;
+}
+
+.right-time{
+    margin-left: 40rpx;
+}
+
+.btn-query{
+    margin-top: 55rpx;
+}
+
+.query-title{
+    margin: 80rpx;
+    color: #666666;
+}
+.result-item{
+    padding: 20rpx;
+    border-bottom: 1px solid #cccccc;
+}
+
+.item-top{
+    align-items: flex-start;
+}
+.comm-title{
+    font-size: 26rpx;
+    width: 40%;
+}
+.result-img{
+    width:23%;
+    height: 210rpx;
+}
+
+.right-item{
+    width: 75%;
+    margin-left: 15rpx;
+}
+
+.item-info{
+    font-size: 26rpx;
+    color: #666666;
+    margin-top: 10rpx;
+}
+.item-bottom{
+    text-align: right;
+}
+button:not([size='mini']) {
+    width: inherit!important;
+}
+@import "../common/common.wxss";

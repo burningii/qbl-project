@@ -1,0 +1,6 @@
+.submit-register{
+    margin-top: 55rpx;
+}
+button:not([size='mini']) {
+    width: inherit!important;
+}

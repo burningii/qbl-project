@@ -1,0 +1,50 @@
+<form bindsubmit="saveInfo">
+    <view class='item-wrap'>
+      <view class="item-top-wrap">
+            <view class="item-top">
+                <image src="../.././images/question.png"></image>
+                <text>请描述你的疑问</text>
+            </view>
+            <view class="item-txt">
+                  <textarea maxlength="40" bindinput="quesInput" name='question'></textarea>
+                  <text>{{size || '0'}}/40</text>
+            </view>
+      </view>
+      <view class="item-bottom-wrap">
+            <textarea placeholder="详细说明问题，以便获得更好的回答（选填）" hover-class='tip' name='question2'></textarea>
+                    <view class='type-choose'><text bindtap='radioEvent' class="{{type=='radio'?'selected':''}}">音频</text><text bindtap="videoEvent" class="{{type=='video'?'selected':''}}">视频</text><text class="{{type=='pic'?'selected':''}}" bindtap='picEvent'>图片</text></view>
+                        
+                        <view class="uploadImage" wx:if='{{type=="pic"}}'>
+                            <scroll-view wx:if='{{tempFilePaths.length>0}}' scroll-x='true'>
+                                <image wx:for='{{tempFilePaths}}' src='{{item}}' wx:key='*this' >
+                                      <text bindtap="delEvent" data-id='{{index}}'>x</text>
+                                </image>
+                            </scroll-view>
+                              <image wx:else src='../../images/add.png' bindtap='upload'>
+                              </image>
+                        </view>
+
+                        <view class="uploadVideo" wx:if='{{type=="video"}}'>
+                          <scroll-view scroll-x='true' class="videoWrap">
+                                <video src="{{src}}" wx:if='{{src}}'></video>
+                                <view bindtap='delVideo' class="delVideo" wx:if='{{src}}'>取消上传</view>
+                                <image src='{{baseUrl+"/video.png"}}' wx:if='{{!src}}' bindtap='chooseVideo'></image>
+                          </scroll-view>
+                        </view>
+                        <view class="uploadRadio" wx:if='{{type=="radio"}}'>
+                            <!-- <image src='../.././images/playRadio.png' bindtap='playVideo' wx:if='{{videoStu}}'></image> -->
+                            <view bindtap='radioOperate' class="radio-wrap">
+                            <image src='{{baseUrl+"/audio.png"}}' bindtap='startVideo' wx:if='{{!videoStu}}'></image>
+                              <text wx:if='{{status==1}}'>开始录制</text>
+                              <text wx:if='{{status==2}}'>结束录制</text>
+                              <text wx:if='{{status==3}}'>播放</text>
+                            </view>
+                             <view bindtap='delRadio' class="delRadio" wx:if='{{status==3}}'>取消上传</view>
+                            
+                        </view>
+      </view>
+    </view>
+  <view class="btn-wrap">
+  <button form-type="submit" class='submit-btn'>提交</button>
+  </view>
+</form>

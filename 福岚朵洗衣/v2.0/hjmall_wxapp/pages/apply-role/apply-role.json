@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "角色申请",
+  "navigationBarBackgroundColor": "#FD7237",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-button": "/vant/button/index",
+    "van-field": "/vant/field/index",
+    "van-area": "/vant/area/index",
+    "van-popup": "/vant/popup/index"
+  }
+}

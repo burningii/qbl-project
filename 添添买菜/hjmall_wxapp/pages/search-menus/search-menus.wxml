@@ -1,0 +1,30 @@
+<view class="search-container">
+    <view class='top-search-wrapper'>
+        <van-search shape="round"
+                    bind:change="onChangeKeyword"
+                    bind:search="searchNow"
+                    show-action
+                    value="{{keyword}}"
+                    bind:cancel="onCancel"
+                    placeholder="搜索菜谱，食材"/>
+    </view>
+    <!--    搜索内容展示-->
+    <view class="my-flex-col result-list-container">
+        <view class="my-flex item-result"
+              wx:for="{{resultList}}"
+              wx:key="index"
+        >
+            <image class="item-img" src="https://s1.ax1x.com/2020/05/07/YZ0CGT.jpg"/>
+            <view class="my-flex-col item-right-top">
+                <view>原味丝瓜</view>
+                <view class="my-flex" style="margin-top: 4px;font-size: 23rpx">
+                    <view class="item-info">一般</view>
+                    <view class="item-info" style="margin-left: 5px">15分钟</view>
+                </view>
+                <view class="item-info-bottom">
+                    丝瓜, 崇安吗,发多少
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

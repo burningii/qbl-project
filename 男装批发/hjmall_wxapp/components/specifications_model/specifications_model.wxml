@@ -1,0 +1,114 @@
+<view bindtap="hideModal" catchtouchmove="preventTouchMove" id="modal-mask" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+    <view bindtap="close_box">
+        <image class="close3" src="{{__wxapp_img.store.close3.url}}"></image>
+    </view>
+    <view class="modal-title" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{goods_name}}
+    </view>
+    <scroll-view scrollY="true" style="height: 100%;">
+        <view class="modal-content">
+            <view>
+                <view class="attr-group" wx:if="{{attr_group.attr_list.length>0}}" wx:for="{{attr_group_list}}"
+                      wx:for-item="attr_group" wx:key="{{attr_group.id}}">
+                    <view class="attr-group-name">{{attr_group.attr_group_name}} :</view>
+                    <scroll-view scroll-x="true" style="width: 100%;white-space: nowrap">
+                        <view class="my-flex attr-list" style="width: 100%;white-space: nowrap">
+                            <view bindtap="attrClick"
+                                  class="attr_name {{item.checked?'select_active':''}} {{item.is_attr_num?'attr_num_0':''}}"
+                                  data-group-id="{{attr_group.attr_group_id}}" data-id="{{item.attr_id}}"
+                                  wx:for="{{attr_group.attr_list}}" wx:key="{{item.id}}">{{item.attr_name}}
+                                <text wx:if="{{item.attr_nums>0}}">({{item.attr_nums}})</text>
+                            </view>
+                        </view>
+                    </scroll-view>
+                </view>
+                <!--                循环尺码-->
+                <view class="size-list-container">
+                    <view class="attr-group"
+                          wx:if="{{attr_group.attr_list.length>0}}"
+                          wx:for="{{sizeAttrList}}"
+                          wx:for-item="attr_group"
+                          wx:key="{{item.id}}">
+                        <view class="my-flex-spa-be my-size-title">
+                            <view class="attr-group-name">{{attr_group.attr_group_name}}</view>
+                            <view>购买数量</view>
+                        </view>
+                        <view class="my-size-list">
+                            <view wx:for="{{attr_group.attr_list}}"
+                                  class="my-flex-spa-be size-item"
+                                  wx:key="index">
+                                <view>{{item.attr_name}}</view>
+                                <view class="flex-grow-0">
+                                    <view class="flex-row number-input-box">
+                                        <view bindtap="myNumberSub"
+                                              data-info="{{item}}"
+                                              data-index="{{index}}"
+                                              class="flex-grow-0 flex-x-center flex-y-center number-btn number-sub my-number-btn"
+                                              style="margin-right:0.01rem;">-
+                                        </view>
+                                        <view class="flex-grow-0">
+                                            <input class="flex-grow-1 number-input my-number-input" min="1" step="1"
+                                                   style="padding:0" type="number" disabled value="{{item.attr_nums}}"/>
+                                        </view>
+                                        <view bindtap="myNumberAdd"
+                                              data-info="{{item}}"
+                                              data-index="{{index}}"
+                                              class="flex-grow-0 flex-x-center my-number-btn flex-y-center number-btn number-add">
+                                            +
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <!--                循环已选的规格-->
+                <view class="checked-attr-container">
+                    <view>已选</view>
+                    <view class="checked-size-content">
+                        <scroll-view scroll-x="true" style="width: 100%;white-space: nowrap">
+                            <view wx:for="{{checkedAttrList}}"
+                                  wx:if="{{item.list.length>0}}"
+                                  class="my-flex"
+                                  style="flex-wrap: nowrap"
+                                  wx:for-index="idx1"
+                                  wx:key="idx1">
+                                <view>{{item.group_name}}：</view>
+                                <view wx:for="{{item.list}}"
+                                      class="my-flex"
+                                      wx:for-item="item2"
+                                      wx:for-index="idx2"
+                                      wx:key="idx2"
+                                >
+                                    <view>{{item2.attr_name}}/</view>
+                                    <view>{{item2.attr_num}}件，</view>
+                                </view>
+                            </view>
+                        </scroll-view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="modal-footer">
+        <!--        <view class="guigeprice" wx:if="{{check_goods_price}}">￥{{check_goods_price}}</view>-->
+        <view class="guigeprice">￥{{currentGood.price}}</view>
+        <!--        <view class="guigeprice" wx:else>￥{{temporaryGood.price}}</view>-->
+
+<!--        <view class="btn-car_num" wx:if="{{check_num}}">-->
+<!--            <image bindtap="guigejian" class="carStandard" src="{{__wxapp_img.store.jian.url}}"></image>-->
+<!--            <input bindinput="goodNumChange" class="carStandard good_num" id="num" maxlength="999" type="number"-->
+<!--                   value="{{check_num}}"></input>-->
+<!--            <image bindtap="onConfirm" class="carStandard" src="{{__wxapp_img.store.jia.url}}"></image>-->
+<!--        </view>-->
+<!--        <view bindtap="onConfirm" class="btn-car" data-status="confirm" style="background:#FF4544;color:#FFFFFF;"-->
+<!--              wx:else>加入购物车-->
+<!--        </view>-->
+
+        <view bindtap="addCart"
+              class="btn-car"
+              style="background:#FF4544;color:#FFFFFF;">加入购物车
+        </view>
+
+    </view>
+</view>

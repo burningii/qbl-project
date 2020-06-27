@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "房东",
+  "usingComponents": {
+    "van-button": "/vant/button/index"
+  }
+}

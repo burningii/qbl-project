@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-button": "/vant/button/index",
+    "van-dropdown-menu": "/vant/dropdown-menu/index",
+    "van-dropdown-item": "/vant/dropdown-item/index"
+  }
+}

@@ -1,0 +1,26 @@
+<view class="reset-pwd-cotainer">
+    <view>
+        <van-cell-group>
+            <van-field
+                    value="{{username}}"
+                    size="large"
+                    label="账号"
+                    placeholder="请输入需要重置的账号"
+                    data-f="1"
+                    bind:change="onChangeValue"
+            />
+            <van-field
+                    value="{{pwd}}"
+                    size="large"
+                    label="密码"
+                    type="password"
+                    placeholder="请输入重置的密码"
+                    data-f="2"
+                    bind:change="onChangeValue"
+            />
+        </van-cell-group>
+    </view>
+    <view style="margin-top: 15px">
+        <van-button bind:click="resetNow" custom-style="width: 100%" size="large" round color="#F86732">立即重置</van-button>
+    </view>
+</view>

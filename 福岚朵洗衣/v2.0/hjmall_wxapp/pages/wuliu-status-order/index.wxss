@@ -1,0 +1,6 @@
+.status-item{
+    width: 100%;
+    background-color: #fff;
+    padding: 18px;
+    margin-top: 10px;
+}

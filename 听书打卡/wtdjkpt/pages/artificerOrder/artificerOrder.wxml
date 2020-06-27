@@ -1,0 +1,33 @@
+<view class="item-wrap">
+   
+     <view class="item-group">
+       <view class="item-left"><image src="../.././images/carServe.png"></image></view>
+       <view class="item-content">
+             <view class="serve-til">上门全方位按摩</view>
+             <view class="serve-time">服务时间：2019/9/19 凌晨</view>
+             <view class="serve-tel">客户联系方式：15583878176</view>
+       </view>
+       <view class="item-griht"><view class="btn">接单</view></view>
+          <view class="item-griht"><view class="btn">拒单</view></view>
+   </view>
+    <view class="item-group">
+       <view class="item-left"><image src="../.././images/carServe.png"></image></view>
+       <view class="item-content">
+             <view class="serve-til">上门全方位按摩</view>
+             <view class="serve-time">服务时间：2019/9/19 凌晨</view>
+             <view class="serve-tel">客户联系方式：15583878176</view>
+       </view>
+       <view class="item-griht"><view class="btn">接单</view></view>
+          <view class="item-griht"><view class="btn">拒单</view></view>
+   </view>
+    <view class="item-group">
+       <view class="item-left"><image src="../.././images/carServe.png"></image></view>
+       <view class="item-content">
+             <view class="serve-til">上门全方位按摩</view>
+             <view class="serve-time">服务时间：2019/9/19 凌晨</view>
+             <view class="serve-tel">客户联系方式：15583878176</view>
+       </view>
+       <view class="item-griht"><view class="btn">接单</view></view>
+          <view class="item-griht"><view class="btn">拒单</view></view>
+   </view>
+</view>

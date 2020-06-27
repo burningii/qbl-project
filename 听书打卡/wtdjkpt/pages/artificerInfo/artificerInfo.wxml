@@ -1,0 +1,41 @@
+<view class='artificer-avator-wrap'>
+   <view class="artificer-avator">
+       <image src=""></image>
+   </view>
+   <view class="artificer-name">张三</view>
+</view>
+    <view class="item-til1">基本信息</view>
+<view class="artificer-basicInfo">
+    <view class="item-group">
+          <view class="item-top">姓名</view>
+          <view class="item-bottom">张三</view>
+    </view>
+     <view class="item-group">
+          <view class="item-top">性别</view>
+          <view class="item-bottom">女</view>
+    </view>
+     <view class="item-group">
+          <view class="item-top">专业技能</view>
+          <view class="item-bottom">按摩服务</view>
+    </view>
+     <view class="item-group">
+          <view class="item-top">电话号码</view>
+          <view class="item-bottom">15583878173</view>
+    </view>
+     <view class="item-group">
+          <view class="item-top">身份证号码</view>
+          <view class="item-bottom">112312312312321</view>
+    </view>
+     <view class="item-group">
+          <view class="item-top">其它特长</view>
+          <view class="item-bottom">拔罐</view>
+    </view>
+</view>
+<view class="subscribe" bindtap="subscribeEvent">我要预约</view>
+<modal bindconfirm='confirmEvent' bindcancel='cancelEvent' hidden='{{isModal}}'>
+     <view class="item-til">预约</view>
+     <view class="withdraw"><text class="withdraw-left">联系方式:</text><input type='text' placeholder="请输入联系方式" placeholder-class="tip"></input></view>
+      <view class="withdraw"><text class="withdraw-left">服务地址:</text><input type='text' placeholder="请输入服务地址" placeholder-class="tip"></input></view>
+       <view class="withdraw"><text class="withdraw-left">服务时间:</text><input type='text' placeholder="请输入服务时间" placeholder-class="tip"></input></view>
+     <view class="tip2">信息填写越详，预约越容易成功</view>
+</modal>

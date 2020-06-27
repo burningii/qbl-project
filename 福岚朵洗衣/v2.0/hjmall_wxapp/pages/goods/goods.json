@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "商品详情",
+    "usingComponents": {
+        "app-navigation": "/components/quick-navigation-components/index",
+        "van-field": "/vant/field/index",
+        "van-dialog": "/vant/dialog/index",
+        "van-button": "/vant/button/index"
+    }
+}

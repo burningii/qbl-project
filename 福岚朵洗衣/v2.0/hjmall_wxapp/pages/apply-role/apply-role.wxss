@@ -1,0 +1,58 @@
+.apply-role-container {
+
+}
+
+.apply-role-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    /*align-items: center;*/
+    padding: 35rpx;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top: 55rpx;
+    font-size: 34rpx;
+    font-weight: 800;
+    color: #757575;
+}
+
+.service-wrapper {
+
+}
+
+
+.service-address-wrapper {
+    background-color: #fff;
+    padding: 25rpx;
+    display: flex;
+    align-items: center;
+}
+
+.province-city {
+    margin-left: 114rpx;
+    font-size: 24rpx;
+}
+
+.now-apply-btn-wrapper {
+    text-align: center;
+    margin:200rpx 0 200rpx 0;
+}
+
+.wait-wrapper {
+    display: flex;
+    margin-top: 300rpx;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.wait-wrapper text{
+   color: #888888;
+}
+
+.wait-wrapper .wait-icon{
+    width: 100rpx;
+    height: 100rpx;
+}
+

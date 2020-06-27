@@ -1,0 +1,57 @@
+page{
+  background: #fff;
+}
+.item-top image{
+  width: 100%;
+}
+.item-til{
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+  padding: 40rpx;
+  text-align: center;
+}
+.item-til-txt{
+  padding-bottom: 40rpx;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+.item-author{
+  padding: 0 40rpx 20rpx 40rpx;
+}
+.item-author-top{
+  display: flex;
+  justify-content: flex-start;
+}
+.item-author-txt{
+  color: #999;
+  font-size: 24rpx;
+}
+.item-author-name,.item-group-til{
+  font-size: 32rpx;
+  color: #585c67;
+  font-family: '微软雅黑';
+}
+.item-author-left image{
+  width: 120rpx;
+  height: 120rpx;
+  border: 2rpx solid red;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+.item-author-right{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.item-author-description,.item-group-description{
+  box-sizing: content-box;
+  padding: 20rpx 0;
+  font-size: 28rpx;
+  line-height: 2;
+  color: #585c67;
+  font-family: '微软雅黑';
+}
+.item-group-img image{
+  margin-top: 20rpx;
+  width: 100%;
+}

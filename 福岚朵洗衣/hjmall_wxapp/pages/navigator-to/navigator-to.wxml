@@ -1,0 +1,37 @@
+<view class="navigator-container">
+    <view wx:if="{{orderList.length>0 && undefined==orderOldListFlag}}" class="nav-top-wrapper">
+        <view>未取走订单({{orderList.length}})</view>
+    </view>
+    <view wx:if="{{undefined!=orderOldListFlag}}" class="nav-top-wrapper">
+        <view>未出厂订单({{orderList.length}})</view>
+    </view>
+    <view class="order-no-container">
+        <block wx:if="{{orderList.length>0}}" wx:for="{{orderList}}" wx:key="index">
+            <view class="order-no-list">
+                <view>用户手机: <text>{{item.phone}}</text></view>
+                <view>类型: <text>{{item.shopname}}</text></view>
+                <view>条形码: <text>{{item.shape}}</text></view>
+            </view>
+        </block>
+        <block wx:if="{{orderList.length==0 && undefined==orderOldListFlag}}">
+            <view class="no-orderlist-wrapper">
+                订单已被全部取走
+            </view>
+        </block>
+    </view>
+    <view wx:if="{{undefined!=orderOldListFlag}}" class="nav-top-wrapper">
+        <view>已洗好订单({{orderOldList.length}})</view>
+    </view>
+    <view wx:if="{{undefined!=orderOldListFlag}}" class="order-no-container">
+        <block wx:for="{{orderOldList}}" wx:key="index">
+            <view class="order-no-list">
+                <view>用户手机: <text>{{item.phone}}</text></view>
+                <view>类型: <text>{{item.shopname}}</text></view>
+                <view>条形码: <text>{{item.shape}}</text></view>
+            </view>
+        </block>
+    </view>
+</view>
+<view wx:if="{{orderList.length>0 || orderOldList.length>0}}" class="btn-sure-wrapper">
+    <van-button color="#F6504F" bind:click="checkAllOrder" custom-style="border-radius: 25px;" size="large" type="default">确认</van-button>
+</view>

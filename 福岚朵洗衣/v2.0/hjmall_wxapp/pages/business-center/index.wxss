@@ -1,0 +1,7 @@
+page {
+    background-color: #fff;
+}
+
+.submit-btn{
+    margin-top: 85px;
+}

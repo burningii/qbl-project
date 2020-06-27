@@ -1,0 +1,35 @@
+page {
+    background-color: #fff;
+}
+.top-search-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.search-wrapper {
+    padding-left: 213rpx !important;
+}
+
+.foods-img{
+    width: 90px;
+    height: 90px;
+    border-radius: 8px;
+}
+
+.list-content{
+    padding: 28rpx;
+}
+
+.list-item{
+    margin-top: 15px;
+}
+
+.foods-info{
+    margin-left: 10px;
+}
+
+.food-item-list-1>view.foods-info:first-child{
+    margin-left: 0;
+}

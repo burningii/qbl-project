@@ -1,0 +1,20 @@
+page{
+    /*background-color: #F2F6FC;*/
+}
+
+.home-title{
+    text-align: center;
+    padding-top: 15rpx;
+}
+
+.input-wrapper{
+    padding: 35rpx;
+}
+
+.btn-submit,.regis{
+    margin-top: 30rpx;
+}
+
+.btn-override{
+    width: 100%!important;
+}

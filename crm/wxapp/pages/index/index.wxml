@@ -1,0 +1,32 @@
+<view class="index-container">
+    <view class="top-info">工作日志</view>
+    <!--    筛选开始-->
+    <view class="select-wrapper">
+        <van-dropdown-menu active-color="#429488">
+            <van-dropdown-item bind:change="onChangeMenu" value="{{ value1 }}" options="{{ option1 }}"/>
+            <van-dropdown-item bind:change="onChangeMenu2" value="{{ value2 }}" options="{{ option2 }}"/>
+        </van-dropdown-menu>
+    </view>
+    <!--    列表开始-->
+    <view class="todo-list-container">
+        <view class="my-flex-col">
+            <view
+                    class="my-flex todo-item"
+                    wx:for="{{todoList}}"
+                    bindtap="goTodoInfo"
+                    data-id="{{item.id}}"
+                    wx:key="index"
+            >
+                <view>{{index+1}}.</view>
+                <view style="margin-left: 8px">{{item.visit_date}}</view>
+                <view>{{item.visit_content}}</view>
+            </view>
+        </view>
+    </view>
+    <!--    新增按钮-->
+    <view class="my-flex-col add-btn-wrapper">
+        <van-button bind:click="addItem" custom-style="width: 180rpx" round color="#589288">新增</van-button>
+    </view>
+    <view style="height: 80px"></view>
+    <include src="/components/tabbar/tabbar.wxml"/>
+</view>

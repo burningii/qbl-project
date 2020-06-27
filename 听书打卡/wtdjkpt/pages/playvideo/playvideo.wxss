@@ -1,0 +1,10 @@
+.item-wrap{
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+video{
+  width: 640rpx;
+  height: 310rpx;
+}

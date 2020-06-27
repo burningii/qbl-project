@@ -1,0 +1,127 @@
+page {
+    background-color: #fff;
+}
+.query-wuliu-container {
+    padding: 25rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.query-wuliu-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.query-wuliu-input .van-cell__left-icon-wrap,.van-cell__right-icon-wrap {
+   align-items: baseline;
+}
+
+.query-wuliu-input {
+    width: 65%;
+}
+
+.query-wuliu-btn {
+    width: 25%;
+    display: flex;
+}
+
+.query-wuliu-middle {
+    width: 100%;
+    margin-top: 25rpx;
+}
+
+.title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F3F4F7;
+    align-items: center;
+    padding: 25rpx 55rpx 25rpx 55rpx;
+}
+
+.zb2-flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.zb2-flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data-item {
+   justify-content: space-between;
+    padding: 25rpx;
+    border-bottom: 1px solid #F3F4F7;
+    color: #000;
+}
+
+.item-font1-color {
+    color: #945F00;
+    font-size: 24rpx;
+}
+
+.item-font2-color {
+    color: #005990;
+    font-size: 24rpx;
+}
+
+.item-time-info image {
+    width: 35rpx;
+    height: 35rpx;
+}
+
+.my-class-popup {
+    width: 90% !important;
+    /*padding: 35rpx;*/
+    border-radius: 15px;
+    padding-bottom: 55rpx;
+    position: relative;
+}
+
+.close-modal-btn {
+    position: absolute;
+    right: 40rpx;
+    top: 30rpx;
+}
+
+.top-calendar-container {
+    width: 100%;
+    /*height: 55rpx;*/
+    background-color: #23AFEA;
+    padding: 25rpx;
+    color: #fff;
+}
+
+.bottom-calendar-content {
+    padding: 25rpx;
+}
+
+.zb-flex-row-around {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.top-container-selecttime {
+    text-align: center;
+}
+
+.opaction {
+    color: #DCDFE6;
+    margin-left: 15rpx;
+}
+
+.top-title {
+    margin-top: 45rpx;
+}
+
+.bottom-calendar-btn {
+    text-align: center;
+    margin-top: 25rpx;
+}

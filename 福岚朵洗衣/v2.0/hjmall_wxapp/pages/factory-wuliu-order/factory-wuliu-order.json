@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "订单",
+  "usingComponents": {
+    "van-button": "/vant/button/index",
+    "van-uploader": "/vant/uploader/index"
+  }
+}

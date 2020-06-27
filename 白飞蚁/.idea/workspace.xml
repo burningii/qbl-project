@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="554d8be5-66d9-4af1-aab2-02c01bc5440e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/wxapp/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/app.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/app.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/project.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/siteinfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/siteinfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/wxParse/wxParse.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/wxParse/wxParse.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/wxParse/wxParse.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/wxParse/wxParse.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/Liar/loginindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/Liar/loginindex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/about/about.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/about/about.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/case/case.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/case/case.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/contact/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/contact/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/contact/contact.json" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/contact/contact.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/contact/contact.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/contact/contact.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/contact/contact.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/contact/contact.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/contact/tem1.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/contact/tem1.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/content/content.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/content/content.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/imglist/imglist.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/imglist/imglist.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/index/adnotice.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/index/adnotice.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/index/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/index/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/index/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/index/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/index/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/index/search.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/index/search.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/message/info.js" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/message/info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/message/info.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/message/info.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/message/info.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/message/info.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/my/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/my/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/my/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/my/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/my/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/my/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/my/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/my/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/news/news.js" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/news/news.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/news/news.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/news/news.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/news/news.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/news/news.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/newsnoimg/newsnoimg.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/newsnoimg/newsnoimg.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/public/foot.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/public/foot.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/scro/scro.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/scro/scro.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/search/search.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/search/search.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/shangjia/info.js" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/shangjia/info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/shangjia/info.json" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/shangjia/info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/shangjia/info.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/shangjia/info.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/shangjia/info.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/shangjia/info.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/video/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/video/video.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/video/video.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/video/video.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/content.json" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/content.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/content.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/content.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/lookphone.js" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/lookphone.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/lookphone.json" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/lookphone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/lookphone.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/lookphone.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/myxiangmu.js" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/myxiangmu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/myxiangmu.json" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/myxiangmu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/myxiangmu.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/myxiangmu.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/myxiangmu.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/myxiangmu.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/sjxiangmu.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/sjxiangmu.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/yanshouinfo.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/wxapp/yyf_company/pages/xiangmu/yanshouinfo.wxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/wxapp" />
+  </component>
+  <component name="ProjectId" id="1bvbH6tzWGzLKlFe09vHjfUsc3g" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wxapp/vant" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wxapp/vant" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="554d8be5-66d9-4af1-aab2-02c01bc5440e" name="Default Changelist" comment="" />
+      <created>1589515423835</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589515423835</updated>
+      <workItem from="1589515424943" duration="2883000" />
+      <workItem from="1589770848393" duration="3016000" />
+      <workItem from="1589852699186" duration="4361000" />
+      <workItem from="1589938918213" duration="1655000" />
+      <workItem from="1590391564709" duration="692000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

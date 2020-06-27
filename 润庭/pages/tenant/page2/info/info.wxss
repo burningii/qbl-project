@@ -1,0 +1,4 @@
+.upload-image{
+    width: 500rpx;
+    height: 210rpx;
+}

@@ -1,0 +1,114 @@
+<view class="page">
+    <include src="/components/common/common"></include>
+    <include src="/components/header/header"></include>
+    <view class="body after-navber">
+        <view class="page {{__page_classes}}">
+            <view class="body after-navber">
+                <view class="query-wuliu-container">
+                    <view class="query-wuliu-top">
+                        <view class="query-wuliu-input">
+                            <van-cell-group>
+                                <van-field
+                                        value="{{ inputValue }}"
+                                        clearable
+                                        left-icon="https://api5.qibuluo.net/addons/zjhj_mall/search@2x.png"
+                                        placeholder="手机号/订单号/取衣码"
+                                        custom-style="background-color: #F0F0F0;border-radius: 25px;"
+                                        bind:change="onInputValue"
+                                />
+                            </van-cell-group>
+                        </view>
+                        <view class="query-wuliu-btn">
+                            <block wx:if="{{inputValue==''}}">
+                                <view style="position: relative;top: 5rpx;">
+                                    <image style="width: 30rpx;height: 30rpx;" src="https://api5.qibuluo.net/addons/zjhj_mall/search2@2x.png"/>
+                                </view>
+                                <view bindtap="showCalendar" style="margin-left: 8rpx;"><text style="color: #222222;font-size: 30rpx;font-weight: 700">高级查询</text></view>
+                            </block>
+                            <block wx:else>
+                                <van-button bind:click="queryNow" custom-style="border-radius: 60px;width: 150rpx;" type="default">搜索</van-button>
+                            </block>
+                        </view>
+                    </view>
+                    <view class="query-wuliu-middle">
+                        <view class="middle-title">
+                            <view class="title-wrapper">
+                                <view>客户</view>
+                                <view>门店</view>
+                                <view>时间</view>
+                            </view>
+                        </view>
+                        <view class="middle-data-container">
+                            <view wx:for="{{queryResult}}" wx:key="index" class="zb2-flex-row data-item">
+                                <view class="item-phone">{{item.phone}}</view>
+                                <view class="item-store-name">{{item.cname}}</view>
+                                <view class="zb2-flex-column item-time-info">
+                                    <view class="zb2-flex-row">
+                                        <view style="position: relative;top: 6rpx;margin-right: 5rpx"><image src="https://api5.qibuluo.net/addons/zjhj_mall/song@2x.png"/></view>
+                                        <view class="item-font1-color">{{item.addtime}}</view>
+                                    </view>
+                                    <view class="zb2-flex-row">
+                                        <view style="position: relative;top: 6rpx;margin-right: 5rpx"><image src="https://api5.qibuluo.net/addons/zjhj_mall/qu@2x.png"/></view>
+                                        <view class="item-font2-color">{{item.create_time}}</view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <include src="/components/footer/footer"></include>
+</view>
+
+<van-popup show="{{ showQrCodeVisible }}" z-index="2001" custom-class="my-class-popup" bind:close="onClose">
+    <view class="top-calendar-container">
+        <view class="top-container-selecttime">请选择时间</view>
+        <view bindtap="onClose" class="close-modal-btn"><van-icon size="18px" color="#ccc" name="cross" /></view>
+        <view class="zb-flex-row-around top-title">
+            <view>
+                <view class="opaction">
+                    送件时间
+                </view>
+                <view>
+                    <van-cell-group>
+                        <van-field
+                                value="{{ startValue }}"
+                                placeholder="请选择"
+                                data-flag="1"
+                                border="{{ false }}"
+                                bind:focus="onFouces"
+                                bind:change="onChange"
+                                custom-style="border-radius: 10px"
+                        />
+                    </van-cell-group>
+                </view>
+            </view>
+            <view style="margin-left: 15rpx">
+                <view class="opaction">
+                    取件时间
+                </view>
+                <view >
+                    <van-cell-group>
+                        <van-field
+                                value="{{ endValue }}"
+                                placeholder="请选择"
+                                data-flag="2"
+                                bind:focus="onFouces"
+                                border="{{ false }}"
+                                bind:change="onChange"
+                                custom-style="border-radius: 10px"
+                        />
+                    </van-cell-group>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="bottom-calendar-content">
+        <calendar currentYear='{{currentYear}}' currentMonth="{{currentMonth}}" nowYear="{{currentYear}}" nowMonth="{{currentMonth}}" nowDate="{{currentDate}}" bindsendObj='getCalendarData'></calendar>
+    </view>
+    <view class="bottom-calendar-btn">
+        <van-button bind:click="nowQueryBy" custom-style="border-radius: 29px;width: 210rpx;" color="#23AFEA">确定</van-button>
+    </view>
+</van-popup>

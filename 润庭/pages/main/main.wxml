@@ -1,0 +1,33 @@
+<!--自定义头部-->
+<view  class="nav" style="height: {{navH}}px;background-color: {{navigateBarColor}};">
+    <view class="nav-wrapper">
+        <view class="my-flex nav-avatar">
+            <image mode='' style="width:60rpx;height: 60rpx;border-radius: 50%;border: 1px solid #fff;" src="{{currentUserAvatar}}"/>
+            <van-icon color="#909399" name="edit" />
+        </view>
+        <view bindtap="goMyPage"  class="nav-title">{{navBarTitle}}</view>
+    </view>
+</view>
+
+<view style="margin-top: {{navH}}px" class="main-container">
+    <view class="my-flex-col top-shenfen-wrapper">
+        <view bindtap="goLandlord" class="my-flex-spa-be shenfen-item" style="background: url('{{landlord_bgc}}') no-repeat center center">
+            <view>
+                <view class="shenfen-title-color">我是房东</view>
+                <view class="shenfen-title-color" style="opacity: 0.6;font-size: 24rpx">Landlord</view>
+            </view>
+            <image src="https://api5.qibuluo.net/addons/zjhj_mall/landlord.png" class="shenfen-img"/>
+        </view>
+        <view bindtap="goTenant" class="my-flex-spa-be shenfen-item"
+              style="background: url('https://api5.qibuluo.net/addons/zjhj_mall/bgblue.png') no-repeat center center">
+            <view>
+                <view class="shenfen-title-color">我是租户</view>
+                <view class="shenfen-title-color" style="opacity: 0.6;font-size: 24rpx">Tenant</view>
+            </view>
+            <image src="https://api5.qibuluo.net/addons/zjhj_mall/tanant.png" class="shenfen-img"/>
+        </view>
+    </view>
+    <view class="bottom-bgc">
+        <image class="bgc-class" src="{{bottom_bgc}}"/>
+    </view>
+</view>

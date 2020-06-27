@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9a5030ab-07ad-4ce3-b293-8b1ce84c1d27" name="Default" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZQYUkCBj6SQvMn78aqDj140mnI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/page5" />
+      <recent name="$PROJECT_DIR$/vant" />
+      <recent name="$PROJECT_DIR$/pages/orderInfoCheck" />
+      <recent name="$PROJECT_DIR$/pages/tenant-info" />
+      <recent name="$PROJECT_DIR$/pages/verify-tenant" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9a5030ab-07ad-4ce3-b293-8b1ce84c1d27" name="Default" comment="" />
+      <created>1581403609718</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581403609718</updated>
+      <workItem from="1581403610924" duration="3905000" />
+      <workItem from="1581473166371" duration="1904000" />
+      <workItem from="1581506026620" duration="37000" />
+      <workItem from="1581506066450" duration="13000" />
+      <workItem from="1581506096008" duration="50000" />
+      <workItem from="1581506204602" duration="48000" />
+      <workItem from="1581508586090" duration="661000" />
+      <workItem from="1582770675912" duration="750000" />
+      <workItem from="1582771499561" duration="25000" />
+      <workItem from="1582771545506" duration="1853000" />
+      <workItem from="1583208670528" duration="10000" />
+      <workItem from="1583716798931" duration="7379000" />
+      <workItem from="1583803528480" duration="3952000" />
+      <workItem from="1584772803880" duration="3337000" />
+      <workItem from="1585273397084" duration="5666000" />
+      <workItem from="1585532228452" duration="7145000" />
+      <workItem from="1585902843923" duration="862000" />
+      <workItem from="1586402441162" duration="255000" />
+      <workItem from="1587021878571" duration="419000" />
+      <workItem from="1587376350077" duration="8240000" />
+      <workItem from="1587525393637" duration="97000" />
+      <workItem from="1587606366859" duration="3861000" />
+      <workItem from="1589334473948" duration="6568000" />
+      <workItem from="1590222079191" duration="1306000" />
+      <workItem from="1590373371738" duration="73000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

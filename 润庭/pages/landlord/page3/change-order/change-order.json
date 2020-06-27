@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "预约时间变更",
+  "usingComponents": {
+    "van-cell-group":"/vant/cell-group/index",
+    "van-cell":"/vant/cell/index",
+    "van-button":"/vant/button/index",
+    "van-field":"/vant/field/index",
+    "van-popup":"/vant/popup/index",
+    "van-datetime-picker": "/vant/datetime-picker/index",
+    "van-picker":"/vant/picker/index",
+    "van-picker-column":"/vant/picker-column/index"
+  }
+}

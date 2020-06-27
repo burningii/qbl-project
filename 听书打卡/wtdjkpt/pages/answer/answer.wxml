@@ -1,0 +1,130 @@
+<view class="item-wrap">
+   <view class="tab-wrap" bindtap="tabEvent">
+        <view class="tab1 {{isShow==true?'tab-selected':''}}" data-id='tab1'>待回复</view>
+        <view class="tab2 {{!isShow==true?'tab-selected':''}}" data-id='tab2'>历史回复</view>
+   </view>
+   <!-- <scroll-view scroll-y='true' style='height:1000rpx;' class='scroll'> -->
+       <view class="item-content">
+         <view class="item-tab1" wx:if='{{isShow}}'>
+           <view class="item-group" wx:if='{{quesArr.length>0}}' wx:for='{{quesArr}}' wx:key='*this'>
+              <view class="item-left"><image src='{{item.avatar_url}}'></image></view>
+              <view class="item-right" style='padding-right: 20rpx;'>
+                  <view class="item-username">{{item.nickname}}</view>
+                  <view class="item-text">{{item.question}}</view>
+                  <view class="item-image">
+                      <image bindtap='imgEnlarge' class="{{enlarge==true?'enlarge':''}}" wx:if='{{item.type=="2"}}' src='{{item.url}}'></image>
+                      <video src='{{item.url}}' wx:if='{{item.type=="4"}}'></video>
+                      <audio controls="true" src='{{item.url}}' wx:if='{{item.type=="3"}}'></audio>
+                  </view>
+                  <view class="item-time">
+                     <view>{{item.time || '未知'}}</view>  
+                     <view class="answer-box"  bindtap='asEvent'>
+                     <navigator url='/pages/expertAnswer/expertAnswer?id={{item.id}}&artificer_id={{item.artificer_id}}' hover-class="none">
+                        <view class='answer'>
+                        <view class="img-box">
+                           <image src="../.././images/answer.png"></image>
+                        </view>
+                        <view class="answer-txt">回复</view>
+                        </view>
+                     </navigator>
+                     </view>
+                  </view>
+              </view>
+            </view>
+         </view>
+         <view class="item-tab2" wx:else>
+              <view class="item-group" wx:for='{{quesArr}}' wx:key='*this' wx:if='{{quesArr.length>0}}'>
+              <view class="item-left"><image src='{{item.avatar_url}}'></image></view>
+              <view class="item-right">
+                  <view class="item-username">{{item.nickname}}</view>
+                  <view class="item-text">{{item.question}}</view>
+                  <view class="item-image">
+                       <image bindtap='imgEnlarge' class="{{enlarge==true?'enlarge':''}}" wx:if='{{item.type=="2"}}' src='{{item.url}}'></image>
+                      <video src='{{item.url}}' wx:if='{{item.type=="4"}}'></video>
+                      <audio controls="true" src='{{item.url}}' wx:if='{{item.type=="3"}}'></audio>
+                  </view>
+                  <view class="item-time">
+                     <view>{{item.time}}</view>  
+                     <!-- <view class="answer-box" wx:if='{{!status}}'>
+                        <view class='answer'>
+                        <view class="img-box">
+                           <image src="../.././images/answer.png"></image>
+                        </view>
+                        <view class="answer-txt" bindtap='asEvent'>回复</view>
+                        </view>
+                     </view> -->
+                  </view>
+                  <view class="reponse-box" wx:for='{{item.answers}}' wx:key='*this' wx:for-item='answerItem'>
+                       <view class="response-top">
+                       </view>
+                       <view class="response-txt">
+                       <text class="expert">专家：</text><text>{{answerItem.answer}}</text>
+                       </view>
+                       <view class="item-image">
+                      <image bindtap='imgEnlarge' class="{{enlarge==true?'enlarge':''}}" wx:if='{{answerItem.type=="2" && answerItem.url.length>0}}' src='{{answerItem.url}}'></image>
+                      <video src='{{answerItem.url}}' wx:if='{{answerItem.type=="4"}}'></video>
+                      <audio controls="true" src='{{answerItem.url}}' wx:if='{{answerItem.type=="3"}}'></audio>
+                  </view>
+                  </view>
+                   
+              </view>
+            </view>
+         </view>
+       </view>
+       <!-- <form bindsubmit="saveInfo" wx:if='{{status1}}'>
+          <view class='item-wrap'>
+            <view class="item-top-wrap">
+                  <view class="item-top">
+                      <image src="../.././images/question.png"></image>
+                      <text>请给出你的见解</text>
+                  </view>
+                  <view class="item-txt">
+                        <textarea maxlength="40" bindinput="quesInput" name='question'></textarea>
+                        <text>{{size || '0'}}/40</text>
+                  </view>
+            </view>
+            <view class="item-bottom-wrap">
+                  <textarea placeholder="详细说明问题，以便获得更好的回答（选填）" hover-class='tip' name='question2'></textarea>
+                          <view class='type-choose'><text bindtap='radioEvent' class="{{type=='radio'?'selected':''}}">音频</text><text bindtap="videoEvent" class="{{type=='video'?'selected':''}}">视频</text><text class="{{type=='pic'?'selected':''}}" bindtap='picEvent'>图片</text></view>
+                              
+                              <view class="uploadImage" wx:if='{{type=="pic"}}'>
+                                  <scroll-view wx:if='{{tempFilePaths.length>0}}' scroll-x='true'>
+                                      <image wx:for='{{tempFilePaths}}' src='{{item}}' wx:key='*this' >
+                                            <text bindtap="delEvent" data-id='{{index}}'>x</text>
+                                      </image>
+                                  </scroll-view>
+                                    <image wx:else src='../../images/add.png' bindtap='upload'>
+                                    </image>
+                              </view>
+
+                              <view class="uploadVideo" wx:if='{{type=="video"}}'>
+                                <scroll-view scroll-x='true' class="videoWrap">
+                                      <video src="{{src}}" wx:if='{{src}}'></video>
+                                      <view bindtap='delVideo' class="delVideo" wx:if='{{src}}'>取消上传</view>
+                                      <image src='../.././images/uploadVideo.png' wx:if='{{!src}}' bindtap='chooseVideo'></image>
+                                </scroll-view>
+                              </view>
+                              <view class="uploadRadio" wx:if='{{type=="radio"}}'>
+                                  <image src='../.././images/playRadio.png' bindtap='playVideo' wx:if='{{videoStu}}'></image>
+                                  <view bindtap='radioOperate' class="radio-wrap">
+                                  <image src='../.././images/startRecord.png' bindtap='startVideo' wx:if='{{!videoStu}}'></image>
+                                    <text wx:if='{{status==1}}'>开始录制</text>
+                                    <text wx:if='{{status==2}}'>结束录制</text>
+                                    <text wx:if='{{status==3}}'>播放</text>
+                                  </view>
+                                  <view bindtap='delRadio' class="delRadio" wx:if='{{status==3}}'>取消上传</view>
+                                  
+                              </view>
+            </view>
+        </view>
+        <view class="btn-wrap">
+        <button form-type="submit" class='submit-btn'>提交</button>
+        </view>
+       </form> -->
+   <!-- </scroll-view> -->
+</view>
+<!-- <view class="modal" wx:if='{{enlarge}}'></view> -->
+
+
+
+<!-- <view class="addmore" bindtap='addMore'>点击加载下一页</view> -->

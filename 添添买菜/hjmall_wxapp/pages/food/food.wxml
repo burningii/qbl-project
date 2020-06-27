@@ -1,0 +1,93 @@
+<scroll-view scroll-y='true' style="height: {{height}}px" bindscroll="handelScroll" scroll-into-view="{{id}}">
+    <!--    <view class="food-container">-->
+    <!--    顶部定位的tab栏-->
+    <view wx:if="{{showTabs}}" class="tabs-wrapper">
+        <van-tabs class="my-tabs" line-height="2" active="{{ active }}" color="#00c203" bind:click="onChangeTab">
+            <van-tab title="食材清单"/>
+            <van-tab title="商品选购"/>
+            <van-tab title="烹饪步骤"/>
+        </van-tabs>
+    </view>
+    <!--    顶部图片轮播页面-->
+    <view class="food-img">
+        <swiper indicator-dots="true"
+                style="height: 550rpx"
+                autoplay="true" interval="{{interval}}">
+            <block wx:for="{{img}}" wx:key="*this">
+                <swiper-item>
+                    <image src="{{item}}" class="img-item"/>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!--    信息模板-->
+    <view class="foods-info-wrapper">
+        <view class="foods-name">土豆红烧肉</view>
+        <view class="my-flex food-ku">
+            <van-icon color="#00c203" name="flag-o"/>
+            <view>难度: 一般</view>
+            <van-icon style="margin-left: 8px" color="#00c203" name="clock-o"/>
+            <view>时长: 45分钟以上</view>
+        </view>
+        <!--        <view></view>-->
+    </view>
+    <!--    食材清单-->
+    <view id="hash1" class="floorType food-list">
+        <view class="title-common">食材清单</view>
+        <view class="mg-top" style="font-size: 26rpx;font-weight: bold;color: #000000">主料</view>
+    </view>
+    <view class="">
+        <!--    主料商品-->
+        <view id="hash2" class="floorType food-goods-main">
+            <view class="title-common">主料商品</view>
+        </view>
+
+        <!--    辅料商品-->
+        <view class="food-goods-main">
+            <view class="title-common">辅料商品</view>
+        </view>
+    </view>
+    <!--    烹饪步骤-->
+    <view id="hash3" class="floorType mg-top cookie-step">
+        <view class="title-common">烹饪步骤</view>
+    </view>
+    <view style="height: 55px"></view>
+    <!--    底部购买按钮-->
+    <view class="bottom-posi my-flex">
+        <view bindtap="showGoodsModal" class="bottom-buy">购买食材</view>
+    </view>
+    <!--    </view>-->
+</scroll-view>
+
+<van-popup round position="bottom"
+           custom-style="height: 89%"
+           closeable
+           show="{{ goodsModalVisible }}"
+           bind:close="onCloseGoodsModal">
+    <view class="modal-container">
+        <view class="goods-tabs-wrapper">
+            <van-tabs
+                    class="my-tabs"
+                    border="{{false}}"
+                    line-height="2"
+                    active="{{ activeGoods }}"
+                    color="#00c203"
+                    bind:click="onChangeGoodsTab">
+                <van-tab title="主料"/>
+                <van-tab title="辅料"/>
+            </van-tabs>
+        </view>
+        <view class="close-goods-modal"><van-icon bind:click="onCloseGoodsModal" size="20" name="cross" /></view>
+        <view style="height: 50px;"></view>
+        <!--        列表开始-->
+        <scroll-view
+                bindscroll="handelScrollGoods"
+                scroll-into-view="{{goodsIntoView}}"
+                scroll-y="true"
+                style="height: {{height}}px">
+            <view class="floorGoods goods-category color1" id="goods1">主料</view>
+            <view class="floorGoods goods-category color2" id="goods2">辅料</view>
+            <view style="height: 500px"></view>
+        </scroll-view>
+    </view>
+</van-popup>

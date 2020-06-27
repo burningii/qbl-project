@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b5071d2b-603d-44a2-9c4b-080e2fedba14" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bcCqdPErfAjlLJ3mfmrz3Mxz3W" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hjmall_wxapp/pages/user2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hjmall_wxapp/pages/user2" />
+      <recent name="$PROJECT_DIR$/hjmall_wxapp/pages/index2" />
+      <recent name="$PROJECT_DIR$/hjmall_wxapp" />
+      <recent name="$PROJECT_DIR$/hjmall_wxapp/components/my/goods" />
+      <recent name="$PROJECT_DIR$/hjmall_wxapp/components/my" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b5071d2b-603d-44a2-9c4b-080e2fedba14" name="Default Changelist" comment="" />
+      <created>1588922186543</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588922186543</updated>
+      <workItem from="1588922187641" duration="47350000" />
+      <workItem from="1589160955274" duration="12029000" />
+      <workItem from="1589364645472" duration="25000" />
+      <workItem from="1589364681000" duration="694000" />
+      <workItem from="1591078114957" duration="37011000" />
+      <workItem from="1591319189905" duration="16621000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="349" y="154" key="SettingsEditor" timestamp="1589001083760">
+      <screen x="0" y="23" width="1680" height="985" />
+    </state>
+    <state x="349" y="154" key="SettingsEditor/0.23.1680.985@0.23.1680.985" timestamp="1589001083760" />
+    <state x="506" y="293" width="667" height="486" key="find.popup" timestamp="1591340147053">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="506" y="293" width="667" height="486" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1591340147053" />
+    <state x="505" y="240" width="670" height="676" key="search.everywhere.popup" timestamp="1588953270981">
+      <screen x="0" y="23" width="1680" height="985" />
+    </state>
+    <state x="505" y="240" width="670" height="676" key="search.everywhere.popup/0.23.1680.985@0.23.1680.985" timestamp="1588953270981" />
+  </component>
+</project>

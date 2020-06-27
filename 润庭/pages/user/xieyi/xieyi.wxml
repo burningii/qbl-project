@@ -1,0 +1,3 @@
+<view class="xieyi-container">
+    {{xieyi[0].proContent}}
+</view>

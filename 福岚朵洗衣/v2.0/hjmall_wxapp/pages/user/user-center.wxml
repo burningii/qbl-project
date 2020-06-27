@@ -1,0 +1,68 @@
+<view class="user-center-container">
+    <view class="top-info-container">
+        <view class="my-flex-spa-btw top-info-wrapper">
+            <view class="my-flex-col">
+                <view>总佣金(元)</view>
+                <view class="price-font">{{pageInfo.amount}}</view>
+            </view>
+            <view class="my-flex-col">
+                <view>昨日佣金(元)</view>
+                <view class="price-font">{{pageInfo.pay_time}}</view>
+            </view>
+        </view>
+        <view class="my-flex-spa-btw top-info-line">
+            <view>账户余额：{{userMoney}}</view>
+            <view><van-button bind:click="cashNow" round color="#33FF00" custom-style="color: #000;width: 85rpx;" size="small">提现</van-button></view>
+        </view>
+    </view>
+    <view class="middle-info">
+        <view class="middle-title">
+            {{pageInfo.store_name}}
+        </view>
+        <view class="my-flex-spa-btw title-content">
+            <view class="my-flex-col">
+                <view>今日营业额(元)</view>
+                <view class="price-font2">{{pageInfo.day_time}}</view>
+            </view>
+            <view class="my-flex-col">
+                <view>今日下单数</view>
+                <view class="price-font2">{{pageInfo.day_count}}</view>
+            </view>
+            <view class="my-flex-col">
+                <view>当月营业额(元)</view>
+                <view class="price-font2">{{pageInfo.curent_month}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="bottom-info">
+        <van-cell-group border="{{false}}">
+            <van-cell custom-class="my-cell" bindtap="goComminPage" icon="chat-o" size="large" title="佣金明细" is-link />
+            <van-cell custom-class="my-cell" bindtap="goTixianPage" icon="chat-o" size="large" title="提现明细" is-link />
+<!--            <van-cell custom-class="my-cell" icon="chat-o" size="large" title="结算银行卡" is-link />-->
+<!--            <van-cell custom-class="my-cell" icon="chat-o" size="large" title="设置" is-link />-->
+        </van-cell-group>
+    </view>
+</view>
+
+<van-dialog
+        use-slot
+        title="金额"
+        show="{{ showPhoneVisible }}"
+        show-cancel-button
+        bind:confirm="confirmPhone"
+        bind:cancel="cancelPhone"
+>
+    <van-cell-group border="{{true}}">
+        <van-field
+                value="{{ cashMoney }}"
+                placeholder="请输入提现金额"
+                type="number"
+                custom-style="margin: 25rpx;"
+                size="large"
+                label="金额"
+                error-message="{{errorMsg}}"
+                border="{{true}}"
+                bind:change="onChangeMoney"
+        />
+    </van-cell-group>
+</van-dialog>

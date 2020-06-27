@@ -1,0 +1,15 @@
+<view class="factory-container">
+    <view class="order-no-container">
+        <block wx:for="{{orderList}}" wx:key="index">
+            <view class="order-no-list">
+                <view>用户手机: <text>{{item.phone}}</text></view>
+                <view>类型: <text>{{item.shopname}}</text></view>
+                <view>条形码: <text>{{item.shape}}</text></view>
+            </view>
+        </block>
+    </view>
+    <view class="btn-add-shape-wrapper">
+        <van-button bind:click="scanShapeByScan" custom-style="width: 35%;border-radius: 30px;" type="default">扫一扫</van-button>
+        <van-button wx:if="{{orderList.length>0}}" bind:click="onSubmitOrder" custom-style="width: 35%;border-radius: 30px;margin-left: 25rpx;" color="#FC4D35" type="default">提交订单</van-button>
+    </view>
+</view>

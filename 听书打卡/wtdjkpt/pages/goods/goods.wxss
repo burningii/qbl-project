@@ -1,0 +1,279 @@
+@import "../../wxParse/wxParse.wxss";
+
+@import "../../components/shopping_cart/shopping_cart.wxss";
+
+@import "../../components/specifications_model/specifications_model.wxss";
+
+@import "../../components/goods/specifications_model.wxss";
+
+@import "../../components/goods/goods_banner.wxss";
+
+@import "../../components/goods/goods_info.wxss";
+
+@import "../../components/goods/goods_buy.wxss";
+
+@import "../../components/goods/goods_recommend.wxss";
+
+@import "../../components/quick-navigation/quick-navigation.wxss";
+
+view {
+    overflow: visible;
+}
+
+.no-scroll {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.share-tip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: rgba(0,0,0,0.65);
+}
+
+.goods-detail {
+    box-sizing: border-box;
+    padding: 24rpx 0;
+    background: #fff;
+}
+
+.goods-detail text,.goods-detail image,.goods-detail view {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.cart-nav {
+    position: fixed;
+    top: 180rpx;
+    right: 24rpx;
+    background: rgba(255,255,255,0.5);
+    font-size: 0;
+    padding: 20rpx;
+    border-radius: 999rpx;
+    box-shadow: 0 1rpx 3rpx rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+.cart-nav image {
+    width: 42rpx;
+    height: 42rpx;
+}
+
+.tab-group .tab-group-header {
+    background: #fff;
+    border-bottom: 1rpx solid #e3e3e3;
+}
+
+.tab-group .tab-group-header .tab-group-item text {
+    height: 100rpx;
+    border-bottom: 2rpx solid transparent;
+}
+
+.tab-group .tab-group-header .tab-group-item.active text {
+    color: #ff4544;
+    border-bottom-color: #ff4544;
+}
+
+.tab-group .tab-group-body .tab-group-item {
+    display: none;
+}
+
+.tab-group .tab-group-body .tab-group-item.active {
+    display: block;
+}
+
+.comment-count {
+    background: #fff;
+    margin-bottom: 20rpx;
+}
+
+.comment-count .comment-count-item {
+    text-align: center;
+    padding: 20rpx 0;
+    font-size: 9pt;
+}
+
+.comment-item {
+    background: #fff;
+    border-bottom: 1rpx solid #e3e3e3;
+    padding: 32rpx 24rpx;
+}
+
+.comment-item .nickname {
+    padding-left: 24rpx;
+    height: 70rpx;
+    font-weight: bolder;
+}
+
+.comment-item .addtime {
+    color: #888;
+}
+
+.comment-item .pic-list {
+    margin-left: -8rpx;
+    margin-top: -8rpx;
+}
+
+.comment-item .pic-item {
+    width: 200rpx;
+    height: 200rpx;
+    margin-left: 8rpx;
+    margin-top: 8rpx;
+    display: inline-block;
+}
+/*diy start*/
+.modal-lession{
+    padding: 27rpx;
+}
+
+.mdoal-top-title{
+    border-left: 4px solid #CA0C16;
+    padding-left: 5px;
+}
+.lession-list{
+    margin-bottom: 20rpx;
+}
+.lession-item{
+    /*border-top: 1px solid #cccccc;*/
+    border-bottom: 1px solid #cccccc;
+    padding: 17rpx;
+    margin-top: 10px;
+}
+
+.play-img{
+    width: 90rpx;
+    height: 90rpx;
+}
+.active-color{
+    color: #CA0C16;
+}
+.fixed-btn{
+    /*background-color: #cccccc;*/
+    border-top: 2px solid #cccccc;
+    padding: 18rpx;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*color: #FFFFFF;*/
+}
+.lession-list2{
+    margin: 30rpx 0;
+}
+
+.lession-item2{
+    /*height: 155rpx;*/
+    background-color: #cccccc;
+    border-radius: 8px;
+    padding: 20rpx;
+    /*width: 100rpx;*/
+    margin-left: 10px;
+    text-align: center;
+    font-size: 26rpx;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.video-wrapper{
+    padding: 20rpx 0;
+}
+
+.video-content{
+    width: 100%;
+}
+.lession-item2-content{
+    width: 220rpx;
+    /*line-height: 116rpx;*/
+}
+.active-bgc{
+    background-color: #CA0C16;
+    color: #FFFFFF;
+}
+/*diy end*/
+
+.reply {
+    margin: 20rpx 24rpx 20rpx 0rpx;
+    border-radius: 16rpx;
+    background: #f7f7f7;
+    font-size: 11pt;
+    padding: 22rpx 30rpx;
+    color: #ff4544;
+}
+
+.reply-content {
+    display: inline;
+    color: #666;
+}
+
+.comment-item .score-tag {
+    display: inline-block;
+    background: #eee;
+    font-size: 9pt;
+    padding: 4rpx 12rpx;
+    border-radius: 5rpx;
+}
+
+.loading-more {
+    text-align: center;
+    opacity: 0;
+}
+
+.loading-more.active {
+    opacity: 1;
+}
+
+.loading-more image {
+    width: 160rpx;
+    height: 80rpx;
+}
+
+.pic-left {
+    margin-right: 5rpx;
+}
+
+.pic-right {
+    margin-left: 5rpx;
+}
+
+.contact {
+    background: #118eea;
+    color: #fff;
+}
+/* 技师详情 */
+.info-wrap{
+  background: #fff;
+}
+.item-group{
+  width: 355rpx;
+  height: 140rpx;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.artificer-basicInfo{
+  padding: 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 20rpx;
+}
+.item-til1{
+ padding: 20rpx;
+ font-size: 32rpx;
+}
+.item-til1 view{
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #e3e3e3;
+}
+.item-top{
+  color: #000;
+  font-size: 30rpx;
+}
+.item-bottom{
+  font-size: 26rpx;
+  color: #666;
+}

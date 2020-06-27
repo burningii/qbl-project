@@ -1,0 +1,73 @@
+page {
+    overflow:hidden;
+    position:fixed;
+    background-image:url('https://api5.qibuluo.net/addons/zjhj_mall/bg02.png');
+    margin: 0px;
+    /*下面的是关键的设置100%显示*/
+    background-size: 100% 100%;
+}
+.img-wrapper{
+    width: 70px;
+    height: 70px;
+}
+.item-wrapper{
+    width: 87%;
+}
+.item-wrapper2{
+    width: 360px;
+    margin-top: 40px;
+}
+.top-info{
+    margin-top: 25px;
+}
+.center-menus{
+    position: relative;
+}
+.img-wrapper2{
+    width: 45px;
+    height: 45px;
+}
+.center-shenbao{
+    padding: 48rpx 40rpx;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.menus-item{
+    background-color: #fff;
+    padding: 50rpx 5rpx;
+    border-radius: 12px;
+    width: 27%;
+}
+.img-arrow{
+    width: 20px;
+    height: 27px;
+    position: absolute;
+}
+.arrow1{
+    top: 100px;
+    left: 168px;
+}
+.arrow2{
+    top: 182px;
+    left: 105px;
+    transform: rotate(-90deg);
+}
+.arrow3{
+    top: 182px;
+    right: 105px;
+    transform: rotate(90deg);
+}
+.arrow4{
+    bottom: 100px;
+    left: 168px;
+}
+.marginTop10{
+    margin-top: 20px;
+}
+
+.mensu-bottom{
+    padding: 48rpx 40rpx;
+    background-color: #fff;
+    border-radius: 12px;
+}

@@ -1,0 +1,315 @@
+.item-wrap{
+  padding: 20rpx;
+}
+.tab-wrap{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #04cad9;
+}
+.tab1,.tab2{
+  width: 200rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background: #04cad9;
+  border-radius: 20rpx 20rpx 0 0;
+  color: #fff;
+}
+.tab-selected{
+  background: #f93;
+}
+/* add */
+.item-group{
+  padding: 20rpx 0;
+  /* border-bottom: 4rpx solid #ccc; */
+  display: flex;
+  justify-content: flex-start;
+}
+.item-left{
+  width: 120rpx;
+  margin-right: 20rpx;
+}
+.item-left image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.item-right{
+  width: 570rpx;
+}
+.item-username{
+  font-size: 32rpx;
+  color: #586c95;
+}
+.item-text{
+  padding: 20rpx 0;
+  font-size: 28rpx;
+  line-height: 45rpx;
+}
+.item-image{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10rpx;
+}
+.item-image image{
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 20rpx;
+}
+.item-image video{
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 20rpx;
+}
+.item-time{
+  color: #666;
+  height: 60rpx;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.answerClick{
+  height: 40rpx;
+  width: 60rpx;
+  background: red;
+  border-radius: 10rpx;
+  text-align: center;
+  background: #ccc;
+  margin-top: 10rpx;
+}
+.enlarge{
+  position:absolute;
+  z-index: 100;
+  transform: scale(2.0);
+  transform-origin: left bottom;
+}
+page{
+  background: #fff;
+  position: relative;
+  width: 100%;
+  height: 1334rpx;
+}
+.modal{
+  width: 100%;
+  background: #666;
+  height: 1334rpx;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  opacity: 0.5;
+}
+.answer-box{
+  display: flex;
+  justify-content: flex-end;
+}
+.answer{
+  background: #2e2e2e;
+  border-radius: 10rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 200rpx;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+}
+.answer image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.img-box{
+  display: flex;
+  align-items: center;
+}
+.answer-txt{
+  margin: 0 30rpx 0 10rpx;
+}
+textarea{
+  width: 550rpx;
+  height: 270rpx;
+  border: 2rpx solid #ccc;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}
+.reponse-box{
+  background: #f7f7f7;
+  padding: 20rpx 20rpx 0 20rpx;
+}
+.response-top{
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #ebebeb;  
+}
+.response-txt{
+  padding-top: 20rpx;
+  line-height: 1.8;
+  font-size: 28rpx;
+}
+.response-txt .expert{
+  color: #586c95;
+}
+.addmore{
+  width: 100%;
+  padding: 20rpx 0;
+  position: fixed;
+  z-index: 100;
+  bottom: 0rpx;
+  font-size: 28rpx;
+  text-align:center;
+  border-top: 1rpx solid #2e2e2e;
+}
+/* .scroll{
+  position: fixed;
+  bottom: 100rpx;
+} */
+
+/* form */
+page{
+  font-family: "Microsoft YaHei","\5b8b\4f53",sans-serif,tahoma;
+  background: #fff;
+}
+form .item-wrap{
+  padding: 20rpx;
+}
+form .item-top{
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+}
+form .item-top image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+form .item-top text{
+  font-size: 32rpx;
+  color: #8296a0;
+}
+form .item-txt{
+  padding: 20rpx 0;
+  width: 100%;
+  height: 184rpx;
+  position: relative;
+}
+form .item-txt textarea{
+  border: 2rpx solid #c6d1d9;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx;
+  height: 160rpx;
+  resize: none;
+  outline: none;
+  font-size: 26rpx;
+  line-height: 1.5;
+  color: #333;
+}
+form .item-txt text{
+  position: absolute;
+  right: 40rpx;
+  bottom: 20rpx;
+  font-size: 24rpx;
+}
+form .item-bottom-wrap{
+  margin-top: 40rpx;
+  width: 100%;
+  height: 510rpx;
+  border: 2rpx solid #c6d1d9;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+form .item-bottom-wrap textarea{
+  width: 100%;
+  height: 180rpx;
+  border-bottom: 2rpx solid #c6d1d9;
+}
+form tip{
+  color: #c6d1d9;
+  font-size: 26rpx;
+}
+form .type-choose{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+form .type-choose text{
+  padding: 20rpx 10rpx;
+  font-size: 24rpx;
+}
+form .selected{
+  color: #4aca6d;
+  border-bottom: 2rpx solid #4aca6d;
+}
+form .uploadImage{
+  padding-top: 20rpx;
+}
+form .uploadImage image,form .uploadVideo image,form .uploadRadio image{
+  position: relative;
+  width: 180rpx;
+  height: 180rpx;
+  border: 2rpx dotted #ccc;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+form .uploadImage image text{
+  position: absolute;
+  right: 0rpx;
+  top:0;
+  line-height:1;
+  padding: 0 10rpx;
+  font-size: 48rpx;
+  background: #4aca6d;
+  color: #fff;
+  z-index: 100;
+}
+form .uploadVideo video{
+  width: 180rpx;
+  height: 180rpx;
+}
+form .videoWrap{
+  display: flex;
+  height: 240rpx;
+  justify-content: flex-start;
+  align-items: center;
+}
+form .videoWrap video{
+  margin-right: 20rpx;
+}
+form .videoWrap .delVideo,.delRadio{
+  display: inline-block;
+  background: #4aca6d;
+  color: #fff;
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+}
+form .delRadio{
+  margin-top: -20rpx;
+  margin-left: 20rpx;
+}
+form .radio-wrap{
+  width: 180rpx;
+  height: 220rpx;
+  display: inline-block;
+  padding-bottom: 20rpx;
+}
+form .radio-wrap text{
+   display: block;
+   color: #4aca6d;
+   font-size: 24rpx;
+   text-align: center;
+}
+form .submit-btn{
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  background: #4aca6d;
+  color:#fff;
+  font-size: 28rpx;
+  border-radius: 0;
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border:none;
+  outline: none;
+}
+form .btn-wrap{
+  position: relative;
+}

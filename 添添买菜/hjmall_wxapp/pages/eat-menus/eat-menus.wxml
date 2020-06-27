@@ -1,0 +1,48 @@
+<view class="eat-menus-container">
+    <view bindtap="goSearch" class='top-search-wrapper'>
+        <van-search shape="round"
+                    disabled
+                    field-class="search-wrapper"
+                    placeholder="请输入搜索关键词"/>
+    </view>
+    <view style="height: 100rpx"></view>
+    <!--    做饭灵感-->
+    <view class="cookie-container">
+        <view class="cookie-pa">
+            <view class="cookie-title cookie-mg">做饭灵感</view>
+        </view>
+        <!--        菜单栏-->
+        <van-sticky offset-top="50">
+            <view class="my-flex-spa-be menus-cookie">
+                <van-tabs border="{{false}}" class="my-tabs" active="{{ active }}" line-height="2" color="#00c203"
+                          bind:change="onChangeMenus">
+                    <van-tab
+                            wx:for="{{menus}}"
+                            wx:key="index"
+                            title="{{item.title}}"/>
+                </van-tabs>
+                <view bindtap="goAllMenus">
+                    <van-icon size="17" style="position: relative;top: 6rpx" name="apps-o"/>
+                    全部菜谱
+                </view>
+            </view>
+        </van-sticky>
+        <!--        菜谱列表页面-->
+        <view class="menus-content-wrapper">
+            <view class="my-flex cookie-pa menus-content">
+                <view class="my-flex-col menus-item {{index%2!==0 ? 'menus-item-marg':''}}"
+                      wx:for="{{menusList}}"
+                      bindtap="goInfo"
+                      data-id="{{item.id}}"
+                      wx:key="index"
+                >
+                    <image class="item-img" src="https://s1.ax1x.com/2020/05/07/YZ0CGT.jpg"/>
+                    <view class="my-flex-col item-bottom-info">
+                        <view style="font-size: 27rpx">清蒸你妈</view>
+                        <view class="item-time">一般 · 20分钟</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,209 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/goods/goods",
+    "pages/list/list",
+    "pages/user/user",
+    "pages/search/search",
+    "pages/order-submit/order-submit",
+    "pages/order/order",
+    "pages/order-detail/order-detail",
+    "pages/order-refund/order-refund",
+    "pages/order-refund-detail/order-refund-detail",
+    "pages/share-qrcode/share-qrcode",
+    "pages/order-comment/order-comment",
+    "pages/article-detail/article-detail",
+    "pages/cat/cat",
+    "pages/coupon/coupon",
+    "pages/clerk/clerk",
+    "pages/coupon-list/coupon-list",
+    "pages/topic-list/topic-list",
+    "pages/topic/topic",
+    "pages/web/web",
+    "pages/shop-detail/shop-detail",
+    "pages/card/card",
+    "pages/card-clerk/card-clerk",
+    "pages/pt/index/index",
+    "pages/pt/list/list",
+    "pages/pt/details/details",
+    "pages/pt/order-submit/order-submit",
+    "pages/pt/order/order",
+    "pages/pt/order-details/order-details",
+    "pages/pt/group/details",
+    "pages/pt/express-detail/express-detail",
+    "pages/pt/order-comment/order-comment",
+    "pages/pt/comment/comment",
+    "pages/pt/clerk/clerk",
+    "pages/pt/order-refund/order-refund",
+    "pages/pt/order-refund-detail/order-refund-detail",
+    "pages/pt/search/search",
+    "pages/book/index/index",
+    "pages/book/details/details",
+    "pages/book/submit/submit",
+    "pages/book/order/order",
+    "pages/book/order/details",
+    "pages/book/shop/shop",
+    "pages/book/clerk/clerk",
+    "pages/book/order-comment/order-comment",
+    "pages/book/comment/comment",
+    "pages/fxhb/open/open",
+    "pages/fxhb/detail/detail",
+    "pages/quick-purchase/index/index",
+    "pages/balance/balance",
+    "pages/recharge/recharge",
+    "pages/bangding/bangding",
+    "pages/web/login/login",
+    "pages/web/authorization/authorization",
+    "pages/balance/detail",
+    "pages/login/login",
+    "pages/shop/shop",
+    "pages/miaosha/miaosha",
+    "pages/miaosha/details/details",
+    "pages/miaosha/order-submit/order-submit",
+    "pages/miaosha/order/order",
+    "pages/miaosha/order-detail/order-detail",
+    "pages/miaosha/express-detail/express-detail",
+    "pages/miaosha/order-comment/order-comment",
+    "pages/miaosha/order-refund/order-refund",
+    "pages/miaosha/order-refund-detail/order-refund-detail",
+    "pages/integral-mall/index/index",
+    "pages/integral-mall/shuoming/index",
+    "pages/integral-mall/detail/index",
+    "pages/integral-mall/exchange/index",
+    "pages/integral-mall/register/index",
+    "pages/integral-mall/coupon-info/index",
+    "pages/integral-mall/goods-info/index",
+    "pages/integral-mall/order-submit/index",
+    "pages/integral-mall/order/order",
+    "pages/integral-mall/clerk/clerk",
+    "pages/store-disabled/store-disabled",
+    "pages/new-order-submit/new-order-submit",
+    "pages/coupon-detail/coupon-detail",
+    "pages/card-detail/card-detail",
+    "pages/service-point/servicePoint",
+    "pages/apply-role/apply-role",
+    "pages/navigator-to/navigator-to",
+    "pages/service-jiedan/service-jiedan",
+    "pages/factory-take/factory-take",
+    "pages/factory-order/factory-order",
+    "pages/wuliu-factory/wuliu-factory",
+    "pages/navto-scan/navto-scan",
+    "pages/factory-wuliu-order/factory-wuliu-order",
+    "pages/wuliu-dabao/wuliu-dabao",
+    "pages/navto-scan2/navto-scan",
+    "pages/qrcode-page/qrcode-page",
+    "pages/navto-scan3/navto-scan",
+    "pages/navto-scan5/navto-scan",
+    "pages/user/user-center",
+    "pages/user/user-notice",
+    "pages/query-order/query-order",
+    "pages/business-center/index",
+    "pages/new-order-submit/buinnes-pay",
+    "pages/wuliu-status-order/index",
+    "pages/wuliu-shoujian/index",
+    "pages/navto-scan4/navto-scan",
+    "pages/wuliu-status-order/list",
+    "pages/navto-scan6/navto-scan",
+    "pages/business-restPwd/index"
+  ],
+  "subPackages": [
+    {
+      "root": "mch",
+      "pages": [
+        "m/myshop/myshop",
+        "m/setting/setting",
+        "m/goods/goods",
+        "m/order/order",
+        "m/order-detail/order-detail",
+        "m/order-send/order-send",
+        "m/shop-qrcode/shop-qrcode",
+        "m/account/account",
+        "m/account-rest/account-rest",
+        "m/account-log/account-log",
+        "m/cash-log/cash-log",
+        "m/tongji/tongji",
+        "m/order-refund/order-refund",
+        "apply/apply",
+        "shop/shop",
+        "shop-list/shop-list",
+        "shop-cat/shop-cat",
+        "m/cash/cash",
+        "m/settle_detail/settle_detail",
+        "shop-summary/shop-summary"
+      ]
+    },
+    {
+      "root": "pond",
+      "pages": [
+        "pond/pond",
+        "prize/prize",
+        "rule/rule"
+      ]
+    },
+    {
+      "root": "bargain",
+      "pages": [
+        "goods/goods",
+        "list/list",
+        "activity/activity",
+        "order-list/order-list",
+        "rule/rule"
+      ]
+    },
+    {
+      "root": "scratch",
+      "pages": [
+        "index/index",
+        "prize/prize",
+        "rule/rule"
+      ]
+    },
+    {
+      "root": "lottery",
+      "pages": [
+        "index/index",
+        "detail/detail",
+        "goods/goods",
+        "prize/prize",
+        "rule/rule",
+        "lucky-code/lucky-code"
+      ]
+    },
+    {
+      "root": "step",
+      "pages": [
+        "index/index",
+        "detail/detail",
+        "goods/goods",
+        "dare/dare",
+        "rules/rules",
+        "top/top",
+        "join/join",
+        "log/log",
+        "share/share",
+        "friend/friend"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Mall",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#EFEFF4"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "0"
+  ],
+  "debug": false,
+  "usingComponents": {
+    "app-navigation": "/components/quick-navigation-components/index"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap13.json"
+}

@@ -1,0 +1,168 @@
+<view class="page1-container">
+    <view class="form-info">
+        <van-cell-group>
+            <van-field
+                    value="{{ data.community }}"
+                    placeholder="请输入社区名称"
+                    label="社区名称"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.street }}"
+                    placeholder="请输入街道名称"
+                    label="街道名称"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.neighborhood }}"
+                    placeholder="请输入小区名称"
+                    label="小区名称"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ '1'==data.houseType ? '公房':'私房' }}"
+                    label="房屋性质"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.hostName }}"
+                    placeholder="请输入房主姓名"
+                    label="房主姓名"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.hostIdNo}}"
+                    placeholder="请输入房主身份证号码"
+                    label="房主身份证号码"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ '1'==data.hostGender ?'男':'女' }}"
+                    label="性别"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.hostNation }}"
+                    placeholder="请输入民族"
+                    label="民族"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.hostTel }}"
+                    placeholder="请输入联系电话"
+                    label="联系电话"
+                    type="number"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.propertyNo }}"
+                    placeholder="请输入房屋产权证号"
+                    label="房屋产权证号"
+                    size="large"
+                    type="number"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.contractNo }}"
+                    label="购房合同编号"
+                    size="large"
+                    type="number"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.houseAddr }}"
+                    placeholder="请输入房屋详细地址"
+                    label="房屋详细地址"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.buildNo }}"
+                    placeholder="请输入楼号"
+                    label="楼号"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.unitNo }}"
+                    placeholder="请输入单元号"
+                    label="单元号"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.roomNo }}"
+                    placeholder="请输入房号"
+                    label="房号"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.propertyText }}"
+                    label="产权类型"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.totalArea }}"
+                    placeholder="请输入房屋总面积"
+                    label="房屋总面积"
+                    size="large"
+                    type="number"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.strctText }}"
+                    label="房屋结构"
+                    size="large"
+                    bindtap="showModal4"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.remark }}"
+                    placeholder="请输入备注"
+                    label="备注"
+                    size="large"
+                    autosize
+                    type="textarea"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.houseStateText }}"
+                    label="房屋状态"
+                    size="large"
+                    disabled
+            />
+            <view class="upload-img">
+                <image bindtap="showPreImage" mode="aspectFit" data-src="{{data.idPic}}" src="{{data.idPic}}"
+                       class="upload-image"/>
+            </view>
+            <view class="upload-img">
+                <image bindtap="showPreImage" mode="aspectFit" data-src="{{data.idPicBack}}" src="{{data.idPic}}"
+                       class="upload-image"/>
+            </view>
+            <view class="upload-img">
+                <image bindtap="showPreImage" mode="aspectFit" data-src="{{data.propertyPic}}"
+                       src="{{data.propertyPic}}" class="upload-image"/>
+            </view>
+            <view class="upload-img">
+                <image bindtap="showPreImage" mode="aspectFit" data-src="{{data.housePic}}" src="{{data.housePic}}"
+                       class="upload-image"/>
+            </view>
+            <!--            <view wx:if="{{data.houseState!=3 && data.houseState!=1}}" class="my-flex-spa-ar" style="padding: 50rpx;">-->
+            <view wx:if="{{data.houseState==2}}"  class="my-flex-spa-ar" style="padding: 50rpx;margin-bottom: 60px">
+                <van-button bind:click="checkNow" round color="#F86732">通过</van-button>
+                <van-button round bind:click="goChuShen" color="#F86732">不通过</van-button>
+            </view>
+        </van-cell-group>
+    </view>
+</view>

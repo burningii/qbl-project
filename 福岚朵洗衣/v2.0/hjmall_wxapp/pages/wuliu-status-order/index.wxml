@@ -1,0 +1,14 @@
+<view class="status-cotainer">
+    <view class="my-flex-col status-list">
+        <view wx:for="{{orderList}}"
+              wx:key="index"
+              class="my-flex-spa-be status-item"
+              wx:if="{{orderList.length>0}}"
+              bindtap="goInfo"
+              data-id="{{item.count}}">
+            <view>{{item.name}}</view>
+            <view>{{item.val}}件</view>
+        </view>
+        <view wx:if="{{0==orderList.length}}" class="my-no-more">没有更多了</view>
+    </view>
+</view>

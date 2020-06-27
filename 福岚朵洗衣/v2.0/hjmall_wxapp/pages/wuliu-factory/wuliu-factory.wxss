@@ -1,0 +1,14 @@
+.wuliu-factory-container {
+
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 155rpx;
+}
+
+.my-class-popup {
+    padding: 25rpx;
+}

@@ -1,0 +1,26 @@
+<view class="item-wrap">
+    <view class="item-top">
+       <view class="item-left">
+             <image src="" bindtap='playEvent' wx:if='{{!status}}'></image>
+             <video src="../.././images/video1.mp4" wx:else autoplay="true"></video>
+       </view>
+       <view class="item-right">
+          <view class="item-name">Node.JS培训课程—从原理到项目Node.JS培训课程—从原理到项目</view>
+          <view class="item-speak">讲师：nodejs专家李文红</view>
+       </view>
+    </view>
+    <view class="item-catalogue">目录</view>
+    <view class="item-group">
+        <view class='item-chapter common'><view class='chapter-txt1'>章节1</view><view class="chapter-txt2">1NodeJS概述及Node搭建服务器</view></view>
+      <navigator url='/pages/playvideo/playvideo'>
+        <view class="item-chapter-course"><view class="common"><view class="course-txt1 ">课时1</view><view class="course-txt2">nodeJS概述+环境安装（node使用场景)</view></view><view class="play-btn"><image></image></view></view>
+      </navigator>
+         <view class="item-chapter-course"><view class="common"><view class="course-txt1 ">课时1</view><view class="course-txt2">nodeJS概述+环境安装（node使用场景)</view></view><view class="play-btn"><image></image></view></view>
+    </view>
+        <view class="item-group">
+        <view class='item-chapter common'><view class='chapter-txt1'>章节2</view><view class="chapter-txt2">1NodeJS概述及Node搭建服务器</view></view>
+           <view class="item-chapter-course"><view class="common"><view class="course-txt1 ">课时1</view><view class="course-txt2">nodeJS概述+环境安装（node使用场景)</view></view><view class="play-btn"><image></image></view></view>
+
+         <view class="item-chapter-course"><view class="common"><view class="course-txt1 ">课时1</view><view class="course-txt2">nodeJS概述+环境安装（node使用场景)</view></view><view class="play-btn"><image></image></view></view>
+    </view>
+</view>

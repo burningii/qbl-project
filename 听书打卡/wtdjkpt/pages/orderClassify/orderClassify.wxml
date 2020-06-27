@@ -1,0 +1,70 @@
+<view class="order-class-container">
+    <view class="top-classify-container">
+        <van-dropdown-menu class="all-list-content">
+            <van-dropdown-item bind:change="onChangeMenus" class="all-list-wrapper" value="{{ value1 }}" options="{{ option1 }}"/>
+            <view bindtap="priceSort" class="my-flex price-wrapper" style="left: -244rpx">
+                <view>价格</view>
+                <view class="my-flex-col" style="margin-left: 3px">
+                    <image class="icon-sort" src="{{imgUp}}"/>
+                    <image style="margin-top: 2px" class="icon-sort" src="{{imgdown}}"/>
+                </view>
+            </view>
+            <view bindtap="hotSort" class="my-flex price-wrapper" style="left: -69rpx">
+                <view>热度</view>
+                <view class="my-flex-col" style="margin-left: 3px">
+                    <image class="icon-sort" src="{{imgUp1}}"/>
+                    <image style="margin-top: 2px" class="icon-sort" src="{{imgdown2}}"/>
+                </view>
+            </view>
+        </van-dropdown-menu>
+    </view>
+    <view class="lession-list-wrapper">
+        <van-transition show="{{ showAnimation }}" name="slide-up"
+                        duration="{{ { enter: 300, leave: 1 } }}">
+            <view class="my-flex lession-list-content">
+                <view class="lession-item"
+                      wx:for="{{lessionList}}"
+                      wx:if="{{lessionList.length>0}}"
+                      bindtap="goLession"
+                      data-item="{{item}}"
+                      wx:key="index">
+                    <view class="my-flex-col item-top-wrapper">
+                        <image class="lession-img" src="{{item.cover_pic}}"/>
+                        <view style="padding: 25rpx">{{item.name}}</view>
+                    </view>
+                    <view class="my-flex-spa-be item-bottom-wrapper"
+                          style="padding: 25rpx">
+                        <view class="my-flex">
+                            <van-icon color="#0E9AED" name="service" />
+                            <view style="color: #0E9AED;margin-left: 4px">¥{{item.price}}</view>
+                        </view>
+                        <view class="nums-learn">{{item.virtual_sales}}人在学</view>
+                    </view>
+                </view>
+            </view>
+        </van-transition>
+        <view wx:if="{{0==lessionList.length}}" class="my-no-more">没有更多了</view>
+    </view>
+</view>
+
+
+<!--<view class="item-wrap">-->
+<!--<navigator url='/pages/artificerList/artificerList?id={{item.id}}&type={{type}}' wx:for='{{lessionList}}' wx:key='index' hover-class="none">-->
+<!--  <view class="item-group">-->
+<!--    <image src='{{item.pic_url || "../.././images/carServe.png"}}'></image>-->
+<!--    <text>{{item.name}}</text>-->
+<!--   </view>-->
+<!--</navigator>-->
+<!--&lt;!&ndash;</view>&ndash;&gt;-->
+<!--<view class='item-wrap1'>-->
+<!--   <navigator url='/pages/coursetxtInfo/courseInfo' hover-class="none" wx:for='{{lessionList}}' wx:key='*this'>-->
+<!--   <view class="item-group {{(index+1)%3==0?'special':''}}" >-->
+<!--      <view class="item-left"><image src=""></image></view>-->
+<!--      <view class="item-right">-->
+<!--         <view class="item-til">{{item.til}}</view>-->
+<!--         <view class="item-author-name">{{item.author}}</view>-->
+<!--         <view class="item-author-description">{{item.des}}</view>-->
+<!--      </view>-->
+<!--   </view>-->
+<!--   </navigator>-->
+<!--</view>-->

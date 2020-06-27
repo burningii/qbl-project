@@ -1,0 +1,54 @@
+<view class="scan-container">
+    <view class="scan-top-container">
+        <view class="scan-top-input">
+            <view class="scan-top-left">
+                <van-cell-group>
+                <van-field
+                        value="{{ scanCodeValue }}"
+                        placeholder="请输入条形码"
+                        label="条形码"
+                        input-class="custom-input"
+                        border="{{ false }}"
+                        custom-style=""
+                        bind:change="onScanCodeChange"
+                />
+            </van-cell-group>
+            </view>
+            <view bindtap="scanQrCode" class="scan-input-right">
+                <van-icon size="50rpx" name="scan" />
+            </view>
+        </view>
+        <view class="scan-top-btn">
+            <van-button bindtap="loadItemByBarCode" color="#FFEDEA" custom-style="border-radius: 28px;width: 200rpx;color: #FC4D35;font-size: 33rpx;">确定</van-button>
+        </view>
+    </view>
+    <view class="scan-bottom-data">
+        <view class="scan-bottom-title">
+            <view><image src="https://api5.qibuluo.net/addons/zjhj_mall/left@2x.png"/></view>
+            <view class="scan-bottom-text">查询结果</view>
+            <view><image src="https://api5.qibuluo.net/addons/zjhj_mall/right@2x.png"/></view>
+        </view>
+        <view class="scan-bottom-item-container">
+            <view wx:for="{{orderList}}" wx:key="index" class="scan-item zb-flex-row-between">
+                <view class="zb-flex-row">
+                    <view><text style="color: #222222;font-weight: 700;font-size: 31rpx;">{{item.shape}}</text></view>
+                    <view class="scan-item-icon-common">{{item.shopname}}</view>
+                </view>
+                <view class="scan-item-price">
+                    ¥<text>{{item.pay_price}}</text>
+                </view>
+            </view>
+            <view style="margin-bottom: 200rpx;"></view>
+        </view>
+    </view>
+</view>
+
+<view class="zb-flex-row-between scan-bottom-btn-group">
+    <view class="scan-group-nums">共{{orderList.length}}件</view>
+    <view class="scan-group-total-price">合计:<text class="price-group1">￥<text class="price-group">{{orderTotalPrice}}</text></text></view>
+    <view class="scan-group-btn"><van-button bind:click="sureGitOrder" custom-style="border-radius: 30px;" color="linear-gradient(to right, #DA251C, #FD7237)">确认交衣</van-button></view>
+</view>
+
+<van-popup show="{{ showQrCodeVisible }}" z-index="2001" custom-class="my-class-popup" bind:close="onClose">
+    <image style="width: 500rpx;height: 500rpx;" src="{{qrCodeSrc}}"/>
+</van-popup>

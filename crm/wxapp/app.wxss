@@ -1,0 +1,56 @@
+
+page,block,view,scroll-view,swiper,movable-view,icon,text,progress,button,checkbox,form,input,label,picker,picker-view,radio,slider,switch,textarea,navigator,audio,image,video,map,canvas,contact-button,cover-image,cover-view {
+  box-sizing: border-box;
+}
+
+button {
+  position:relative;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:14px;
+  padding-right:14px;
+  box-sizing:border-box;
+  font-size:18px;
+  text-align:center;
+  text-decoration:none;
+  line-height:2.55555556;
+  border-radius:5px;
+  -webkit-tap-highlight-color:transparent;
+  overflow:hidden;
+  color:#000000;
+  background-color:#F8F8F8;
+}
+
+
+.my-flex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.my-flex-spa-be{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.my-flex-spa-ar{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.my-flex-col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.my-no-more{
+  text-align: center;
+  margin-top: 100px;
+  color: #888888;
+  font-size: 26rpx;
+}
+

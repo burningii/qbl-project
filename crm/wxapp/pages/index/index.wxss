@@ -1,0 +1,21 @@
+/* pages/index/index.wxss */
+
+.top-info{
+    height: 300rpx;
+    width: 100%;
+    background-color: #429488;
+    text-align: center;
+    color: #000000;
+    line-height: 300rpx;
+    font-size: 52rpx;
+}
+
+.todo-item{
+    width: 86%;
+    font-size: 32rpx;
+    margin-top: 15px;
+}
+
+.add-btn-wrapper{
+    margin-top: 16px;
+}

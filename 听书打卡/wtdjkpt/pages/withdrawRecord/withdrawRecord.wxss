@@ -1,0 +1,51 @@
+page{
+  background: #fff;
+}
+.item-wrap{
+  padding: 20rpx;
+}
+.item-group{
+  height: 120rpx;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20rpx;
+}
+.item-r{
+  padding-bottom: 20rpx;
+  flex: 1;
+  border-bottom: 2rpx solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+.item-left{
+  margin-right: 20rpx;
+}
+.item-left image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.item-content,.item-right{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.widthdraw{
+  color: #000;
+  font-size: 32rpx;
+}
+.withdraw-time{
+  color: #666;
+  font-size: 28rpx;
+}
+.widthdraw-money{
+  color: #000;
+  font-size: 38rpx;
+  font-weight: 700;
+}
+.withdraw-status{
+  background: #ff9933;
+  text-align: center;
+  color: #fff;
+  font-size: 24rpx;
+}

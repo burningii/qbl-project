@@ -1,0 +1,26 @@
+<view class="verify-container">
+    <view class="top-input">
+        <van-cell-group>
+            <van-field
+                    value="{{ remark }}"
+                    placeholder="请输不通过理由"
+                    border="{{ false }}"
+                    size="large"
+                    label="备注"
+                    type="textarea"
+                    autosize
+                    bind:change="onChangeRemark"
+            />
+        </van-cell-group>
+    </view>
+    <view class="btn-group">
+        <view class="my-flex-spa-ar">
+<!--            <view>-->
+<!--                <van-button bind:click="checkNow" color="#F86732" round>通过</van-button>-->
+<!--            </view>-->
+            <view>
+                <van-button color="#F86732" bind:click="checkNo" round>不通过</van-button>
+            </view>
+        </view>
+    </view>
+</view>

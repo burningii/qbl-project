@@ -1,0 +1,302 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.4",
+	"appid": "wxe42fd1371ce2b827",
+	"projectname": "%E7%A6%8F%E5%B2%9A%E6%9C%B5v2.0",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 10,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/user/user",
+					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "bargain/goods/goods",
+					"pathName": "bargain/goods/goods",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/list/list",
+					"pathName": "pages/list/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/goods/goods",
+					"pathName": "pages/goods/goods",
+					"query": "id=73",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/service-point/servicePoint",
+					"pathName": "pages/service-point/servicePoint",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/apply-role/apply-role",
+					"pathName": "pages/apply-role/apply-role",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/service-jiedan/service-jiedan",
+					"pathName": "pages/service-jiedan/service-jiedan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/cart/cart",
+					"pathName": "pages/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/cat/cat",
+					"pathName": "pages/cat/cat",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/navigator-to/navigator-to",
+					"pathName": "pages/navigator-to/navigator-to",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/factory-take/factory-take",
+					"pathName": "pages/factory-take/factory-take",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "pages/order/order",
+					"pathName": "pages/order/order",
+					"query": "status=5",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "pages/order/order",
+					"pathName": "pages/order/order",
+					"query": "status=0",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "pages/factory-order/factory-order",
+					"pathName": "pages/factory-order/factory-order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "mch/shop/shop",
+					"pathName": "mch/shop/shop",
+					"query": "mch_id=5",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/book/order/order",
+					"pathName": "pages/book/order/order",
+					"query": "id=14",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wuliu-factory/wuliu-factory",
+					"pathName": "pages/wuliu-factory/wuliu-factory",
+					"query": "id=14",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/demo/demo",
+					"pathName": "pages/demo/demo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/navto-scan/navto-scan",
+					"pathName": "pages/navto-scan/navto-scan",
+					"query": "id=73",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/factory-wuliu-order/factory-wuliu-order",
+					"pathName": "pages/factory-wuliu-order/factory-wuliu-order",
+					"query": "id=73",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wuliu-dabao/wuliu-dabao",
+					"pathName": "pages/wuliu-dabao/wuliu-dabao",
+					"query": "id=73",
+					"scene": null
+				},
+				{
+					"id": 21,
+					"name": "pages/qrcode-page/qrcode-page",
+					"pathName": "pages/qrcode-page/qrcode-page",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user/user-center",
+					"pathName": "pages/user/user-center",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 23,
+					"name": "pages/web/login/login",
+					"pathName": "pages/web/login/login",
+					"query": "scene=3b9185a3673dea19244203c315deb009",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/navigator-to/navigator-to",
+					"pathName": "pages/navigator-to/navigator-to",
+					"query": "party_id=32&part_id=2",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "mch/m/account/account",
+					"pathName": "mch/m/account/account",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 26,
+					"name": "pages/new-order-submit/new-order-submit",
+					"pathName": "pages/new-order-submit/new-order-submit",
+					"query": "mch_list=[{\"mch_id\":0,\"goods_list\":[{\"cart_id\":666}]}]",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/query-order/query-order",
+					"pathName": "pages/query-order/query-order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "收件点登录",
+					"pathName": "pages/business-center/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商家代付",
+					"pathName": "pages/new-order-submit/buinnes-pay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/navto-scan4/navto-scan",
+					"pathName": "pages/navto-scan4/navto-scan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/navto-scan3/navto-scan",
+					"pathName": "pages/navto-scan3/navto-scan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/navto-scan5/navto-scan",
+					"pathName": "pages/navto-scan5/navto-scan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/navto-scan6/navto-scan",
+					"pathName": "pages/navto-scan6/navto-scan",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

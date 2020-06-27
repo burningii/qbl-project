@@ -1,0 +1,86 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class="play-container">
+    <view class="player-content">
+        <view class="video-wrapper">
+            <video style="width: 100%" src="{{videoSrc}}" />
+        </view>
+        <view style="text-align: center;margin-top: 10px">{{videoTitle}}</view>
+        <view style="text-align: center;margin-top: 10px">
+            <van-button custom-style="width: 200rpx" bind:click="showLeftModal" round color="#CA0C16">更多</van-button>
+        </view>
+    </view>
+    <view wx:if="{{!clockFlag}}" style="text-align: center"><van-count-down bind:finish="finishedTime" time="{{ time }}" /></view>
+    <view>
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+</view>
+<include src="/components/quick-navigation/quick-navigation"></include>
+<view bindtap="goScore" class="posi-btn23">打卡得学分</view>
+<view bindtap="showShareModal" class="posi-share23">分享</view>
+
+<view class="share-modal {{share_modal_active}}">
+    <view class="share-modal-body">
+        <view class="flex-row">
+            <view class="flex-grow-1 flex-x-center">
+                <button class="share-bottom" openType="share" style="height:100%;">
+                    <image src="{{__wxapp_img.share.friend.url}}"></image>
+                    <view>分享给朋友</view>
+                </button>
+            </view>
+            <view class="flex-grow-1 flex-x-center">
+                <view bindtap="getGoodsQrcode" class="share-bottom">
+                    <image src="{{__wxapp_img.share.qrcode.url}}"></image>
+                    <view>生成商品海报</view>
+                </view>
+            </view>
+        </view>
+        <view bindtap="shareModalClose" class="share-modal-close flex-y-center flex-x-center">关闭</view>
+    </view>
+</view>
+
+<view class="goods-qrcode-modal {{goods_qrcode_active}}">
+    <view class="goods-qrcode-body flex-col">
+        <view class="flex-grow-1" style="position: relative">
+            <view style="position: absolute;left: 0;top:0;width: 100%;height: 100%;padding: 100rpx 100rpx 60rpx">
+                <view class="goods-qrcode-box">
+                    <view class="goods-qrcode-loading flex-x-center flex-y-center">
+                        <view class="flex-x-center flex-col">
+                            <image src="{{__wxapp_img.system.loading2.url}}" style="width: 150rpx;height: 150rpx"></image>
+                            <view style="color: #888">海报生成中</view>
+                        </view>
+                    </view>
+                    <image bindtap="goodsQrcodeClick" class="goods-qrcode {{goods_qrcode?'active':''}}" data-src="{{goods_qrcode}}" mode="aspectFit" src="{{goods_qrcode}}"></image>
+                </view>
+            </view>
+        </view>
+        <view class="flex-grow-0 flex-col flex-x-center" style="padding: 0 60rpx 80rpx">
+            <view style="margin-bottom: 20rpx;padding: 0 40rpx">
+                <button bindtap="saveGoodsQrcode" style="background: #ff4544;color: #fff;" wx:if="{{goods_qrcode}}">
+                    保存图片
+                </button>
+                <button style="opacity: .4" wx:else>保存图片</button>
+            </view>
+            <view style="color: #888;font-size: 9pt;text-align: center">保存至相册</view>
+        </view>
+        <view bindtap="goodsQrcodeClose" class="goods-qrcode-close">
+            <image src="{{__wxapp_img.store.close2.url}}" style="width: 50rpx;height: 50rpx;display: block"></image>
+        </view>
+    </view>
+</view>
+
+<van-popup show="{{ leftModalVisible }}"
+           position="left"
+           custom-style="height: 100%"
+           bind:close="onCloseLeftModal">
+    <view class="left-modal-wrapper">
+        <view style="padding: 10rpx 100rpx;border-bottom: 1px solid #ccc;"
+              wx:for="{{videoList}}"
+              class="{{index==currentIdx ? 'active-bgc':''}}"
+              bindtap="checkCurrentLession"
+              data-item="{{item}}"
+              data-index="{{index}}"
+              wx:key="index">
+            <view>{{item.description}}</view>
+        </view>
+    </view>
+</van-popup>

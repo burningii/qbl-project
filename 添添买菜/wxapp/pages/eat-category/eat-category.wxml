@@ -1,0 +1,33 @@
+<view class="eat-category-container">
+    <view bindtap="goSearch" class='top-search-wrapper'>
+        <van-search shape="round"
+                    disabled
+                    field-class="search-wrapper"
+                    placeholder="请输入搜索关键词"/>
+    </view>
+    <view style="height: 30px"></view>
+    <view class="list-content">
+        <view class="list-item"
+              wx:for="{{foods}}"
+              wx:for-item="food"
+              wx:for-index="index1"
+              wx:key="index1"
+        >
+            <view>{{food.name}}</view>
+            <view style="margin-top: 8px;flex-wrap: wrap" class="my-flex food-item-list-1">
+                <view class="my-flex-col foods-info"
+                      wx:for="{{food.childrenList}}"
+                      bindtap="goFoodsInfo"
+                      wx:for-item="item2"
+                      data-id="{{item2.id}}"
+                      data-name="{{item2.name}}"
+                      wx:for-index="index2"
+                      wx:key="index2"
+                >
+                    <image class="foods-img" src="{{item2.pic_url}}"/>
+                    <view style="margin-top: 8px">{{item2.name}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

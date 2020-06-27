@@ -1,0 +1,21 @@
+<view class="item-wrap">
+     <view class="item-group" wx:for='{{logs}}' wx:key='*this'>
+        <view class="item-left">
+             <image src="{{avatar_url}}"></image>
+        </view>
+        <view class="item-r">
+               <view class="item-content">
+              <view class="widthdraw">余额提现</view>
+              <view class="withdraw-time">{{item.addtime}}</view>
+        </view>
+        <view class="item-right">
+              <view class="widthdraw-money">{{item.price}}</view>
+              <view class='withdraw-status' wx:if='{{item.status==0}}'>待审核</view>
+               <view class='withdraw-status' wx:if='{{item.status==1}}'>待打款</view>
+                <view class='withdraw-status' wx:if='{{item.status==2}}'>已审核</view>
+               <view class='withdraw-status' wx:if='{{item.status==3}}'>无效</view>
+        </view>
+        </view>
+       
+     </view>
+</view>

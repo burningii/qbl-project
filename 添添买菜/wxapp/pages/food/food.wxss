@@ -1,0 +1,163 @@
+
+.food-img{
+    width: 100%;
+    /*height: 550rpx;*/
+}
+
+.my-tabs {
+    --tab-active-text-color: #00c203
+}
+
+.tabs-wrapper{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+}
+.amount-food{
+    color: #C0C4CC;
+}
+
+.food-wrapper{
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+.food-video-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.goods-item{
+    background-color: #fff;
+    border-radius: 8px;
+    /*padding: 10px;*/
+    width: 230rpx;
+    margin-left: 10px;
+    padding-bottom: 10px;
+    display: inline-block;
+    text-align: center;
+}
+.scoll-goods-main{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.main-food{
+}
+
+.good-title{
+    font-size: 26rpx;
+    margin-top: 5px;
+}
+
+.good-price{
+    font-size: 26rpx;
+    color: red;
+}
+
+.good-img-wrapper{
+    width: 100%;
+    height: 260rpx;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.img-item{
+    width: 100%;
+    height: 100%;
+}
+.foods-info-wrapper{
+    background-color: #fff;
+    padding: 30rpx;
+}
+.foods-name{
+    font-size: 45rpx;
+    color: #000000;
+    font-weight: bolder;
+}
+.title-common{
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #000000;
+}
+.food-ku{
+    font-size: 25rpx;
+    margin-top: 13px;
+}
+.mg-top{
+    margin-top: 10px;
+}
+.food-list{
+    background-color: #fff;
+    padding: 30rpx;
+    margin-top: 15px;
+    /*height: 200px;*/
+}
+.food-goods-main{
+    margin-top: 15px;
+    /*height: 200px;*/
+    padding: 30rpx;
+}
+
+
+.cookie-step{
+    background-color: #fff;
+    padding: 30rpx;
+    /* height: 800px; */
+}
+
+.bottom-posi{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 55px;
+    background-color: #fff;
+    justify-content: center;
+    padding: 0 18px;
+}
+
+.bottom-buy{
+    border-radius: 20px;
+    background-color: #00c203;
+    padding: 10px;
+    width: 48%;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.modal-container{
+    position: relative;
+}
+
+.goods-tabs-wrapper{
+    position: fixed;
+    left: 0;
+    right: 0;
+    /*top: 150rpx;*/
+    z-index: 99;
+}
+.goods-tabs-wrapper .van-tabs__scroll--line{
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+}
+
+.close-goods-modal{
+    position: fixed;
+    right: 36rpx;
+    top: 168rpx;
+    z-index: 99;
+}
+
+.goods-category{
+    /*height: 500px;*/
+}
+
+.color1{
+    /*background-color: rebeccapurple;*/
+}
+
+.color2{
+    /*background-color: #00aa00;*/
+}

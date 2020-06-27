@@ -1,0 +1,44 @@
+<view class="user-info-container">
+    <view class="my-flex-spa-be info-item">
+        <image src="{{userInfo.img}}" class="avatar"/>
+        <view>
+            <van-uploader bind:after-read="afterRead">
+                <van-button
+                        custom-style="width: 88px"
+                        size="small" round color="#F86732">头像修改
+                </van-button>
+            </van-uploader>
+        </view>
+    </view>
+    <view class="my-flex-spa-be info-item">
+        <view>{{userInfo.name}}</view>
+        <van-button bind:click="showNickModal" custom-style="width: 88px" size="small" round color="#F86732">昵称修改</van-button>
+    </view>
+    <view class="my-flex-col info-item">
+        <van-button bind:click="goPwdChange" custom-style="width: 88px" size="small" round color="#F86732">密码修改</van-button>
+    </view>
+    <view class="my-flex-col info-item">{{userInfo.user_tel}}</view>
+    <view class="my-flex-col info-item">
+        <van-button bind:click="logout" custom-style="width: 88px" size="small" round color="#F86732">退出登录</van-button>
+    </view>
+</view>
+
+<van-dialog
+        use-slot
+        title="昵称修改"
+        show="{{ nickModalVisible }}"
+        bind:close="nickModalConfirm"
+        show-cancel-button
+>
+    <view style="padding: 30rpx">
+        <van-cell-gruop>
+            <van-field
+                value="{{newNickname}}"
+                size="large"
+                placeholder="输入新的昵称"
+                label="昵称"
+                bind:change="onChangeNickname"
+            />
+        </van-cell-gruop>
+    </view>
+</van-dialog>

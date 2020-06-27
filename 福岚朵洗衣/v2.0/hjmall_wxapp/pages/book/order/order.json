@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "查询",
+    "usingComponents": {
+        "app-navigation": "/components/quick-navigation-components/index",
+        "van-field": "/vant/field/index",
+        "van-icon": "/vant/icon/index",
+        "van-button": "/vant/button/index",
+        "calendar": "/components/calendar2/calendar2",
+        "van-popup": "/vant/popup/index"
+    }
+}

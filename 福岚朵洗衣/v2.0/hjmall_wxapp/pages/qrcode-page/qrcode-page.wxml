@@ -1,0 +1,57 @@
+<view class="qrcode-page-container">
+    <view wx:if="{{ order.length>0}}" class="order-item">
+        <view wx:for="{{order}}" wx:key="index" wx:for-item="order" wx:if="{{null!=order}}">
+            <view style="font-size: 9pt;margin-bottom: 12rpx;white-space: nowrap;overflow: hidden;text-overflow: ellipsis">
+                {{order.mch.name}}
+            </view>
+            <view class="flex-row order-info">
+                <view class="flex-grow-1">订单号:{{order.order_no}}</view>
+                <view class="flex-grow-0">{{order.addtime}}</view>
+            </view>
+            <view class="flex-row order-info">
+                <view class="flex-grow-1">用户手机号:{{order.phone}}</view>
+                <view class="flex-grow-0">条形码:{{order.shape}}</view>
+            </view>
+            <view class="goods-list">
+                <view class="goods-item flex-row" wx:for="{{order.goods_list}}" wx:for-item="goods"
+                      wx:key="{{goods.id}}">
+                    <view class="flex-grow-0" style="overflow: visible">
+                        <image class="goods-pic" mode="aspectFill" src="{{goods.cover_pic}}"></image>
+                    </view>
+                    <view class="flex-grow-1 flex-col">
+                        <view class="flex-grow-1">
+                            <view class="goods-name">{{goods.name}}</view>
+                            <view class="attr-list">
+                                <view class="attr-item" wx:for="{{goods.attr_list}}" wx:for-item="attr"
+                                      wx:key="{{attr.id}}">
+                                    {{attr.attr_group_name}}:{{attr.attr_name}}
+                                </view>
+                            </view>
+                        </view>
+                        <view class="flex-grow-0 flex-row">
+                            <view class="flex-grow-1 num">×1</view>
+                            <view class="flex-grow-0 price">￥:{{goods.price}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view wx:if="{{status==5}}" class="goods-item">
+                    <view class="flex-grow-0" style="overflow: visible">
+                        <text><text style="color: #888;">问题描述:</text> {{order.problem}}</text>
+                    </view>
+                    <view class="flex-row" style="margin-top: 15rpx;">
+                        <view style="color: #888;">问题图片: </view>
+                        <view bindtap="showImage2" wx:if="{{order.problem_photo!=''}}" data-src="{{order.problem_photo}}" style="margin-left: 15rpx;"><image style="width: 156rpx;height: 156rpx;" src="{{order.problem_photo}}"/></view> <view wx:else style="margin-left: 15rpx;">暂无图片</view>
+                    </view>
+                </view>
+            </view>
+            <view class="flex-row qrcode-flex">
+                <view>
+                <van-button data-id="{{order.id}}" bind:click="cuku_item" color="#F6504F" size="small" custom-style="border-radius: 25px;">出库</van-button>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="btn-sure-wrapper">
+        <van-button bind:click="testQrcode" color="#F6504F" custom-style="border-radius: 25px;" size="large" type="default">扫码</van-button>
+    </view>
+</view>

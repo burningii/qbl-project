@@ -1,0 +1,28 @@
+<view class='item-wrap'>
+   <view class="item-top">
+        <view class="item-left">
+             <image src=""></image>
+        </view>
+        <view class="item-right">
+           <view class="item-right-top">
+                <view class="item-right-til">伏天氏</view>
+                <view class="item-right-author">作者：净无痕</view>
+           </view>
+              <view class="item-description">
+         东方神州，有人皇立道统，有圣贤宗门传道，有诸侯雄踞一方王国，诸强林立，神州动乱千万载，执此之时，一代天骄叶青帝及东凰大帝横空出世，斩人皇，驭圣贤，诸侯臣服，东方神州一统！      然，叶青帝忽然暴毙，世间雕像尽皆被毁，于世间除名，沦为禁忌；从此神州唯东凰大帝独尊！      十五年后，东海青州城，一名为叶伏天的少年，开启了他的传奇之路…
+         </view>
+         <navigator url="/pages/txtshow/txtshow" hover-class="none">
+              <view class="item-tbn">开始阅读</view>   
+        </navigator>
+        </view>
+   </view>
+   <view class='item-chapter'>
+      <view class="item-chapter-til"><view class="til-txt1">伏天氏</view><view class="til-txt2">目录列表</view></view>
+      <view class="item-group">
+         <view class="item-group-til">课时一：摩擦</view>
+         <view class="item-group-til">课时一：摩擦</view>
+         <view class="item-group-til">课时一：摩擦</view>
+         <view class="item-group-til">课时一：摩擦</view>
+      </view>
+   </view>
+</view>

@@ -1,0 +1,76 @@
+.top-info-wrapper {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 35rpx 0;
+}
+page {
+    background-color: #fff;
+}
+.top-info-wrapper > view {
+    width: 50%;
+    line-height: 65rpx;
+}
+
+.top-info-wrapper > view:first-child {
+    border-right: 1px solid #FFFFFF;
+}
+.price-font {
+    font-size: 45rpx;
+}
+
+.top-info-line {
+    background-color: #222222;
+    padding: 25rpx 55rpx;
+    color: #FFFFFF;
+}
+
+.middle-info,.bottom-info {
+    border: 1px solid #DCDFE6;
+    border-radius: 8px;
+    width: 92%;
+    margin: 0 auto;
+}
+.middle-info {
+    margin-top: 55rpx;
+}
+
+.bottom-info {
+    margin-top: 55rpx;
+}
+
+.middle-title {
+    text-align: center;
+    border-bottom: 1px solid #DCDFE6;
+    padding: 25rpx 0;
+    font-weight: bold;
+}
+
+.title-content>view{
+    line-height: 65rpx;
+}
+
+.price-font2 {
+    font-size: 35rpx;
+    font-weight: bold;
+}
+
+.title-content {
+    padding: 35rpx;
+}
+
+.my-cell {
+    padding: 42rpx 30rpx!important;
+    /*background:none !important;*/
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    /*border-bottom: 1px solid #DCDFE6;*/
+}
+
+.bottom-info .my-cell:last-child{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.bottom-info {
+    margin-bottom: 89rpx;
+}

@@ -1,0 +1,30 @@
+<view class="search-container">
+    <view bindtap="goSearch" class='top-search-wrapper'>
+        <van-search shape="round"
+                    disabled
+                    field-class="search-wrapper"
+                    placeholder="请输入搜索关键词"/>
+    </view>
+    <!--    搜索内容展示-->
+    <view class="my-flex-col result-list-container">
+        <view class="my-flex item-result"
+              wx:for="{{resultList}}"
+              bindtap="goInfo"
+              data-id="{{item.id}}"
+              data-name="{{item.title}}"
+              wx:key="index"
+        >
+            <image class="item-img" src="{{item.cover_pic}}"/>
+            <view class="my-flex-col item-right-top">
+                <view>{{item.title}}</view>
+                <view class="my-flex" style="margin-top: 4px;font-size: 23rpx">
+                    <view class="item-info">{{item.difficulty}}</view>
+                    <view class="item-info" style="margin-left: 5px">{{item.duration}}</view>
+                </view>
+                <view class="item-info-bottom">
+                    {{item.shicai}}
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

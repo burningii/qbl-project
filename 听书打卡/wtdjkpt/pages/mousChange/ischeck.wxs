@@ -1,0 +1,8 @@
+var isCheck=function (id,skills){
+  return skills.some(function(item) {
+    return item==id;
+  })
+}
+module.exports={
+  IsCheck:isCheck
+}

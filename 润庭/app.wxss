@@ -1,0 +1,36 @@
+.btn-override{
+  width: 100%!important;
+}
+
+.my-flex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.my-flex-spa-be{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.my-flex-spa-ar{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.my-flex-col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.my-no-more{
+  text-align: center;
+  margin-top: 100px;
+  color: #888888;
+  font-size: 26rpx;
+}
+
+
+

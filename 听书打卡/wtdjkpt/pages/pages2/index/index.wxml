@@ -1,0 +1,74 @@
+<view class="index-container">
+    <view class="top-lession">
+        <view class="my-flex-spa-be lession-my">
+            <view class="my-title">我的已购（{{lessionList.length}}）</view>
+<!--            <view>查看全部</view>-->
+        </view>
+        <view class="lession-list">
+            <view class="my-flex-col">
+<!--                <view bindtap="goLession" wx:if="{{0!=lessionList.length}}"-->
+<!--                      wx:for="{{lessionList}}"-->
+<!--                      wx:key="index"-->
+<!--                      class="list-item">-->
+<!--                    -->
+<!--                </view>-->
+
+                <view class="order-list" style="width: 100%">
+                    <view class="order-item" wx:for="{{lessionList}}" wx:for-item="order" wx:key="index">
+                        <view bindtap="goLession">
+                            <view class="flex-row order-info">
+                                <view class="flex-grow-1">订单号:{{order.order_no}}</view>
+                                <view class="flex-grow-0">{{order.addtime}}</view>
+                            </view>
+                            <view class="goods-list">
+                                <view class="goods-item flex-row" wx:for="{{order.goods_list}}" wx:for-item="goods" wx:key="{{goods.id}}">
+                                    <view class="flex-grow-0" style="overflow: visible">
+                                        <image class="goods-pic" mode="aspectFill" src="{{goods.goods_pic}}"></image>
+                                    </view>
+                                    <view class="flex-grow-1 flex-col">
+                                        <view class="flex-grow-1">
+                                            <view class="goods-name">{{goods.goods_name}}</view>
+                                            <view class="attr-list">
+                                                <view class="attr-item" wx:for="{{goods.attr_list}}" wx:for-item="attr" wx:key="{{attr.id}}">
+                                                    {{attr.attr_group_name}}:{{attr.attr_name}}
+                                                </view>
+                                            </view>
+                                        </view>
+                                        <view class="flex-grow-0 flex-row">
+                                            <view class="flex-grow-1 num">×{{goods.num}}</view>
+                                            <!-- {{goods.price}} -->
+                                            <view class="flex-grow-0 price">￥:{{order.pay_price}}</view>
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="flex-row">
+                            <view class="flex-grow-1 flex-y-center">
+                                合计：￥{{order.pay_price}}
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="my-no-more" wx:if="{{0==lessionList.length}}">暂无已购课程~</view>
+            </view>
+        </view>
+    </view>
+<!--    精品推荐课程-->
+    <view class="Recommend-list-wrapper">
+        <view class="my-flex-spa-be lession-my">
+            <view class="my-title">精品推荐</view>
+        </view>
+        <view class="recommend-list">
+            <view class="my-flex-col">
+                <view wx:if="{{0!=lessionList2.length}}"
+                      wx:for="{{lessionList2}}"
+                      wx:key="index"
+                      class="list-item">
+
+                </view>
+                <view class="my-no-more" wx:if="{{0==lessionList2.length}}">暂无已购课程~</view>
+            </view>
+        </view>
+    </view>
+</view>

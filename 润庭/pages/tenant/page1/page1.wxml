@@ -1,0 +1,482 @@
+<view class="page1-container">
+    <view class="form-info">
+        <form bindsubmit="formSubmit" bindreset="formReset">
+            <van-cell-group>
+                <van-field
+                        value="{{ houseData.street }}"
+                        placeholder="请输入街道名称"
+                        label="街道名称"
+                        name="streetName"
+                        size="large"
+                        readonly
+                />
+                <van-field
+                        value="{{ houseData.community }}"
+                        placeholder="请输入社区名称"
+                        label="社区名称"
+                        name="communityName"
+                        size="large"
+                        readonly
+                />
+                <van-field
+                        value="{{ houseData.neighborhood }}"
+                        placeholder="请输入小区名称"
+                        label="小区名称"
+                        name="houseName"
+                        size="large"
+                        readonly
+                />
+                <van-field
+                        value="{{ landlordName }}"
+                        placeholder="拍照或者上传身份证图片"
+                        label="租户姓名"
+                        name="landlordName"
+                        size="large"
+                        disabled
+                        bindtap="startdd"
+                />
+                <van-field
+                        value="{{ landlordIdcard }}"
+                        placeholder="拍照或者上传身份证图片"
+                        label="租户身份证号码"
+                        name="landlordIdcard"
+                        size="large"
+                        disabled
+                        bindtap="startdd"
+                />
+                <van-field
+                        value="{{ landlordGender }}"
+                        label="性别"
+                        size="large"
+                        bindtap="showModal2"
+                        disabled
+                        bindtap="startdd"
+                />
+                <van-field
+                        value="{{ landlordNation }}"
+                        placeholder="拍照或者上传身份证图片"
+                        label="民族"
+                        name="landlordNation"
+                        size="large"
+                        disabled
+                        bindtap="startdd"
+                />
+                <van-field
+                        value="{{ phone }}"
+                        placeholder="请输入联系电话"
+                        label="联系电话"
+                        type="number"
+                        name="phone"
+                        size="large"
+                        bind:change="changePhone"
+                />
+                <van-field
+                        value="{{ HukouTxt }}"
+                        placeholder="请选择户口类别"
+                        label="户口类别"
+                        size="large"
+                        disabled
+                        bindtap="showHukouchoose"
+                />
+                <van-field
+                        value="{{ houseData.houseAddr }}"
+                        placeholder="请输入房屋详细地址"
+                        label="现居住地址"
+                        name="houseAddress"
+                        size="large"
+                        readonly
+                />
+                <van-field
+                        value="{{ houseData.buildNo }}"
+                        placeholder="请输入楼号"
+                        label="楼号"
+                        name="houseFloorNum"
+                        size="large"
+                        readonly
+                />
+                <van-field
+                        value="{{ houseData.unitNo }}"
+                        placeholder="请输入单元号"
+                        label="单元号"
+                        name="houseSelectionNum"
+                        size="large"
+                        readonly
+                />
+                <van-field
+                        value="{{ houseData.roomNo }}"
+                        placeholder="请输入房号"
+                        label="房号"
+                        name="houseNum2"
+                        size="large"
+                        readonly
+                />
+                <van-field
+                        value="{{ confirmJiuYeTxt }}"
+                        label="是否就业"
+                        size="large"
+                        bindtap="showJiYeViable"
+                        disabled
+                />
+                <block wx:if="{{showJiuyeItem}}">
+                    <van-field
+                            value="{{ jiuYeCompany }}"
+                            placeholder="请输入就业单位"
+                            label="就业单位"
+                            name="jiuYeCompany"
+                            size="large"
+                            bind:change="changeJiuYeCompany"
+                    />
+                    <van-field
+                            value="{{ jiuYeCompanyPhone }}"
+                            label="就业单位电话"
+                            placeholder="请输入就业单位电话"
+                            size="large"
+                            name="jiuYeCompanyPhone"
+                            type="number"
+                            bind:change="changeJiuYeCompanyPhone"
+                    />
+                    <van-field
+                            value="{{ jiuYeCompanyAddr }}"
+                            label="就业单位地址"
+                            placeholder="请输入就业单位地址"
+                            name="jiuYeCompanyAddr"
+                            size="large"
+                            bind:change="changeJiuYeCompanyAddr"
+                    />
+                </block>
+                <van-field
+                        value="{{ remark }}"
+                        label="备注"
+                        placeholder="请输入备注"
+                        name="remark"
+                        autosize
+                        size="large"
+                        bind:change="changeRemark"
+                />
+                <block wx:if="{{!reloadFlag}}">
+                    <van-field
+                            value="{{ declareTime }}"
+                            label="申报时间"
+                            size="large"
+                            disabled
+                    />
+                    <van-field
+                            value="{{ recordTime1 }}"
+                            label="初审通过时间"
+                            size="large"
+                            disabled
+                    />
+                    <van-field
+                            value="{{ recordTime2 }}"
+                            label="终审通过时间"
+                            size="large"
+                            disabled
+                    />
+                </block>
+                <view class="upload-img">
+                    <van-uploader
+                            max-size="10485760"
+                            max-count="1"
+                            upload-text="上传身份证正面"
+                            file-list="{{ fileList }}"
+                            bind:delete="deleteImg"
+                            data-flag="1"
+                            bind:after-read="afterRead"/>
+                </view>
+                <view class="upload-img">
+                    <van-uploader
+                            max-size="10485760"
+                            max-count="1"
+                            upload-text="上传身份证反面"
+                            file-list="{{ fileList2 }}"
+                            bind:delete="deleteImg"
+                            data-flag="2"
+                            bind:after-read="afterRead"/>
+                </view>
+                <van-field
+                        value="{{ '点击增加同住人' }}"
+                        label="同住人"
+                        size="large"
+                        disabled
+                        bindtap="addPerson"
+                />
+                <view class="person-all">
+                    <view class="person-item"
+                          wx:for="{{personAllList}}"
+                          wx:key="index">
+                        <van-cell-group>
+                            <van-field
+                                    value="{{ item.name }}"
+                                    label="姓名"
+                                    size="large"
+                                    placeholder="点击拍照"
+                                    disabled
+                                    data-idx="{{index}}"
+                                    bindtap="startdd2"
+                            />
+                            <van-field
+                                    value="{{ item.idCard }}"
+                                    label="身份证号"
+                                    size="large"
+                                    placeholder="点击拍照"
+                                    type="number"
+                                    disabled
+                                    data-idx="{{index}}"
+                                    bindtap="startdd2"
+                            />
+                            <van-field
+                                    value="{{ item.gender }}"
+                                    label="性别"
+                                    size="large"
+                                    placeholder="点击拍照"
+                                    disabled
+                                    data-idx="{{index}}"
+                                    bindtap="startdd2"
+                            />
+                            <van-field
+                                    value="{{ item.nation }}"
+                                    label="民族"
+                                    size="large"
+                                    placeholder="点击拍照"
+                                    disabled
+                                    data-idx="{{index}}"
+                                    bindtap="startdd2"
+                            />
+                            <van-field
+                                    value="{{ item.phone }}"
+                                    label="手机号"
+                                    size="large"
+                                    placeholder="输入手机号"
+                                    data-idx="{{index}}"
+                                    type="number"
+                                    data-f="1"
+                                    bind:change="onChangePerson"
+                            />
+                            <van-field
+                                    value="{{ item.household.text }}"
+                                    label="户口类别"
+                                    size="large"
+                                    placeholder="选择户口类别"
+                                    disabled
+                                    data-idx="{{index}}"
+                                    bindtap="selectPersonHukou"
+                            />
+                            <van-field
+                                    value="{{ !0==item.isCompany ? '是':'否' }}"
+                                    label="是否就业"
+                                    size="large"
+                                    placeholder="选择就业"
+                                    disabled
+                                    data-idx="{{index}}"
+                                    bindtap="selectPersonIsCompany"
+                            />
+                            <block wx:if="{{item.isCompany}}">
+                                <van-field
+                                        value="{{ item.companyName }}"
+                                        label="就业单位"
+                                        size="large"
+                                        placeholder="输入就业单位"
+                                        data-idx="{{index}}"
+                                        data-f="2"
+                                        bind:change="onChangePerson"
+                                />
+                                <van-field
+                                        value="{{ item.companyPhone }}"
+                                        label="就业单位电话"
+                                        size="large"
+                                        placeholder="输入就业单位电话"
+                                        type="number"
+                                        data-idx="{{index}}"
+                                        data-f="3"
+                                        bind:change="onChangePerson"
+                                />
+                                <van-field
+                                        value="{{ item.companyAddr }}"
+                                        label="就业单位地址"
+                                        size="large"
+                                        placeholder="输入就业单位地址"
+                                        data-idx="{{index}}"
+                                        data-f="4"
+                                        bind:change="onChangePerson"
+                                />
+                            </block>
+                                <van-uploader
+                                    max-size="10485760"
+                                    max-count="1"
+                                    upload-text="上传身份证正面"
+                                    file-list="{{ item.idPic }}"
+                                    bind:delete="deletePersonImg"
+                                    data-flag="1"
+                                    data-index="{{index}}"
+                                    bind:after-read="personAfterRead"/>
+                            <van-uploader
+                                    max-size="10485760"
+                                    max-count="1"
+                                    upload-text="上传身份证反面"
+                                    file-list="{{ item.idPicBack }}"
+                                    bind:delete="deleteImg"
+                                    data-flag="2"
+                                    data-index="{{index}}"
+                                    bind:after-read="personAfterRead"/>
+                            <van-field
+                                    value="{{ item.relationship.text }}"
+                                    label="与申报人关系"
+                                    size="large"
+                                    disabled
+                                    data-idx="{{index}}"
+                                    bindtap="showSelectShip"
+                            />
+                        </van-cell-group>
+                        <view class="delete-person">
+                            <van-button size="small" bind:click="deletePerson" data-idx="{{index}}" round
+                                        color="#F86732">删除
+                            </van-button>
+                        </view>
+                    </view>
+                </view>
+            </van-cell-group>
+            <view class="submit-now">
+                <button class="submit-btn" formType="submit">提交</button>
+            </view>
+        </form>
+    </view>
+</view>
+<van-action-sheet
+        show="{{ personHukouVisible }}"
+        actions="{{ actions }}"
+        bind:close="onClosePersonHukou"
+        bind:select="onSelect"
+/>
+<van-action-sheet
+        show="{{ personisCompanyVisible }}"
+        actions="{{ actions2 }}"
+        bind:close="onClosePersonIsCompany"
+        bind:select="onSelect2"
+/>
+<van-popup
+        show="{{ modalVisible }}"
+        position="bottom"
+        bind:close="onCloseModal"
+>
+    <view>
+        <van-picker
+                title="房屋性质"
+                show-toolbar
+                columns="{{ houseTypeArr }}"
+                bind:cancel="onCloseModal"
+                bind:confirm="onConfirmHouseType"
+        />
+    </view>
+</van-popup>
+
+<van-popup
+        show="{{ modal2Visible }}"
+        position="bottom"
+        bind:close="onCloseModal2"
+>
+    <view>
+        <van-picker
+                title="性别"
+                show-toolbar
+                columns="{{ genderArr }}"
+                bind:cancel="onCloseModal2"
+                bind:confirm="onConfirmlandlordGender"
+        />
+    </view>
+</van-popup>
+
+<van-popup
+        show="{{ modal3Visible }}"
+        position="bottom"
+        bind:close="onCloseModal3"
+>
+    <view>
+        <van-picker
+                title="产权类型"
+                show-toolbar
+                columns="{{ canquanArr }}"
+                bind:cancel="onCloseModal3"
+                bind:confirm="onConfirmcanquanType"
+        />
+    </view>
+</van-popup>
+
+<van-popup
+        show="{{ modal4Visible }}"
+        position="bottom"
+        bind:close="onCloseModal4"
+>
+    <view>
+        <van-picker
+                title="房屋结构"
+                show-toolbar
+                columns="{{ houseJieGou }}"
+                bind:cancel="onCloseModal4"
+                bind:confirm="onConfirmHouseJieGou"
+        />
+    </view>
+</van-popup>
+
+<van-popup
+        show="{{ hukouVisible }}"
+        position="bottom"
+        bind:close="closeHukou"
+>
+    <view>
+        <van-picker
+                title="户口类别"
+                show-toolbar
+                columns="{{ hukouArr }}"
+                bind:cancel="closeHukou"
+                bind:confirm="onConfirmHukou"
+        />
+    </view>
+</van-popup>
+<van-popup
+        show="{{ jiuYeVisible }}"
+        position="bottom"
+        bind:close="closeJiuYe"
+>
+    <view>
+        <van-picker
+                title="是否就业"
+                show-toolbar
+                columns="{{ jiuYeArr }}"
+                bind:cancel="closeJiuYe"
+                bind:confirm="onConfirmJiyYe"
+        />
+    </view>
+</van-popup>
+<van-popup
+        show="{{ relactionShipVisible }}"
+        position="bottom"
+        bind:close="closeShip"
+>
+    <view>
+        <van-picker
+                title="选择关系"
+                show-toolbar
+                columns="{{ relationshipArr }}"
+                bind:cancel="closeShip"
+                bind:confirm="onConfirmShip"
+        />
+    </view>
+</van-popup>
+
+<scroll-view wx:if="{{addressVisible}}" class="query-search" scroll-y="true">
+    <view class="query-result-item" wx:for="{{sugArr}}"
+          wx:key="index"
+          data-item="{{item}}"
+          bindtap="checkAddrResult">
+        <view>{{item.title}}</view>
+    </view>
+</scroll-view>
+
+<scroll-view wx:if="{{communityVisible}}" class="query-search2" scroll-y="true">
+    <view class="query-result-item" wx:for="{{sugArr}}"
+          wx:key="index"
+          data-item="{{item}}"
+          bindtap="checkAddrResult2">
+        <view>{{item.title}}</view>
+    </view>
+</scroll-view>

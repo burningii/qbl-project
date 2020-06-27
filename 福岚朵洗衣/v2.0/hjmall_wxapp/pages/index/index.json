@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "",
+    "enablePullDownRefresh": true,
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "app-navigation": "/components/quick-navigation-components/index",
+        "van-icon": "/vant/icon/index",
+        "van-popup": "/vant/popup/index",
+        "van-button":"/vant/button/index"
+    }
+}

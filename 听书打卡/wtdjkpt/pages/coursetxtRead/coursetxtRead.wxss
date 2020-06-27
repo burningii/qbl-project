@@ -1,0 +1,80 @@
+page{
+  background: #fff;
+}
+.item-wrap{
+  padding: 20rpx;
+}
+.item-top{
+  display: flex;
+  justify-content: flex-start;
+}
+.item-left image{
+  width: 200rpx;
+  height: 280rpx;
+  border: 2rpx solid red;
+  margin-right: 20rpx;
+}
+.item-right-top{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #e8e8e8;
+  padding-bottom: 20rpx;
+}
+.item-right-til{
+  color: #d40909;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.item-right-author{
+  color: #666;
+  font-size: 28rpx;
+  font-family: "Microsoft YaHei", 微软雅黑, Tahoma, Geneva, sans-serif;
+}
+.item-description{
+  height: 104rpx;
+  margin: 20rpx 0;
+  font-size: 28rpx;
+  color: #666;
+  font-family: "Microsoft YaHei", 微软雅黑, Tahoma, Geneva, sans-serif;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.item-tbn{
+  width: 160rpx;
+  height: 60rpx;
+  margin:20rpx auto;
+  color: #fff;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background: #409f9f;
+}
+.item-chapter-til{
+  display: flex;
+  justify-content: flex-start;
+}
+.til-txt1{
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-right: 20rpx;
+  color: #208181;
+}
+.til-txt2{
+  color: #666;
+  font-size: 28rpx;
+  font-family: 宋体, Arial, Helvetica, sans-serif;
+}
+.item-group{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.item-group-til{
+   width: 50%;
+  height: 60rpx;
+  color: #666;
+  padding: 5rpx 0;
+  font-family: 宋体, Arial, Helvetica, sans-serif;
+}

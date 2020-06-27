@@ -1,0 +1,23 @@
+<!--自定义头部-->
+<view class="nav" style="height: {{navH}}px;background-color:#ffffff;">
+    <view class="nav-wrapper">
+        <view class="my-flex nav-avatar">
+            <van-icon bind:click="goLastPage" size="25" name="arrow-left" />
+        </view>
+        <view bindtap="goMyPage"  class="nav-title">{{navBarTitle}}</view>
+    </view>
+</view>
+
+<view class="room-container" style="margin-top: {{navH}}px">
+    <view class="room-content">
+        <view class="room-item"
+              wx:for="{{roomList}}"
+              bindtap="goRoom"
+              data-id="{{item.identifier}}"
+              data-name="{{item.title}}"
+              wx:key="index"
+        >
+            {{item.title}}
+        </view>
+    </view>
+</view>

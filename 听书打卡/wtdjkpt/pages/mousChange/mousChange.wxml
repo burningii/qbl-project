@@ -1,0 +1,124 @@
+<form bindsubmit='registerEvent'>
+    <!-- <view style='padding: 20rpx'>
+      <view class="item-status">
+      <view class="noselect {{type=='expert'?'selected':''}} " bindtap='expertEvent'>专家</view>
+      <view class="noselect  {{type=='artificer'?'selected':''}}" bindtap='artificerEvent'>技师</view>
+      <view wx:if='true' class="item-status-til">技师认证</view>
+      <view wx:else>专家认证</view>
+      </view>
+    </view> -->
+<scroll-view scroll-y='true' class="scroll">
+  <view class='item-wrap'>
+     <view class="item-group">
+          <view class="item-group-left1">*</view>
+          <view class="item-group-left2">姓名</view>
+          <view class="item-group-right"><input type="text" placeholder="请输入你的姓名" placeholder-class="tips" name='name' value='{{oldArr.nickname}}'></input></view>
+     </view>
+      <view class="item-group">
+          <view class="item-group-left1">*</view>
+          <view class="item-group-left2">联系方式</view>
+          <view class="item-group-right"><input type="text" placeholder="请输入你的电话" placeholder-class="tips" name='mobile' value='{{oldArr.mobile}}'></input></view>
+     </view>
+      <view class="item-group">
+          <view class="item-group-left1">*</view>
+          <view class="item-group-left2">身份证号码</view>
+          <view class="item-group-right" placeholder-class="tips"><input type="text" placeholder="请输入你的身份证号码" placeholder-class="tips" name='id_card' value='{{oldArr.id_card}}'></input></view>
+     </view>
+         <!-- <view class="item-group">
+          <view class="item-group-left1">*</view>
+          <view class="item-group-left2">工作经验</view>
+          <view class="item-group-right" placeholder-class="tips"><input type="text" placeholder="请输入你的工作经验" placeholder-class="tips"></input></view>
+         </view> -->
+           <view class="item-group">
+          <view class="item-group-left1">*</view>
+          <view class="item-group-left2">性别</view>
+          <view class="item-group-right">
+          <radio-group bindtap='sexChange'>
+                <label data-id='1'><radio name='sex' data-id='1' checked="{{oldArr.gender==1?true:false}}" ></radio>男</label>
+               <label data-id='0'><radio name='sex' data-id='0' checked="{{oldArr.gender==0?true:false}}" ></radio>女</label>
+          </radio-group>
+          </view>
+         </view>
+
+        <view class="item-group">
+          <view class="item-group-left1" style='color:#fff;'>*</view>
+          <view class="item-group-left2">微信昵称</view>
+          <view class="item-group-right" placeholder-class="tips"><input type="text" placeholder="请输入你的微信昵称" placeholder-class="tips" name='wx_name' value='{{oldArr.wx}}'></input></view>
+         </view>
+            <wxs src='./ischeck.wxs' module='ischeck'/>
+            <view class="item-box" wx:if='{{type=="artificer"}}'>
+             <view class="item-group">
+                  <view class="item-group-left1">*</view>
+                  <view class="item-group-left2">技能</view>
+             </view>
+             <view class="skills" wx:if='{{arr.length>0}}'>
+                <checkbox-group bindchange='checkboxEvent'>
+                      <checkbox  wx:for='{{arr}}' value='{{item.id}}' checked='{{ischeck.IsCheck(item.id,idx)}}'>{{item.name}}</checkbox>
+                </checkbox-group>
+             </view>
+         </view>
+
+          <view class="item-box" wx:if='{{type=="expert"}}'>
+             <view class="item-group">
+                  <view class="item-group-left1">*</view>
+                  <view class="item-group-left2">科室-咨询费</view>
+             <picker range='{{expertArr}}' bindchange='pickerEvent' style='border-bottom: 2rpx solid #ddd; width: 384rpx;font-size: 28rpx;'>{{expertArr[index] || '--请选择科室-咨询费--'}}</picker>
+             </view>
+         </view>
+         <!-- <view class="item-box" wx:if='{{type=="expert"}}'>
+             <view class="item-group">
+                  <view class="item-group-left1">*</view>
+                  <view class="item-group-left2">答题佣金</view>
+             <view class="item-group-right"><input type="number" placeholder="请输入你的答题佣金" placeholder-class="tips" name='pay'></input></view>
+             </view>
+         </view> -->
+
+         <!-- <view class="item-box" wx:if='{{type=="expert"}}'>
+             <view class="item-group">
+                  <view class="item-group-left1">*</view>
+                  <view class="item-group-left2">工作经历</view>
+             </view>
+             <view class="work-experience"><textarea placeholder="工作经历详细，认证更易通过(200字以内)" placeholder-class="tips"></textarea></view>
+         </view> -->
+             <!-- <view class="item-box"  wx:if='{{type=="expert"}}'>
+             <view class="item-group">
+                  <view class="item-group-left1">*</view>
+                  <view class="item-group-left2">擅长</view>
+             </view>
+             <view class="work-experience"><textarea placeholder="擅长详细，更易收到预约(200字以内)" placeholder-class="tips"></textarea></view>
+         </view> -->
+         <!-- <view class="item-img"  wx:if='{{type=="expert"}}'>
+             <view class="item-group">
+                  <view class="item-group-left1">*</view>
+                  <view class="item-group-left2">身份证上传</view>
+                  <view class="tips">(上传身份证正反面)</view>
+             </view>
+             <view class="upload">
+                   <view class="upload-box" >
+                   <image wx:for='{{tempFilePaths}}' src='{{item}}' wx:key='*this'>
+                      <view class="del" bindtap="delEvent1" data-id='{{index}}' data-type='status'>x</view>
+                   </image>
+                    <image src="../.././images/add.png" wx:if='{{!tempFilePaths ||tempFilePaths.length<=0}}' bindtap="upload" data-type='status' data-img='idcard'></image>
+                   </view>
+             </view>
+         </view>
+          <view class="item-img"  wx:if='{{type=="expert"}}'>
+             <view class="item-group">
+                  <view class="item-group-left1">*</view>
+                  <view class="item-group-left2">资格证书</view>
+                  <view class="tips">(上传职业资格证书)</view>
+             </view>
+             <view class="upload" style='margin-bottom: 60rpx;'>
+                   <view class="upload-box" >
+                   <image wx:for='{{tempFilePaths1}}' src='{{item}}' wx:key='*this'>
+                      <view class="del" bindtap="delEvent1" data-id='{{index}}' data-type='offer'>x</view>
+                   </image>
+                    <image src="../.././images/add.png" wx:if='{{!tempFilePaths1 ||tempFilePaths1.length<=0}}' bindtap="upload" data-type='offer'></image>
+                   </view>
+             </view>
+         </view> -->
+
+</view>
+</scroll-view>
+    <button class="btn-submit" form-type='submit'>提交</button>
+</form>

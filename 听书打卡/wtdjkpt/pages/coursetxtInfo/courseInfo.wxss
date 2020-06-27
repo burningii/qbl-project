@@ -1,0 +1,245 @@
+
+page{
+  background: #fff;
+  font-family: "Arial","Hiragino Sans GB", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
+}
+.common{
+  display: flex;
+  justify-content: flex-start;
+}
+.item-wrap1 .item-top{
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 2rpx solid #eaeaea;
+  padding: 20rpx 0;
+}
+.item-wrap1 .item-top .item-left image,.item-wrap1 .item-top .item-left video{
+     width: 357rpx;
+     border: 2rpx solid #d1d1d1;
+     height: 180rpx;
+     margin:0 20rpx;
+}
+.item-wrap1  .item-right{
+  width: 314rpx;
+  height: 180rpx;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding-right: 20rpx;
+}
+.item-wrap1 .item-right .item-name{
+  color: #333;
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.item-right .item-speak{
+  font-size: 24rpx;
+  color: #666;
+}
+.item-catalogue{
+  padding: 20rpx 20rpx 0 20rpx;
+}
+.item-group{
+  padding: 20rpx 20rpx 0 20rpx;
+}
+.item-chapter{
+  background: #fafafa;
+  padding: 5rpx 0;
+}
+.item-chapter-course,.item-chapter-course{
+  padding: 5rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+.chapter-txt1{
+  width: 80rpx;
+  text-align: right;
+      color: #999;
+    font-family: '微软雅黑';
+    font-size: 28rpx;
+    font-weight: bolder;
+}
+.chapter-txt2{
+    padding-left: 12rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: '微软雅黑';
+    font-size: 30rpx;
+}
+.course-txt1{
+  width: 80rpx;
+  text-align: right;
+    color: #b4b7be;
+}
+.course-txt2{
+  padding-left: 16rpx;
+    color: #585c67;
+    font-size: 28rpx;
+    font-family: '微软雅黑';
+}
+.play-btn image{
+   width: 40rpx;
+   height: 40rpx;
+}
+
+/* 课程：图文 */
+
+.item-top image{
+  width: 100%;
+}
+.item-til{
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+  padding: 40rpx;
+  text-align: center;
+}
+.item-til-txt{
+  padding-bottom: 40rpx;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+.item-author{
+  padding: 0 40rpx 20rpx 40rpx;
+}
+.item-author-top{
+  display: flex;
+  justify-content: flex-start;
+}
+.item-author-txt{
+  color: #999;
+  font-size: 24rpx;
+}
+.item-author-name,.item-group-til{
+  font-size: 32rpx;
+  color: #585c67;
+  font-family: '微软雅黑';
+}
+.item-author-left image{
+  width: 120rpx;
+  height: 120rpx;
+  border: 2rpx solid red;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+.item-author-right{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.item-author-description,.item-group-description{
+  box-sizing: content-box;
+  padding: 20rpx 0;
+  font-size: 28rpx;
+  line-height: 2;
+  color: #585c67;
+  font-family: '微软雅黑';
+}
+.item-group-img image{
+  margin-top: 20rpx;
+  width: 100%;
+}
+
+/* 文本 */
+
+.item-wrap3{
+  padding: 20rpx 20rpx 0 20rpx;
+}
+.item-wrap3 .item-top{
+  display: flex;
+  justify-content: flex-start;
+}
+.item-wrap3 .item-left image{
+  width: 200rpx;
+  height: 280rpx;
+  border: 2rpx solid red;
+  margin-right: 20rpx;
+}
+.item-wrap3 .item-right-top{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #e8e8e8;
+  padding-bottom: 20rpx;
+}
+.item-wrap3 .item-right-til{
+  color: #d40909;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.item-wrap3 .item-right-author{
+  color: #666;
+  font-size: 28rpx;
+  font-family: "Microsoft YaHei", 微软雅黑, Tahoma, Geneva, sans-serif;
+}
+.item-wrap3 .item-description{
+  height: 104rpx;
+  margin: 20rpx 0;
+  font-size: 28rpx;
+  color: #666;
+  font-family: "Microsoft YaHei", 微软雅黑, Tahoma, Geneva, sans-serif;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.item-wrap3 .item-tbn{
+  width: 160rpx;
+  height: 60rpx;
+  margin:20rpx auto;
+  color: #fff;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background: #409f9f;
+}
+.item-wrap3 .item-chapter-til{
+  display: flex;
+  justify-content: flex-start;
+}
+.item-wrap3 .til-txt1{
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-right: 20rpx;
+  color: #208181;
+}
+.item-wrap3 .til-txt2{
+  color: #666;
+  font-size: 28rpx;
+  font-family: 宋体, Arial, Helvetica, sans-serif;
+}
+.item-wrap3 .item-group{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.item-wrap3 .item-group-til{
+  height: 60rpx;
+  color: #666;
+  padding: 5rpx 0;
+  font-family: 宋体, Arial, Helvetica, sans-serif;
+}
+/* 音频 */
+.item-wrap4{
+  padding: 20rpx;
+}
+.item-wrap4 .item-group{
+  display:flex;
+  border-bottom: 1rpx solid #eaeaea;
+  align-items:center;
+  padding: 10rpx 0;
+  justify-content:flex-start;
+  color: #40404c;
+}
+.item-wrap4 .item-group .itemNum{
+  color: #a3a3a3;
+}
+.courseName{
+  margin-left: 80rpx;
+  margin-right: 200rpx;
+}
+.courseListen image{
+  width: 40rpx;
+  height: 40rpx;
+}

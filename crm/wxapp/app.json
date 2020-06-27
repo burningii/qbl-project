@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/customer/customer",
+    "pages/info/info",
+    "pages/calendar/calendar",
+    "pages/login/login",
+    "pages/add-todo/add-todo",
+    "pages/add-customer/index",
+    "pages/customer-info/customer-info"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#429488",
+    "navigationBarTitleText": "工作日志",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "van-tabbar": "/vant/tabbar/index",
+    "van-tabbar-item": "/vant/tabbar-item/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

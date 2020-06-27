@@ -1,0 +1,39 @@
+<view class='item-wrap' wx:if='{{type!=1}}'>
+ <!-- wx:if='{{type!=1}}' -->
+     <!-- <view class="item-top">技术专员</view> -->
+      <navigator url='/pages/goods/goods?id={{item.goods_id}}&type={{type}}&ids={{item.id}}' hover-class="none" wx:for='{{arr}}' wx:key='*this'>
+      <!-- wx:for='{{arr}}' wx:key='*this' -->
+        <view class="item-group">
+            <view class="img1-box">
+                <image src="{{item.avatar_url}}" class="img1"></image>
+            </view>
+            <view class="item-right">
+            <view class="item-content">
+                 <view class="artificer-name" style='font-size: 32rpx;color: #000;font-weight:500;'>【{{item.nickname || 123}}】</view>
+                 <view class="skills-wrap">
+                      <view class="skill" wx:for='{{item.skills}}' wx:key='*this' wx:for-item='childitem'>{{childitem}}</view>
+                 </view>
+                 <!-- <view class="artificer-tel">
+                    <view class="txt1">性别</view><view style='padding: 20rpx 0;'>{{item.gender=='1'?'男':'女'}}</view>
+                 </view> -->
+            </view>
+            <!-- <view class="img2-box">
+                 <image src="../.././images/info.png" class="img2"></image>
+            </view> -->
+            </view>
+        </view>
+      </navigator>
+</view>
+
+<view class='item-wrap1' wx:if='{{type==1}}'>
+   <navigator url='/pages/goods/goods?id={{item.id}}&type={{type}}'  hover-class="none" wx:for='{{arr}}' wx:key='*this'>
+   <view class="item-group1 {{(index+1)%3==0?'special1':''}}" >
+      <view class="item-left1"><image src="{{item.cover_pic}}"></image></view>
+      <view class="item-right1">
+         <view class="item-til1">{{item.name}}</view>
+         <!-- <view class="item-author-name1">{{item.author}}</view> -->
+         <!-- <view class="item-author-description1">{{item.des}}</view> -->
+      </view>
+   </view>
+   </navigator>
+</view>

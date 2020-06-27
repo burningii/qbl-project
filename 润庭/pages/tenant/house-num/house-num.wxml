@@ -1,0 +1,15 @@
+<view class="num-container">
+    <van-cell-group>
+        <van-field
+                value="{{ idNum }}"
+                placeholder="请输入房屋租赁许可证"
+                border="{{ false }}"
+                size="large"
+                label="许可证"
+                bind:change="onChangeNum"
+        />
+    </van-cell-group>
+    <view class="btn-num">
+        <van-button bind:click="goNextPage" custom-class="btn-override" round size="large" color="#F86732">下一步</van-button>
+    </view>
+</view>

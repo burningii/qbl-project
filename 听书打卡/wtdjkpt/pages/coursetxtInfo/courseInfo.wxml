@@ -1,0 +1,77 @@
+ <view class="item-wrap1">
+        <view class="item-top" wx:if='{{bookInfo}}'>
+       <view class="item-left">
+             <image src="{{bookInfo.cover_pic}}" bindtap='playEvent' wx:if='{{!status}}'></image>
+             <!-- <video src="../.././images/video1.mp4" wx:else autoplay="true"></video> -->
+       </view>
+       <view class="item-right">
+          <view class="item-name">{{bookInfo.name}}</view>
+          <view class="item-speak">讲师：{{bookInfo.author}}</view>
+       </view>
+    </view>
+ </view>
+ <!-- 目录列表START -->
+  <view class="item-chapter-til" wx:for='{{chapters}}'>
+           <!-- <view class="til-txt1">伏天氏</view> -->
+      <view class="til-txt2" style='padding: 20rpx;'>目录列表</view>
+  </view>
+ <!-- 目录列表END -->
+ <view wx:for='{{chapters}}' wx:key='*this'>
+<view class="item-wrap1" wx:if='{{item.type==3}}'>
+    <!-- <view class="item-catalogue">目录</view> -->
+    <view class="item-group">
+        <!-- <view class='item-chapter common'><view class='chapter-txt1'>{{item.title}}</view><view class="chapter-txt2">{{item.content}}</view></view> -->
+      <navigator url='/pages/txtshow/txtshow?course_id={{course_id}}&til={{item.title}}&id={{item.id}}' hover-class="none">
+        <view class="item-chapter-course"><view class="common"><view class="course-txt1 ">课时{{index+1}}</view><view class="course-txt2">{{item.title}}</view></view><view class="play-btn"><image src='../.././images/playVideo.png'></image></view></view>
+      </navigator>
+    </view>
+</view>
+
+<!-- 课程：图文 -->
+<!-- wx:if='{{type=="courseText"}}' -->
+
+<!-- 课程：文字 -->
+<!-- wx:if='{{type=="txt"}}' -->
+<view class='item-wrap3'  wx:if='{{item.type==1}}' >
+   <!-- <view class="item-top">
+        <view class="item-left">
+             <image src=""></image>
+        </view>
+        <view class="item-right">
+           <view class="item-right-top">
+                <view class="item-right-til">伏天氏</view>
+                <view class="item-right-author">作者：净无痕</view>
+           </view>
+              <view class="item-description">
+         东方神州，有人皇立道统，有圣贤宗门传道，有诸侯雄踞一方王国，诸强林立，神州动乱千万载，执此之时，一代天骄叶青帝及东凰大帝横空出世，斩人皇，驭圣贤，诸侯臣服，东方神州一统！      然，叶青帝忽然暴毙，世间雕像尽皆被毁，于世间除名，沦为禁忌；从此神州唯东凰大帝独尊！      十五年后，东海青州城，一名为叶伏天的少年，开启了他的传奇之路…
+         </view>
+         <navigator url="/pages/txtshow/txtshow" hover-class="none">
+              <view class="item-tbn">开始阅读</view>   
+        </navigator>
+        </view>
+   </view> -->
+   <view class='item-chapter'>
+     
+      <view class="item-group" >
+      <navigator url="/pages/txtshow/txtshow?course_id={{course_id}}&til={{item.title}}&id={{item.id}}" hover-class="none" hover-stay-time>
+         <view class="item-group-til">
+          <text>课时{{index+1}}：</text>
+          <text>{{item.title}}</text>
+         </view>
+      </navigator>
+      </view>
+   </view>
+</view>
+<!-- 课程：音频 -->
+<view class="item-wrap4" wx:if='{{item.type==2}}'>
+<navigator url='/pages/txtshow/txtshow?course_id={{course_id}}&til={{item.title}}&id={{item.id}}' hover-class="none">
+    <view class="item-group">
+          <view class="courseNum">{{index+1}}</view>
+          <view class="courseName">{{item.title}}</view>
+          <view class="courseListen">
+                  <image src="../.././images/playAudio.png"></image>
+          </view>
+    </view>
+</navigator>
+</view>
+</view>

@@ -1,0 +1,3 @@
+<view class='item-wrap'>
+    <video src='../../images/video1.mp4'></video>
+</view>

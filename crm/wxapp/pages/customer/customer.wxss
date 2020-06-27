@@ -1,0 +1,12 @@
+/* pages/customer/customer.wxss */
+
+.custom-content{
+    /*padding: 28rpx;*/
+}
+
+.custom-item{
+    width: 100%;
+    /* background-color: #cccccc; */
+    padding: 28rpx;
+    border-bottom: 1px solid #c2c2c2;
+}

@@ -1,0 +1,49 @@
+page{
+  background: #fff;
+}
+.item-wrap{
+  padding: 20rpx;
+  display: flex;
+  justify-content:flex-start;
+  flex-wrap: wrap; 
+}
+.item-group{
+  width: 223.3rpx;
+  height: 330rpx;
+  margin: 0 20rpx 20rpx 0;
+}
+.item-left{
+ text-align: center;
+}
+.item-left image{
+  width: 130rpx;
+  height: 160rpx;
+  border: 2rpx solid red;
+}
+.item-til{
+    color: #333;
+    font-size: 28rpx;
+    font-weight: bold;
+    text-align: center;
+}
+.item-author-name{
+    border-bottom: 2rpx dashed #ddd;
+    margin-bottom: 4rpx;
+    color: #777777;
+    font-size: 26rpx;
+    text-align: center;
+}
+.item-author-description{
+  padding: 10rpx 0;
+  color: #999;
+  font-size: 24rpx;
+  font-family: 宋体, Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  height: 88rpx;
+  display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+}
+.special{
+  margin-right: 0rpx!important;
+}

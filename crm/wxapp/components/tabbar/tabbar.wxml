@@ -1,0 +1,6 @@
+<van-tabbar active-color="#429488" inactive-color="#DCDCDC" active="{{ activeTab }}" bind:change="onChangeTabBar">
+    <van-tabbar-item icon="wap-home">工作日志</van-tabbar-item>
+    <van-tabbar-item icon="todo-list">客户</van-tabbar-item>
+    <van-tabbar-item icon="comment-circle">消息</van-tabbar-item>
+    <van-tabbar-item icon="column">日历</van-tabbar-item>
+</van-tabbar>

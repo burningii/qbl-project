@@ -1,0 +1,58 @@
+<view class="record-container">
+    <view class="top-input-wrapper">
+        <van-cell-group>
+            <van-field
+                value="{{text}}"
+                placeholder="请输入备案说明"
+                size="large"
+                label="备案说明"
+                bind:change="onChangeValue"
+            />
+            <van-field
+                    value="{{timeText}}"
+                    size="large"
+                    disabled
+                    label="租赁开始时长"
+                    bindtap="showModal"
+            />
+            <van-field
+                    value="{{timeEndText}}"
+                    size="large"
+                    disabled
+                    label="租赁结束时长"
+                    bindtap="showModal2"
+            />
+        </van-cell-group>
+    </view>
+    <view>
+        <van-button bind:click="sureSubmit" size="large" round color="#F86732" custom-style="width: 100%">提交</van-button>
+    </view>
+</view>
+<van-popup
+        show="{{ modalVisible }}"
+        position="bottom"
+        bind:close="onCloseModal"
+>
+    <van-datetime-picker
+            type="date"
+            value="{{ currentDate }}"
+            bind:confirm="onCofirmStartTime"
+            bind:cancel="onCloseModal"
+            min-date="{{ minDate }}"
+            formatter="{{ formatter }}"
+    />
+</van-popup>
+<van-popup
+        show="{{ modalVisible2 }}"
+        position="bottom"
+        bind:close="onCloseModal2"
+>
+    <van-datetime-picker
+            type="date"
+            value="{{ currentDate }}"
+            bind:confirm="onCofirmEndTime"
+            bind:cancel="onCloseModal2"
+            min-date="{{ minDate }}"
+            formatter="{{ formatter }}"
+    />
+</van-popup>

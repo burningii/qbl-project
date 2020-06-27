@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "店主代付",
+  "usingComponents": {
+    "van-button": "/vant/button/index",
+    "van-cell-group": "/vant/cell-group/index",
+    "van-cell": "/vant/cell/index",
+    "van-field": "/vant/field/index",
+    "van-radio": "/vant/radio/index",
+    "van-radio-group": "/vant/radio-group/index"
+  }
+}

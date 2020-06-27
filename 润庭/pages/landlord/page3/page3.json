@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "预约信息查询",
+  "usingComponents": {
+    "van-button":"/vant/button/index",
+    "van-popup":"/vant/popup/index",
+    "van-datetime-picker": "/vant/datetime-picker/index"
+  }
+}

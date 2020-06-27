@@ -1,0 +1,9 @@
+<view class="start-index-container">
+    <!--    <view class="my-flex" style="flex-wrap: wrap;width: 110%">-->
+    <!--         <view wx:for="{{arr}}" class="lattice-wrapper" wx:key="index"></view>-->
+    <!--    </view>-->
+    <!--    <view class="title-top">即砣世界</view>-->
+    <button class="start-game-wrapper {{classFlag?'text-class':''}}" open-type="getUserInfo" bindtouchstart="startTouch"
+            bindgetuserinfo="getUserInfo" bindtap="playSound" bindtouchend="endTouch">进入世界
+    </button>
+</view>

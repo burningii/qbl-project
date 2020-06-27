@@ -1,0 +1,94 @@
+<view class="home-container">
+    <!--    <view class="home-title">请登录</view>-->
+    <view class="welcome-login-wrapper">
+        <view class="my-flex-col" style="align-items: flex-start">
+            <view style="color: #0D0D0D;font-size: 26px">欢迎回来</view>
+            <view style="color: #606060;font-size: 13px;margin-top: 8px">输入手机号码获取验证码后登录</view>
+        </view>
+    </view>
+    <view class="input-wrapper">
+        <van-cell-group border="{{false}}">
+            <van-field
+                    value="{{ username }}"
+                    placeholder="请输入手机号"
+                    size="large"
+                    data-flag="1"
+                    type="number"
+                    bind:change="onChangeUser"
+            />
+            <van-field
+                    value="{{ code }}"
+                    data-flag="3"
+                    placeholder="请输入验证码"
+                    size="large"
+                    use-button-slot
+                    bind:change="onChangeUser"
+            >
+                <van-button custom-style="color: #F86732;border: 0;" custom-class="btn-override" plain
+                            disabled="{{sendMsgAbled}}" bind:click="sendCode" slot="button">{{sendMsg}}
+                </van-button>
+            </van-field>
+<!--             type="{{pwdFlag?'password':'text'}}"-->
+            <van-field
+                    value="{{ pwd }}"
+                    data-flag="2"
+                    password="{{pwdFlag}}"
+                    placeholder="请输入密码"
+                    size="large"
+                    auto-focus="{{foucesFlag}}"
+                    bind:click-icon="clickIcon"
+                    right-icon="{{pwdFlag?'https://api5.qibuluo.net/addons/zjhj_mall/Eyes_close.png':'https://api5.qibuluo.net/addons/zjhj_mall/Eyes_open.png'}}"
+                    bind:change="onChangeUser"
+            />
+        </van-cell-group>
+        <view class="btn-submit">
+            <van-button custom-class="btn-override" disabled="{{btnFlag}}" bind:click="loginNow" custom-style="border-radius: 12px"
+                        size="large" color="{{btnFlag?'#CBC7C5':' #F86732'}}">登录
+            </van-button>
+        </view>
+        <view class="my-flex-col regis">
+            <view class="my-flex">
+                <view>
+                    <van-button custom-style="color: #969696;border: 0;" bind:click="goRestorePwd"
+                                custom-class="btn-override">忘记密码？
+                    </van-button>
+                </view>
+                <view>
+                    <van-button custom-style="color: #F86732;border: 0;" bind:click="goRegister"
+                                custom-class="btn-override">注册
+                    </van-button>
+                </view>
+            </view>
+        </view>
+        <view class="my-flex-col" style="margin-top: 10px">
+            <button  bindgetuserinfo="updateUserInfo" openType="getUserInfo" style="border: 0;background: none;">
+                <image style="width: 50px;height: 50px;" src="https://api5.qibuluo.net/addons/zjhj_mall/Weichat.png"/>
+            </button>
+<!--            <image bindtap="wechatLogin" style="width: 50px;height: 50px;" src="https://api5.qibuluo.net/addons/zjhj_mall/Weichat.png"/>-->
+        </view>
+        <view class="my-flex-col" style="margin-top: 50px">
+            <image bindtap="showTextInfo" style="width: 50px;height: 50px;" src="https://api5.qibuluo.net/addons/zjhj_mall/logo.png"/>
+        </view>
+    </view>
+</view>
+
+<van-dialog
+        use-slot
+        title="手机号"
+        show="{{ phoneModalVisible }}"
+        bind:close="onCloseBindModal"
+        show-cancel-button
+>
+    <view style="padding: 20rpx">
+        <van-cell-group>
+            <van-field
+                value="{{bindPhone}}"
+                size="large"
+                label="手机号"
+                type="number"
+                placeholder="请输入手机号"
+                bind:change="onChangeBindPhone"
+            />
+        </van-cell-group>
+    </view>
+</van-dialog>

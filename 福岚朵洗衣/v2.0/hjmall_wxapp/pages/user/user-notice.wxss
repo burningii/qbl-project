@@ -1,0 +1,7 @@
+.order-item {
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 28rpx;
+    border-radius: 8px;
+    margin-top: 15rpx;
+}

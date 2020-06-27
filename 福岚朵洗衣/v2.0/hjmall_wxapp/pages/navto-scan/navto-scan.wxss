@@ -1,0 +1,162 @@
+.scan-container {
+    
+}
+
+.scan-top-container {
+    background-color: #fff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.my-upload-upload .van-uploader__upload{
+    width: 30px!important;
+    height: 30px!important;
+}
+
+.my-upload-upload .van-uploader__preview-image{
+    width: 30px!important;
+    height: 30px!important;
+}
+.scan-top-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 16rpx;
+}
+
+.scan-top-left {
+    width: 70%;
+}
+
+.scan-input-right {
+    width: 19%;
+    border-left: 1px dotted #cccccc;
+    padding: 15rpx;
+    text-align: center;
+}
+
+.custom-input {
+    /*width: 80%!important;*/
+}
+
+.scan-top-btn {
+    width: 100%;
+    text-align: center;
+    padding: 35rpx 0 35rpx 0;
+    background-color: #fff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1)
+}
+
+.scan-bottom-data {
+
+}
+
+.scan-bottom-text {
+    position: relative;
+    top: 5rpx;
+    font-family: PingFang-SC-Medium;
+    margin: 0 20rpx 0 20rpx;
+}
+
+.scan-bottom-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35rpx 0 35rpx 0;
+}
+
+.scan-bottom-title image{
+    width: 110rpx;
+    height: 12rpx;
+}
+
+.zb-flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.zb-flex-row-between {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.scan-item-icon-common {
+    padding: 10rpx;
+    background-color: #FFAA23;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 24rpx;
+    margin-left: 10rpx;
+}
+
+.scan-bottom-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.scan-bottom-item-container>view {
+   margin-top: 20rpx;
+}
+.scan-bottom-item-container>view:first-child {
+   margin-top: 0;
+}
+
+.scan-item {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 45rpx 25rpx 45rpx 25rpx;
+    border-radius: 10px;
+}
+
+.scan-item-price {
+    color: #FC4D35;
+}
+
+.scan-item-price text{
+    color: #FC4D35;
+    font-size: 32rpx;
+    font-weight: 700;
+}
+
+.scan-bottom-btn-group {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 85rpx;
+    background-color: #fff;
+    border-top: 1px solid #DDDDDD;
+    padding: 65rpx 45rpx 65rpx 45rpx;
+}
+
+.scan-group-nums {
+    color: #999;
+}
+
+.scan-group-total-price {
+    margin-left: -110rpx;
+    color: #222;
+}
+
+.scan-group-total-price .price-group1{
+    color: #FC4D35;
+    font-size: 32rpx;
+}
+
+.price-group {
+    font-size: 35rpx;
+    font-weight: 700;
+}
+
+.my-class-popup {
+    padding: 25rpx;
+}

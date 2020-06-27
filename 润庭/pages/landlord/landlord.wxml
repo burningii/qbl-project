@@ -1,0 +1,52 @@
+<view class="landlord-container">
+    <view class="my-flex-col">
+        <view class="my-flex-spa-be item-wrapper top-info">
+            <view class="my-flex-col" style="align-items: flex-start">
+                <view style="font-size: 44rpx;color: #ffffff">我是房东</view>
+                <view style="font-size: 24rpx;color: #ffffff;opacity: 0.6">Landlord</view>
+            </view>
+            <image class="img-wrapper" src="https://api5.qibuluo.net/addons/zjhj_mall/landlord.png"/>
+        </view>
+<!--        菜单页面-->
+        <view class="center-menus item-wrapper2">
+            <view bindtap="goPage1" class="my-flex center-shenbao">
+                <image class="img-wrapper2" src="https://api5.qibuluo.net/addons/zjhj_mall/shenbao01.png"/>
+                <view class="my-flex-col" style="align-items: flex-start;margin-left: 25px">
+                    <view style="color: #000000;font-size: 32rpx">房屋信息申报</view>
+                    <view style="color: #969696;font-size: 24rpx;margin-top: 7px">点击进行房屋信息申报</view>
+                </view>
+            </view>
+            <view class="my-flex-spa-be" style="margin-top: 25px">
+                <view bindtap="goPage2" class="my-flex-col menus-item">
+                    <view>审批查询</view>
+                    <image class="img-wrapper2 marginTop10" src="https://api5.qibuluo.net/addons/zjhj_mall/shenpi.png"/>
+                </view>
+                <view bindtap="goPage4" class="my-flex-col menus-item">
+                    <view>许可证</view>
+                    <image class="img-wrapper2 marginTop10" src="https://api5.qibuluo.net/addons/zjhj_mall/xukezheng.png"/>
+                </view>
+                <view bindtap="goPage3" class="my-flex-col menus-item">
+                    <view>终审预约</view>
+                    <image class="img-wrapper2 marginTop10" src="https://api5.qibuluo.net/addons/zjhj_mall/zhongshen.png"/>
+                </view>
+            </view>
+            <view bindtap="goPage5" class="my-flex mensu-bottom" style="margin-top: 25px">
+                <image class="img-wrapper2" src="https://api5.qibuluo.net/addons/zjhj_mall/zulin.png"/>
+                <view class="my-flex-col" style="align-items: flex-start;margin-left: 25px">
+                    <view style="color: #000000;font-size: 32rpx">租赁备案</view>
+                    <view style="color: #969696;font-size: 24rpx;margin-top: 7px">点击进行房屋租赁备案</view>
+                </view>
+            </view>
+            <image class="img-arrow arrow1" src="https://api5.qibuluo.net/addons/zjhj_mall/arrow_down.png"/>
+            <image class="img-arrow arrow2" src="https://api5.qibuluo.net/addons/zjhj_mall/arrow_down.png"/>
+            <image class="img-arrow arrow3" src="https://api5.qibuluo.net/addons/zjhj_mall/arrow_down.png"/>
+            <image class="img-arrow arrow4" src="https://api5.qibuluo.net/addons/zjhj_mall/arrow_down.png"/>
+        </view>
+    </view>
+
+<!--    <view class="center"><van-button bind:click="goPage1" color="#F86732" round>房屋信息申报</van-button></view>-->
+<!--    <view class="center"><van-button bind:click="goPage2" color="#F86732" round>申报查询</van-button></view>-->
+<!--    <view class="center"><van-button bind:click="goPage3" color="#F86732" round>预约查询</van-button></view>-->
+<!--    <view class="center"><van-button bind:click="goPage4" color="#F86732" round>租赁许可证查询</van-button></view>-->
+<!--    <view class="center"><van-button bind:click="goPage5" color="#F86732" round>租赁备案</van-button></view>-->
+</view>

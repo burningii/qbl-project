@@ -1,0 +1,17 @@
+<view class="reset-pwd-container">
+    <view>
+        <van-cell-group>
+            <van-field
+                value="{{pwd}}"
+                label="密码"
+                placeholder="请输入密码"
+                size="large"
+                type="password"
+                bind:change="onChangePwd"
+            />
+        </van-cell-group>
+    </view>
+    <view style="margin-top: 18px">
+        <van-button bind:click="gonow" size="large" round color="#EB554D">立即修改</van-button>
+    </view>
+</view>

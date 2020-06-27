@@ -1,0 +1,50 @@
+<!-- <view class="item-btn">
+    <view class="prev-btn txt-btn">上一课时</view>
+    <view class="next-btn txt-btn">下一课时</view>
+</view> -->
+<!-- <scroll-view scroll-y='true' class="scroll">
+  <view class="item-txt" >
+      {{content}}
+  </view>
+</scroll-view> -->
+
+<!-- <view class='item-wrap' >
+      <view class="item-top">
+             <image src="../.././images/1.png" mode="widthFix"></image>
+      </view>
+      <view class="item-til">
+          <view class="item-til-txt">家庭版的手撕鸡</view>
+      </view>
+      <view class="item-author">
+           <view class="item-author-top">
+              <view class="item-author-left"><image src="" ></image></view>
+              <view class="item-author-right">
+                    <view class="item-author-txt">讲师</view>
+                    <view class="item-author-name">星级大厨wenjiming</view>
+              </view>
+           </view>
+              <view class="item-author-description">
+                     最常见的家常菜做法简单易懂，菜谱中很多材料都是适量，每个人口味轻重不同更具自己喜好加多加少
+              </view>
+              <view class="item-group">
+                    <view class="item-group-til">图解1</view>
+                    <view class="item-group-img"><image src="../.././images/1.png" mode='widthFix'></image></view>
+                    <view class="item-group-description">两个大鸡腿洗干净 最常见的家常菜做法简单易懂，菜谱中很多材料都是适量，每个人口味轻重不同更具自己喜好加多加少</view>
+              </view>
+           </view>
+</view> -->
+<view wx:if='{{data.type==1}}'>
+   <import src="../../wxParse/wxParse.wxml"></import>
+   <view style='padding: 20rpx;'>
+   <template is="wxParse" data="{{wxParseData:detail.nodes}}"></template>
+</view>   
+</view>
+<view wx:if='{{data.type==2}}' style='padding: 20rpx;'>
+    <audio src="{{data.content}}" controls="true" author='{{data.title}}' name='' ></audio>
+</view>
+<view wx:if='{{data.type==3}}'>
+      <view class='item-wrap' wx:if='{{data.content}}' style='position:relative;background:red;'>
+        <video src='{{data.content}}' controls="true" custom-cache="{{false}}"></video>
+         <cover-view style='background:#ccc; width: 640rpx;height: 310rpx;position:absolute;left:0;top:0;z-index:100;opacity:0.5;text-align:center;line-height:310rpx;color:#fff;' wx:if='{{s}}'>loading...</cover-view>
+      </view>
+</view>

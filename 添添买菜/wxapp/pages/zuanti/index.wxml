@@ -1,0 +1,45 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="zuanti-container">
+    <image src="{{info.info.first_pic}}" class="firs1-img"/>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    <video src="{{info.info.video_url}}" class="video-wrapper"></video>
+    <view class="foods-wrapper">
+        <view class="foods-item"
+              wx:for="{{info.info.shareList}}"
+              bindtap="goInfo"
+              data-id="{{item.goods_id}}"
+              data-name="{{item.title}}"
+              wx:key="index"
+        >
+            <view class="my-flex-col">
+                <view class="food-title-2">{{item.title}}</view>
+            </view>
+            <image class="firs2-img" src="{{item.picture}}"/>
+        </view>
+    </view>
+    <!--   循环商品-->
+    <view class="goods-content">
+        <view class="my-flex" style="flex-wrap: wrap">
+            <view class="good-item"
+                  wx:for="{{info.goods_data}}"
+                  wx:key="index"
+            >
+                <image class="info-img" src="{{item.pic_list[0].pic_url}}"/>
+                <view style="padding: 10px">{{item.name}}</view>
+                <view class="my-flex-spa-be" style="padding: 10px;margin-top: 10px">
+                    <view style="color: red">¥ {{item.price}}</view>
+                    <van-icon bind:click="addCart" data-id="{{item.id}}" name="cart" size="20"
+                              color="#00c203"/>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!--    底部banner-->
+    <view bindtap="preive" class="my-flex-col bottom-banner" style="padding: 15px 0">
+        <view class="animation-fdkjf more-make">点击解锁更多做法</view>
+        <view class="my-flex-col" style="margin-top: 60rpx">
+            <view class="title-fdfd">所有菜谱来自"吃什么"板块</view>
+            <view class="title22">跟着我学做饭, 餐桌N天不重复</view>
+        </view>
+    </view>
+</view>

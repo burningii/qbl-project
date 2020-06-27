@@ -1,0 +1,116 @@
+<view class="page2-container">
+
+	<view class="my-flex-col top-input-wrapper">
+		<view class="my-flex-spa-be item-meuus">
+			<view class="my-flex-col" style="align-items: flex-start">
+				<view style="color: #969696;font-size: 25rpx">起始时间:</view>
+				<view bindtap="showTimePicker" data-flag="1" class="my-flex-spa-be check-time-input">
+					<view>{{startTime}}</view>
+					<image class="icon-arrow-menus" src="https://api5.qibuluo.net/addons/zjhj_mall/Triangle_Gray.png" />
+				</view>
+			</view>
+			<view class="my-flex-col" style="align-items: flex-start">
+				<view style="color: #969696;font-size: 25rpx">结束时间:</view>
+				<view bindtap="showTimePicker" data-flag="2" class="my-flex-spa-be check-time-input">
+					<view>{{endTime}}</view>
+					<image class="icon-arrow-menus" src="https://api5.qibuluo.net/addons/zjhj_mall/Triangle_Gray.png" />
+				</view>
+			</view>
+		</view>
+	</view>
+	<view style="width: 95%;margin: 15px auto;padding-left: 36rpx">
+		<van-button custom-style="width:95%;border-radius: 13px" class="diy-btn" bind:click="queryNow" size="large" color="linear-gradient(to right, #FF8807, #FF5504)">立即查询
+		</van-button>
+	</view>
+
+	<!--    <view class="my-flex-col page2-top-time">-->
+	<!--        <view class="my-flex check-time">-->
+	<!--            <view class="left-time">查询时间</view>-->
+	<!--            <view class="right-time">-->
+	<!--                <view bindtap="showTimePicker" data-flag="1" class="check-time-input">{{startTime}}</view>-->
+	<!--                <view bindtap="showTimePicker" data-flag="2" class="check-time-input">{{endTime}}</view>-->
+	<!--            </view>-->
+	<!--        </view>-->
+	<!--        <view class="btn-query">-->
+	<!--            <van-button bind:click="queryNow" round color="#F86732">立即查询</van-button>-->
+	<!--        </view>-->
+	<!--    </view>-->
+	<!--查询结果列表-->
+	<view style="width: 100%;background-color: #F4F4F4;height: 8px"></view>
+	<view class="query-result">
+		<van-tabs color="#F86732" active="{{ active }}" bind:change="onChangeMenus">
+			<van-tab title="房屋申报信息" />
+			<van-tab title="租户信息" />
+		</van-tabs>
+		<view class="result-wrapper">
+			<block wx:if="{{0==active}}">
+				<view class="result-item" wx:for="{{resultList}}" wx:if="{{item.itemType==1}}" wx:key="index">
+					<view class="my-flex-spa-be item-top">
+						<!--<image src="https://s2.ax1x.com/2019/11/25/MjF3vQ.jpg" class="result-img"/>-->
+						<view class="right-item">
+							<view class="my-flex-spa-be">
+								<view>编号为: {{item.declareNo}}</view>
+								<!--<view>-->
+								<!--<van-button size="small" round color="#F86732">状态: 已审核</van-button>-->
+								<!--</view>-->
+							</view>
+							<view class="item-info">预约日期为: {{item.reserveDate}}</view>
+							<view class="item-info">小区名称: {{item.neighborhood}}</view>
+							<view class="item-info">{{item.buildNo}}栋{{item.unitNo}}单元{{item.roomNo}}室</view>
+<!--							<view class="item-info">楼号: {{item.buildNo}}</view>-->
+<!--							<view class="item-info">单元号: {{item.unitNo}}</view>-->
+<!--							<view class="item-info">房间号: {{item.roomNo}}</view>-->
+						</view>
+					</view>
+					<!-- <view class="item-bottom">
+						<van-button size="small" disabled wx:if="{{item.reserveState==4}}" round color="#F86732">用户已确定该预约时间
+						</van-button>
+						<van-button size="small" disabled wx:if="{{item.reserveState==1}}" round color="#F86732">请等待用户确定该时间
+						</van-button>
+						<van-button bind:click="sureTwoCheckTime" size="small" data-item="{{item}}" wx:if="{{item.reserveState==2}}" round color="#F86732">用户已变更时间，是否确认？
+						</van-button>
+						<van-button size="small" round color="#F86732">详情</van-button>
+					</view> -->
+				</view>
+			</block>
+			<block wx:if="{{1==active}}">
+				<view class="result-item" wx:for="{{resultList}}" wx:if="{{item.itemType==2}}" wx:key="index">
+					<view class="my-flex-spa-be item-top">
+						<!--<image src="https://s2.ax1x.com/2019/11/25/MjF3vQ.jpg" class="result-img"/>-->
+						<view class="right-item">
+							<view class="my-flex-spa-be">
+								<view>编号为: {{item.declareNo}}</view>
+								<!--<view>-->
+								<!--<van-button size="small" round color="#F86732">状态: 已审核</van-button>-->
+								<!--</view>-->
+							</view>
+							<view class="item-info">预约日期为: {{item.reserveDate}}</view>
+							<view class="item-info">小区名称: {{item.neighborhood}}</view>
+							<view class="item-info">{{item.buildNo}}栋{{item.unitNo}}单元{{item.roomNo}}室</view>
+						</view>
+					</view>
+					<!-- <view class="item-bottom">
+						<van-button size="small" disabled wx:if="{{item.reserveState==4}}" round color="#F86732">用户已确定该预约时间
+						</van-button>
+						<van-button size="small" disabled wx:if="{{item.reserveState==1}}" round color="#F86732">请等待用户确定该时间
+						</van-button>
+						<van-button bind:click="sureTwoCheckTime" size="small" data-item="{{item}}" wx:if="{{item.reserveState==2}}" round color="#F86732">用户已变更时间，是否确认？
+						</van-button>
+						<van-button size="small" round color="#F86732">详情</van-button>
+					</view> -->
+				</view>
+			</block>
+			<view wx:if="{{resultList.length==0}}" style="line-height: 94rpx" class="my-flex-col my-no-more">
+				<image style="width: 100px;height: 100px;"
+					   src="https://api5.qibuluo.net/addons/zjhj_mall/No_goods.png"/>
+				<view style="color: #969696">未查询到相关结果</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<van-popup show="{{ showTimePickerVisible }}" position="bottom" bind:close="onCloseTimePicker">
+	<view>
+		<van-datetime-picker type="date" value="{{ currentDate }}" bind:confirm="onInputTime" bind:cancel="onCloseTimePicker" min-date="{{ minDate }}" formatter="{{ formatter }}" />
+	</view>
+</van-popup>

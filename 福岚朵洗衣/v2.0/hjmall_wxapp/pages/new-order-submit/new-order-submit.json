@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "结算",
+    "usingComponents": {
+        "app-navigation": "/components/quick-navigation-components/index",
+        "van-popup": "/vant/popup/index",
+        "van-button": "/vant/button/index"
+    }
+}

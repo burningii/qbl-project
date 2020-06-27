@@ -1,0 +1,55 @@
+<view class="page2-container">
+    <view class="my-flex-col page2-top-time">
+        <view class="my-flex check-time">
+            <view class="left-time">查询时间</view>
+            <view class="right-time">
+                <view bindtap="showTimePicker" data-flag="1" class="check-time-input">{{startTime}}</view>
+                <view bindtap="showTimePicker" data-flag="2" class="check-time-input">{{endTime}}</view>
+            </view>
+        </view>
+        <view class="btn-query">
+            <van-button bind:click="queryNow" round color="#F86732">立即查询</van-button>
+        </view>
+    </view>
+    <!--查询结果列表-->
+    <view class="query-result">
+        <view class="query-title">查询结果列表</view>
+        <view class="result-wrapper">
+            <view class="result-item"
+                wx:for="{{resultList}}"
+                wx:key="index">
+
+                <view class="my-flex-spa-be item-top">
+                    <view class="right-item">
+                        <view class="">
+                            <view>{{resultList.community}}</view>
+                            <image src="{{resultList.idPic}}" class="result-img"/>
+                        </view>
+                    </view>
+                </view>
+                <view class="my-flex-spa-be">
+                    <van-button bind:click="deleteItem" bind:click="goInfo"  size="small" round color="#F86732">查看详情</van-button>
+                    <!--<van-button size="small" round color="#F86732">下载 (保存到相册)</van-button>-->
+                </view>
+
+            </view>
+        </view>
+    </view>
+</view>
+
+<van-popup
+        show="{{ showTimePickerVisible }}"
+        position="bottom"
+        bind:close="onCloseTimePicker"
+>
+    <view>
+        <van-datetime-picker
+                type="date"
+                value="{{ currentDate }}"
+                bind:confirm="onInputTime"
+                bind:cancel="onCloseTimePicker"
+                min-date="{{ minDate }}"
+                formatter="{{ formatter }}"
+        />
+    </view>
+</van-popup>

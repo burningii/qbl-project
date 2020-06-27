@@ -1,0 +1,27 @@
+<view class="clock-container">
+    <view class="my-flex-col top-nums">
+        <view class="my-flex-col study-day-wrapper">
+            <view>连续学习</view>
+            <view><text class="days">{{info.just_dk_day}}</text>天</view>
+        </view>
+    </view>
+    <view class="form-wrapper">
+        <van-cell-group>
+            <van-field
+                value="{{text}}"
+                label="读书心得"
+                size="large"
+                placeholder="请输入学习心得"
+                bind:change="onChangeInput"
+            />
+        </van-cell-group>
+        <van-uploader
+                file-list="{{ fileList }}"
+                      upload-text="上传朋友圈截图"
+                    bind:delete="deleteImg"
+                      bind:after-read="afterRead" />
+    </view>
+    <view style="margin-top: 80px">
+        <van-button bind:click="clockRight" size="large" round color="#FC7868">立即打卡</van-button>
+    </view>
+</view>

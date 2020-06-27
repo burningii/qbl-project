@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="67aa084e-96c7-4bea-a6f2-df2e6463f9f0" name="shijie" url="http://49.234.48.79:9999/">
+        <fileTransfer host="49.234.48.79" port="22" rootFolder="/data/www/wwwroot/shijie.qibuluo.net" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

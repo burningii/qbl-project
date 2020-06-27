@@ -1,0 +1,36 @@
+<view class='item-wrap'>
+   <view class="item-top">
+       <view>答题模式选择</view>
+       <picker range="{{['普通','悬赏']}}" bindchange="pickerAnswer">
+            <view>{{['普通','悬赏'][index] || '普通>'}}</view>
+       </picker>
+   </view>
+   <scroll-view scroll-y='true'>
+               <view class="item-group">
+              <view class="item-left"><image src='{{avatorUrl}}'></image></view>
+              <view class="item-right">
+                  <view class="item-username">wenjiming</view>
+                  <view class="item-text">打开了我的说说的选项栏中看到之前发表的说说,此时在说说的页面中点击“更多”选项。 步骤阅读 3 然后展开其他选项菜单中选择点击“删除”选项。</view>
+                  <view class="item-image">
+                      <image bindtap='imgEnlarge' class="{{enlarge==true?'enlarge':''}}"></image>
+                      <video src='../.././images/video1.mp4'></video>
+                      <view style='display:flex;align-item:center;'><image src="../.././images/listen.png"></image></view>
+                  </view>
+                  <view class="item-time">
+                     <view>昨天</view>  
+                     <view class="answer-box" wx:if='{{!status}}'>
+                        <view class='answer'>
+                        <view class="img-box">
+                           <image src="../.././images/answer.png"></image>
+                        </view>
+                        <view class="answer-txt" bindtap='asEvent'>回复</view>
+                        </view>
+                     </view>
+                  </view>
+                  <view wx:if='{{status}}'>
+                          <textarea placeholder="回复" focus="{{status}}"></textarea>
+                  </view>
+              </view>
+            </view>
+   </scroll-view>
+</view>

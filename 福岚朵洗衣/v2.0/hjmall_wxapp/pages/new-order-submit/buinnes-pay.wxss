@@ -1,0 +1,17 @@
+page {
+    background-color: #fff;
+}
+
+.submit-btn{
+    margin-top: 85px;
+}
+
+.pay-price {
+    background-color: #fff;
+    padding: 65rpx;
+    font-size: 32rpx;
+}
+
+.pay-now-wrapper {
+    margin-top: 450rpx;
+}

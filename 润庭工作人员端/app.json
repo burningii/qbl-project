@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/index/index",
+    "pages/houseInfoCheck/index",
+    "pages/tenantInfoCheck/index",
+    "pages/orderInfoCheck/index",
+    "pages/house-info/house-info",
+    "pages/verify-house/verify-house",
+    "pages/verify-tenant/index",
+    "pages/tenant-info/index",
+    "pages/page5/page5",
+    "pages/reset-pwd/reset-pwd"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

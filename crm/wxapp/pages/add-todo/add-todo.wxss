@@ -1,0 +1,11 @@
+/* pages/add-todo/add-todo.wxss */
+
+.todo-type{
+    padding: 10px;
+    padding-left: 16px;
+    align-items: flex-start;
+    font-size: 29rpx;
+}
+.my-checkbox{
+    margin-top: 6px;
+}

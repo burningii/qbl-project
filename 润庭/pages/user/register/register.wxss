@@ -1,0 +1,13 @@
+.submit-register{
+    /*margin-top: 55rpx;*/
+}
+button:not([size='mini']) {
+    width: inherit!important;
+}
+.color-radio{
+    --radio-label-color: #888888;
+}
+.text-xieyi{
+    padding: 30px 15px;
+    font-size: 26rpx;
+}

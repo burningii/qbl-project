@@ -1,0 +1,8 @@
+<view>
+    <view bindtap="goSearch" class='top-search-wrapper'>
+        <van-search shape="round"
+                    disabled
+                    field-class="search-wrapper"
+                    placeholder="请输入搜索关键词"/>
+    </view>
+</view>

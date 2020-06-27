@@ -1,0 +1,192 @@
+<view class="page2-container">
+
+    <view class="my-flex-col top-input-wrapper">
+        <view class="my-flex-spa-be item-meuus">
+            <view class="my-flex-col" style="align-items: flex-start">
+                <view style="color: #969696;font-size: 25rpx">起始时间:</view>
+                <view bindtap="showTimePicker" data-flag="1" class="my-flex-spa-be check-time-input">
+                    <view>{{startTime}}</view>
+                    <image class="icon-arrow-menus" src="https://api5.qibuluo.net/addons/zjhj_mall/Triangle_Gray.png"/>
+                </view>
+            </view>
+            <view class="my-flex-col" style="align-items: flex-start">
+                <view style="color: #969696;font-size: 25rpx">结束时间:</view>
+                <view bindtap="showTimePicker" data-flag="2" class="my-flex-spa-be check-time-input">
+                    <view>{{endTime}}</view>
+                    <image class="icon-arrow-menus" src="https://api5.qibuluo.net/addons/zjhj_mall/Triangle_Gray.png"/>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view style="width: 95%;margin: 15px auto;padding-left: 36rpx">
+        <van-button
+                custom-style="width:95%;border-radius: 13px"
+                class="diy-btn"
+                bind:click="queryNow"
+                size="large"
+                color="linear-gradient(to right, #FF8807, #FF5504)">立即查询
+        </van-button>
+    </view>
+    <view>
+        <van-tabs active="{{ active }}" color="#F86732" bind:change="onChangeMenus">
+            <van-tab title="待审批"/>
+            <van-tab title="初审"/>
+            <van-tab title="终审"/>
+        </van-tabs>
+    </view>
+
+    <!--    <view class="my-flex-col page2-top-time">-->
+    <!--        <view class="my-flex check-time">-->
+    <!--            <view class="left-time">查询时间</view>-->
+    <!--            <view class="right-time">-->
+    <!--                <view bindtap="showTimePicker" data-flag="1" class="check-time-input">{{startTime}}</view>-->
+    <!--                <view bindtap="showTimePicker" data-flag="2" class="check-time-input">{{endTime}}</view>-->
+    <!--            </view>-->
+    <!--        </view>-->
+    <!--        <view class="btn-query">-->
+    <!--            <van-button bind:click="queryNow" round color="#F86732">立即查询</van-button>-->
+    <!--        </view>-->
+    <!--    </view>-->
+    <!--查询结果列表-->
+    <view style="width: 100%;background-color: #F4F4F4;height: 8px"></view>
+    <view class="query-result">
+        <!--        <view class="my-flex-spa-be query-title">-->
+        <!--            <view>查询结果列表</view>-->
+        <!--            <view><van-button bind:click="goOrderInfo" size="small" round color="#F86732">去登记</van-button></view>-->
+        <!--        </view>-->
+        <view class="result-wrapper">
+            <block wx:if="{{0==active}}">
+                <view class="result-item"
+                      wx:for="{{resultList}}"
+                      wx:if="{{resultList.length>0 && item.tenantState==2}}"
+                      wx:key="index">
+                    <view class="my-flex-spa-be item-top">
+                        <image src="{{item.idPic}}" class="result-img"/>
+                        <view class="right-item">
+                            <view class="my-flex-spa-be">
+                                <view class="community-text">{{item.street}}</view>
+                                <view>
+                                    <van-button size="small" size="small" round color="#F86732">状态: {{item.statusTxt}}
+                                    </van-button>
+                                </view>
+                            </view>
+                            <view class="item-info">{{item.remark}}</view>
+                            <view class="item-info">{{item.community}}</view>
+                            <view class="item-info">小区: {{item.neighborhood}}</view>
+                            <view class="item-info">楼号: {{item.buildNo}}</view>
+                            <view class="item-info">单元号: {{item.unitNo}}</view>
+                            <view class="item-info">房号: {{item.roomNo}}</view>
+                        </view>
+                    </view>
+                    <view class="item-bottom">
+                        <van-button size="small" bind:click="reSubmit"
+                                    data-item="{{item}}" round color="#F86732">详情
+                        </van-button>
+                        <van-button size="small" bind:click="deleteItem" data-id="{{item.tenantId}}" round
+                                    color="#F86732">删除
+                        </van-button>
+<!--                        <van-button size="small" bind:click="goInfo" data-item="{{item}}" round color="#F86732">详情-->
+<!--                        </van-button>-->
+                    </view>
+                </view>
+            </block>
+            <block wx:elif="{{1==active}}">
+                <view class="result-item"
+                      wx:for="{{resultList}}"
+                      wx:if="{{resultList.length>0 && (item.tenantState==3 || 4==item.tenantState)}}"
+                      wx:key="index">
+                    <view class="my-flex-spa-be item-top">
+                        <image src="{{item.idPic}}" class="result-img"/>
+                        <view class="right-item">
+                            <view class="my-flex-spa-be">
+                                <view class="community-text">{{item.street}}</view>
+                                <view>
+                                    <van-button size="small" size="small" round color="#F86732">状态: {{item.statusTxt}}
+                                    </van-button>
+                                </view>
+                            </view>
+                            <view class="item-info">{{item.remark}}</view>
+                            <view class="item-info">{{item.community}}</view>
+                            <view class="item-info">小区: {{item.neighborhood}}</view>
+                            <view class="item-info">楼号: {{item.buildNo}}</view>
+                            <view class="item-info">单元号: {{item.unitNo}}</view>
+                            <view class="item-info">房号: {{item.roomNo}}</view>
+                        </view>
+                    </view>
+                    <view class="item-bottom">
+                        <van-button size="small" bind:click="reSubmit"
+                                    data-item="{{item}}" round color="#F86732">详情
+                        </van-button>
+                        <van-button size="small" bind:click="deleteItem" data-id="{{item.tenantId}}" round
+                                    color="#F86732">删除
+                        </van-button>
+<!--                        <van-button size="small" bind:click="goInfo" data-item="{{item}}" round color="#F86732">详情-->
+<!--                        </van-button>-->
+                    </view>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="result-item"
+                      wx:for="{{resultList}}"
+                      wx:if="{{resultList.length>0 && item.tenantState==6}}"
+                      wx:key="index">
+                    <view class="my-flex-spa-be item-top">
+                        <image src="{{item.idPic}}" class="result-img"/>
+                        <view class="right-item">
+                            <view class="my-flex-spa-be">
+                                <view class="community-text">{{item.street}}</view>
+                                <view>
+                                    <van-button size="small" size="small" round color="#F86732">状态: {{item.statusTxt}}
+                                    </van-button>
+                                </view>
+                            </view>
+                            <view class="item-info">{{item.remark}}</view>
+                            <view class="item-info">{{item.community}}</view>
+                            <view class="item-info">小区: {{item.neighborhood}}</view>
+                            <view class="item-info">楼号: {{item.buildNo}}</view>
+                            <view class="item-info">单元号: {{item.unitNo}}</view>
+                            <view class="item-info">房号: {{item.roomNo}}</view>
+                        </view>
+                    </view>
+                    <view class="item-bottom">
+                        <van-button size="small" bind:click="reSubmit"
+                                    data-item="{{item}}" round color="#F86732">详情
+                        </van-button>
+                        <van-button size="small" bind:click="deleteItem" data-id="{{item.tenantId}}" round
+                                    color="#F86732">删除
+                        </van-button>
+                        <!--                        <van-button size="small" bind:click="goInfo" data-item="{{item}}" round color="#F86732">详情-->
+                        <!--                        </van-button>-->
+                    </view>
+                </view>
+            </block>
+            <view wx:if="{{resultList.length==0}}" style="line-height: 94rpx" class="my-flex-col my-no-more">
+                <image style="width: 100px;height: 100px;"
+                       src="https://api5.qibuluo.net/addons/zjhj_mall/No_goods.png"/>
+                <view style="color: #969696">未查询到相关结果</view>
+                <van-button
+                        bind:click="goOrderInfo"
+                        custom-style="border-radius: 13px;width: 110px!important"
+                        color="linear-gradient(to right, #FF8807, #FF5504)">去登记
+                </van-button>
+            </view>
+        </view>
+    </view>
+</view>
+
+<van-popup
+        show="{{ showTimePickerVisible }}"
+        position="bottom"
+        bind:close="onCloseTimePicker"
+>
+    <view>
+        <van-datetime-picker
+                type="date"
+                value="{{ currentDate }}"
+                bind:confirm="onInputTime"
+                bind:cancel="onCloseTimePicker"
+                min-date="{{ minDate }}"
+                formatter="{{ formatter }}"
+        />
+    </view>
+</van-popup>

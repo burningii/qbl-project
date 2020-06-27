@@ -1,0 +1,190 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.4",
+	"appid": "wx27ab23190615e671",
+	"projectname": "%E6%B6%A6%E5%BA%AD%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "用户注册",
+					"pathName": "pages/user/register/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "主页",
+					"pathName": "pages/main/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "房东菜单页",
+					"pathName": "pages/landlord/landlord",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "房东房屋信息申报表",
+					"pathName": "pages/landlord/page1/page1",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "房东申报查询",
+					"pathName": "pages/landlord/page2/page2",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "房东预约信息查询",
+					"pathName": "pages/landlord/page3/page3",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "预约时间变更",
+					"pathName": "pages/landlord/page3/change-order/change-order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "房东租赁许可证查询",
+					"pathName": "pages/landlord/page4/page4",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "租户菜单页",
+					"pathName": "pages/tenant/tenant",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "租户申报",
+					"pathName": "pages/tenant/page1/page1",
+					"query": "data= {\"token\":null,\"houseId\":6,\"declareNo\":\"HP20200309000004\",\"recordNo\":\"LP20200310000004\",\"declareDate\":\"2020-03-09\",\"recordDate\":\"2020-03-10\",\"organNo\":\"11121001\",\"community\":\"11120001机构中文简称-社区\",\"street\":\"11121001机构中文简称-街道\",\"neighborhood\":\"11212\",\"houseType\":1,\"hostName\":\"张兵\",\"hostIdNo\":\"27817281728718271\",\"hostGender\":2,\"hostNation\":\"汉\",\"hostTel\":\"21212\",\"propertyNo\":\"21212\",\"houseAddr\":\"12121\",\"buildNo\":\"212\",\"unitNo\":\"212\",\"roomNo\":\"212\",\"proper\":null,\"propertyType\":1,\"totalArea\":\"212\",\"strctType\":1,\"idPic\":\"http://47.104.94.110:9998/HLP_GOV/upload/pic/1583716597048.png\",\"propertyPic\":\"http://47.104.94.110:9998/HLP_GOV/upload/pic/1583716602832.png\",\"housePic\":\"http://47.104.94.110:9998/HLP_GOV/upload/pic/1583716606197.png\",\"remark\":null,\"houseState\":1,\"createId\":0,\"createTime\":null,\"updateId\":0,\"updateTime\":null}&id= LP20200310000004",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "租户申报查询",
+					"pathName": "pages/tenant/page2/page2",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "租户预约查询",
+					"pathName": "pages/tenant/page3/page3",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "租户租赁备案查询",
+					"pathName": "pages/tenant/page4/page4",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "忘记密码",
+					"pathName": "pages/restore-pwd/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/landlord/page5/page5",
+					"pathName": "pages/landlord/page5/page5",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 15,
+					"name": "登录",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "用户中心",
+					"pathName": "pages/user/info/info",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "租户申报-1",
+					"pathName": "pages/tenant/house-num/house-num",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

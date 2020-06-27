@@ -1,0 +1,133 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.3",
+	"appid": "wx30b5d4dcbaf5c934",
+	"projectname": "%E5%90%AC%E4%B9%A6%E6%89%93%E5%8D%A1",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "主页",
+					"pathName": "pages/pages2/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "播放页面-音频",
+					"pathName": "pages/pages2/play/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "打卡页面",
+					"pathName": "pages/pages2/clock/clock",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "商品列表",
+					"pathName": "pages/list/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "商品详情",
+					"pathName": "pages/goods/goods",
+					"query": "id=23&type=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品结算页面",
+					"pathName": "pages/new-order-submit/new-order-submit",
+					"query": "mch_list=[{\"mch_id\":0,\"goods_list\":[{\"goods_id\":\"21\",\"num\":1,\"attr\":[{\"attr_group_id\":2,\"attr_id\":2}]}]}]",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "用户中心",
+					"pathName": "pages/user/user",
+					"query": "mch_list=[{\"mch_id\":0,\"goods_list\":[{\"goods_id\":\"21\",\"num\":1,\"attr\":[{\"attr_group_id\":2,\"attr_id\":2}]}]}]",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的视频播放页面",
+					"pathName": "pages/pages2/play/video",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的课程",
+					"pathName": "pages/myCourse/myCourse",
+					"query": "id=23&type=1",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "课程类目",
+					"pathName": "pages/orderClassify/orderClassify",
+					"query": "item=1",
+					"scene": null
+				}
+			]
+		}
+	}
+}

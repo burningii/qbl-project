@@ -1,0 +1,51 @@
+<view class='item-wrap'>
+     <view class="item-top">
+          <view class="expert-classify">专家分类</view>
+          <picker range='{{["牙科","儿童科","耳科"]}}' bindchange="pickerEvent">
+             <view class="" wx:if='{{index}}'>{{["牙科","儿童科","耳科"][index]}}</view>
+              <view class='' wx:else>牙科</view>
+          </picker>
+     </view>
+     <view class="item-group">
+         <view class="item-left"><image src=""></image></view>
+         <view class="item-right">
+          <view class="item-content">
+                <view class="item-name">姓名：张三</view>
+                <view class="item-tel">联系方式：15583878176</view>
+                <view class="item-area">所属领域：牙科</view>
+          </view>
+          <view class="item-info">
+              <navigator url='/pages/ask/ask'><view class="item-ask">去提问</view></navigator>
+              <navigator url='/pages/artificerInfo/artificerInfo'><view class="item-expertInfo">详情</view></navigator>
+          </view>
+         </view>
+     </view>
+     <view class="item-group">
+         <view class="item-left"><image src=""></image></view>
+         <view class="item-right">
+          <view class="item-content">
+                <view class="item-name">姓名：张三</view>
+                <view class="item-tel">联系方式：15583878176</view>
+                <view class="item-area">所属领域：牙科</view>
+          </view>
+          <view class="item-info">
+              <view class="item-ask">去提问</view>
+              <view class="item-expertInfo">详情</view>
+          </view>
+         </view>
+     </view>
+     <view class="item-group">
+         <view class="item-left"><image src=""></image></view>
+         <view class="item-right">
+          <view class="item-content">
+                <view class="item-name">姓名：张三</view>
+                <view class="item-tel">联系方式：15583878176</view>
+                <view class="item-area">所属领域：牙科</view>
+          </view>
+          <view class="item-info">
+              <view class="item-ask">去提问</view>
+              <view class="item-expertInfo">详情</view>
+          </view>
+         </view>
+     </view>
+</view>

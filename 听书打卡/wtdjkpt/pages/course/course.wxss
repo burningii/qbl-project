@@ -1,0 +1,87 @@
+
+page{
+  background: #fff;
+  font-family: "Arial","Hiragino Sans GB", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
+}
+.common{
+  display: flex;
+  justify-content: flex-start;
+}
+.item-top{
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 2rpx solid #eaeaea;
+  padding: 20rpx 0;
+}
+.item-left image,.item-left video{
+     width: 357rpx;
+     border: 2rpx solid red;
+     height: 180rpx;
+     margin:0 20rpx;
+}
+.item-right{
+  width: 314rpx;
+  height: 180rpx;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding-right: 20rpx;
+}
+.item-right .item-name{
+  color: #333;
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.item-right .item-speak{
+  font-size: 24rpx;
+  color: #666;
+}
+.item-catalogue{
+  padding: 20rpx 20rpx 0 20rpx;
+}
+.item-group{
+  padding: 20rpx 20rpx 0 20rpx;
+}
+.item-chapter{
+  background: #fafafa;
+  padding: 5rpx 0;
+}
+.item-chapter-course,.item-chapter-course{
+  padding: 5rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+.chapter-txt1{
+  width: 80rpx;
+  text-align: right;
+      color: #999;
+    font-family: '微软雅黑';
+    font-size: 28rpx;
+    font-weight: bolder;
+}
+.chapter-txt2{
+    padding-left: 12rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: '微软雅黑';
+    font-size: 30rpx;
+}
+.course-txt1{
+  width: 80rpx;
+  text-align: right;
+    color: #b4b7be;
+}
+.course-txt2{
+  padding-left: 16rpx;
+    color: #585c67;
+    font-size: 28rpx;
+    font-family: '微软雅黑';
+}
+.play-btn image{
+   width: 40rpx;
+   height: 40rpx;
+   border: 2rpx solid red;
+}

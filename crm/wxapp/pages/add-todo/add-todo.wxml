@@ -1,0 +1,122 @@
+<view class="add-todo-container">
+    <van-cell-group>
+        <van-field
+                value="{{todoDate}}"
+                placeholder="点击选择日期"
+                disabled
+                bindtap="showTimeModal"
+                label="拜访日期"
+        />
+        <van-field
+                value="{{todoObj.value}}"
+                placeholder="点击选择对象"
+                disabled
+                bindtap="showObjModal"
+                label="拜访对象"
+        />
+        <van-field
+                value="{{todoContent}}"
+                autosize
+                type="textarea"
+                placeholder="输入内容"
+                label="拜访内容"
+                bind:change="onChangeTodoContent"
+        />
+<!--        拜访类别-->
+        <view class="my-flex todo-type">
+            <view>拜访类别</view>
+            <view class="todo-main" style="margin-left: 50rpx;">
+                <van-checkbox
+                        wx:for="{{todoType}}"
+                        wx:key="index"
+                        custom-class="my-checkbox"
+                        checked-color="#429488"
+                        value="{{ item.checked }}"
+                        data-index="{{index}}"
+                        data-check="{{item.checked}}"
+                        bind:change="onChangeType">{{item.name}}</van-checkbox>
+            </view>
+        </view>
+<!--        拜访连接-->
+        <view class="my-flex todo-type">
+            <view>拜访链接</view>
+            <view class="todo-main" style="margin-left: 50rpx;">
+                <van-checkbox
+                        wx:for="{{todoLink}}"
+                        wx:key="index"
+                        custom-class="my-checkbox"
+                        checked-color="#429488"
+                        data-index="{{index}}"
+                        data-check="{{item.checked}}"
+                        value="{{ item.checked }}"
+                        bind:change="onChangeLink">{{item.name}}</van-checkbox>
+            </view>
+        </view>
+        <van-field
+                value="{{remindDate}}"
+                size="large"
+                placeholder="点击选择提醒时间"
+                disabled
+                bindtap="showRemindDateModal"
+                label="提醒时间"
+        />
+    </van-cell-group>
+    <view style="margin-top: 18px">
+        <van-button
+                wx:if="{{pageFlag==1}}"
+                bind:click="submitNow"
+                size="large"
+                round
+                color="#429488">立即提交
+        </van-button>
+        <van-button
+                wx:else
+                bind:click="editNow"
+                size="large"
+                round
+                color="#429488">立即修改
+        </van-button>
+    </view>
+</view>
+
+<van-popup
+        show="{{ dataPickerVisible }}"
+        position="bottom"
+        bind:close="onCloseDateModal"
+>
+    <van-datetime-picker
+            type="date"
+            value="{{ currentDate }}"
+            bind:confirm="onConfirmDate"
+            bind:cancel="onCloseDateModal"
+            min-date="{{ minDate }}"
+            formatter="{{ formatter }}"
+    />
+</van-popup>
+<van-popup
+        show="{{ objPickerVisible }}"
+        position="bottom"
+        bind:close="onCloseObjModal"
+>
+    <van-picker
+            show-toolbar
+            columns="{{ objArr }}"
+            value-key="name"
+            bind:cancel="onCloseObjModal"
+            bind:confirm="onConfirmObj" />
+</van-popup>
+<van-popup
+        show="{{ remindDateModal }}"
+        position="bottom"
+        bind:close="onCloseRemindModal"
+>
+    <van-datetime-picker
+            type="date"
+            value="{{ currentDate }}"
+            bind:confirm="onConfirmRemind"
+            bind:cancel="onCloseRemindModal"
+            min-date="{{ minDate }}"
+            formatter="{{ formatter }}"
+    />
+</van-popup>
+

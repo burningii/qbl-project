@@ -1,0 +1,159 @@
+<!--自定义头部-->
+<view  class="nav" style="height: {{navH}}px;background-color:#ffffff;">
+    <view class="nav-wrapper">
+        <view class="my-flex nav-avatar">
+            <van-icon bind:click="goLastPage" size="25" name="arrow-left" />
+        </view>
+        <view bindtap="goMyPage"  class="nav-title">{{navBarTitle}}</view>
+    </view>
+</view>
+<view style="height: {{navH}}px"></view>
+<view class="nav2" style="background-color:#fff;">
+    <view class="nav-wrapper">
+        <view class="my-flex-spa-be" style="text-align: center;padding: 0 10px">
+            <view style="width: 30%" class="my-flex">
+                <image mode='' style="width:60rpx;height: 60rpx;border-radius: 50%;border: 1px solid #fff;"
+                       src="{{user_info.headimg}}"/>
+                <view style="font-size: 26rpx">{{user_info.username}}</view>
+            </view>
+            <view style="width: 30%;font-size: 26rpx">{{roomName}}</view>
+            <view class="" style="width: 30%">{{myGeziNums}}</view>
+        </view>
+        <!--        <view class="nav-title">{{myGeziNums}}</view>-->
+    </view>
+</view>
+
+<view style="overflow:hidden;" class="game-container">
+    <!--    右边菜单栏-->
+    <view class="my-flex-spa-be right-menus">
+        <view
+                bindtap="onChangeMenus"
+                wx:for="{{menus}}"
+                data-index="{{index}}"
+                wx:key="index"
+                class="menus-item {{index==activeIndex?'active-text':''}}">{{item}}
+        </view>
+    </view>
+    <!--    地图显示-->
+    <view hidden="{{activeIndex!=0}}">
+        <view class="map-wrapper" style="width: 650px;position: fixed;left: 6px;">
+            <movable-area style="width: 450rpx;height: 1300rpx">
+                <movable-view class="movable-class"
+                              damping="1000"
+                              style="width:850px;height: 900px;"
+                              direction="all"
+                              scale-min="0.01"
+                              scale="true"
+                              scale-value="2"
+                              scale-max="2"
+                >
+
+                    <view class="my-flex" style="flex-wrap: wrap">
+                        <view
+                                wx:for="{{geziList}}"
+                                wx:for-item="item1"
+                                wx:for-index="idx1"
+                                wx:key="idx1"
+
+                        >
+                            <!--                            border-color: {{item2.color}}-->
+                            <view class="gezi-item"
+                                  wx:for="{{item1}}"
+                                  wx:for-item="item2"
+                                  wx:for-index="idx2"
+                                  wx:key="idx2"
+                                  data-index="{{idx2}}"
+                                  data-findex="{{idx1}}"
+                                  style="background-color: {{item2.color}}; border-color: {{item2.color}}"
+                                  bindtap="onChangeColor"
+                            ></view>
+                        </view>
+                    </view>
+
+                </movable-view>
+            </movable-area>
+        </view>
+    </view>
+    <!--    设置页面-->
+    <view hidden="{{activeIndex!=2}}">
+        <view class="setting-wrapper">
+            <view class="my-flex-spa-be setting-item">
+                <view>背景音乐</view>
+                <van-switch
+                        size="24px"
+                        checked="{{ checkedTwo }}"
+                        data-f="1"
+                        class="switch-my"
+                        active-color="{{color}}"
+                        bind:change="onCheckedOne"/>
+            </view>
+            <!--                背景音乐选择框-->
+            <!--            <view wx:if="{{checkedTwo}}" style="padding: 0 35rpx">-->
+            <!--                <van-radio-group value="{{ checkBgmItem }}" bind:change="onChange">-->
+            <!--                    <van-cell-group>-->
+            <!--                        <van-cell-->
+            <!--                                wx:for="{{bgmList}}"-->
+            <!--                                wx:key="index"-->
+            <!--                                title="{{item.title}}"-->
+            <!--                                clickable-->
+            <!--                                data-name="{{index}}"-->
+            <!--                                bind:click="onClick"-->
+            <!--                        >-->
+            <!--                            <van-radio slot="right-icon" name="{{index}}"/>-->
+            <!--                        </van-cell>-->
+            <!--                    </van-cell-group>-->
+            <!--                </van-radio-group>-->
+            <!--            </view>-->
+            <view class="my-flex-spa-be setting-item">
+                <view>音效</view>
+                <van-switch
+                        size="24px"
+                        checked="{{ checkedOne }}"
+                        data-f="2"
+                        class="switch-my"
+                        active-color="{{color}}"
+                        bind:change="onCheckedOne"/>
+            </view>
+        </view>
+    </view>
+    <view hidden="{{activeIndex!=3}}">
+        <view class="about-wrapper" style="">
+            <scroll-view scroll-y="true" style="height: 400px">
+                <view>{{aboutText}}</view>
+            </scroll-view>
+        </view>
+    </view>
+    <!--    底部颜色提示-->
+    <view class="my-flex-col current-color-wrapper">
+        <view class="my-flex">
+            <view wx:if="{{time!=0}}" style="position: relative;left: -255rpx">
+<!--            <van-count-down bind:finish="finishTime" wx:if="{{time!=0}}" time="{{ time }}" format="ss 秒"/>-->
+                <van-count-down bind:finish="finishTime" time="{{ time }}" format="ss 秒"/>
+            </view>
+            <!--            <van-count-down bind:finish="finishTime" wx:if="{{time!=0}}" time="{{ time }}" />-->
+            <view class="color-item2" style="background-color:{{currentColor}};margin-left: 2px"></view>
+        </view>
+    </view>
+    <!--    底部颜色-->
+    <view class="bottom-color-list">
+        <scroll-view scroll-x="true" style="white-space: nowrap; display: flex">
+            <view
+                    wx:for="{{colorList}}"
+                    wx:key="index"
+                    bindtap="checkColor"
+                    data-item="{{item}}"
+                    style="background-color: {{item.color}};display: inline-block"
+                    class="color-item">
+            </view>
+        </scroll-view>
+    </view>
+    <view class="bottom-view"></view>
+</view>
+<van-popup round show="{{ showLoadingFlag }}">
+    <!--    进度条的展示-->
+    <view class="loading-wrapper">
+        <van-loading type="spinner"/>
+        <image style="width: 100%;height: 24rpx" src="/image/gif1.gif"/>
+<!--        <van-progress custom-class="-my-van-progress" percentage="{{percentage}}"/>-->
+    </view>
+</van-popup>

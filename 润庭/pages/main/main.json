@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "润庭",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "van-icon":"/vant/icon/index",
+    "van-button":"/vant/button/index"
+  }
+}

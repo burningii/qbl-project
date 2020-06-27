@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="65292e29-30e2-471e-9634-e4c5d8384916" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ayfh9IahOis2r4ZmNyWoFXL0HW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Immediate-game/image" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Immediate-game/image" />
+      <recent name="$PROJECT_DIR$/Immediate-game/vant" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="65292e29-30e2-471e-9634-e4c5d8384916" name="Default Changelist" comment="" />
+      <created>1587712870963</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587712870963</updated>
+      <workItem from="1587712872125" duration="79220000" />
+      <workItem from="1588729414116" duration="7372000" />
+      <workItem from="1588762518734" duration="107000" />
+      <workItem from="1588948771559" duration="533000" />
+      <workItem from="1589160955100" duration="599000" />
+      <workItem from="1589422606819" duration="23190000" />
+      <workItem from="1589530923489" duration="2563000" />
+      <workItem from="1589765688324" duration="9177000" />
+      <workItem from="1589854492616" duration="848000" />
+      <workItem from="1589868770277" duration="648000" />
+      <workItem from="1589873659140" duration="9629000" />
+      <workItem from="1590026068752" duration="21971000" />
+      <workItem from="1590576530062" duration="379000" />
+      <workItem from="1590662830671" duration="998000" />
+      <workItem from="1590718367684" duration="533000" />
+      <workItem from="1590735135546" duration="751000" />
+      <workItem from="1591001178124" duration="3247000" />
+      <workItem from="1591348557703" duration="833000" />
+      <workItem from="1591424768225" duration="764000" />
+      <workItem from="1591607200809" duration="619000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="490" y="234" key="#Deployment" timestamp="1590133412628">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="490" y="234" key="#Deployment/0.23.1680.1027@0.23.1680.1027" timestamp="1590133412628" />
+    <state x="560" y="256" key="#Deployment/0.23.1920.1135@0.23.1920.1135" timestamp="1588231578080" />
+    <state x="304" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588746171913">
+      <screen x="0" y="23" width="1680" height="985" />
+    </state>
+    <state x="304" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.985@0.23.1680.985" timestamp="1588746171913" />
+    <state x="469" y="229" key="SettingsEditor" timestamp="1587721403720">
+      <screen x="0" y="23" width="1920" height="1135" />
+    </state>
+    <state x="469" y="229" key="SettingsEditor/0.23.1920.1135@0.23.1920.1135" timestamp="1587721403720" />
+    <state x="867" y="328" key="ftp.server.browser" timestamp="1588231571218">
+      <screen x="0" y="23" width="1920" height="1135" />
+    </state>
+    <state x="867" y="328" key="ftp.server.browser/0.23.1920.1135@0.23.1920.1135" timestamp="1588231571218" />
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1589879968205">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1589879968205" />
+  </component>
+</project>

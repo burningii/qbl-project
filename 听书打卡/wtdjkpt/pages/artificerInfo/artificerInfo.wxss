@@ -1,0 +1,91 @@
+.artificer-avator-wrap{
+  height: 360rpx;
+  overflow: hidden;
+  background: #ff9933;
+}
+.artificer-avator{
+  width: 180rpx;
+  height: 180rpx;
+  margin: 40rpx auto;
+}
+.artificer-avator image{
+  width: 180rpx;
+  height: 180rpx;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2rpx solid red;
+}
+.artificer-name{
+  text-align: center;
+  color: #fff;
+}
+.item-group{
+  width: 355rpx;
+  height: 140rpx;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.artificer-basicInfo{
+  padding: 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.item-til1{
+ padding: 20rpx 20rpx 0 20rpx;
+ font-size: 32rpx;
+}
+.item-top{
+  color: #000;
+  font-size: 30rpx;
+}
+.item-bottom{
+  font-size: 26rpx;
+  color: #666;
+}
+.subscribe{
+  width: 520rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  background: #ff9933;
+  color: #fff;
+  margin: 40rpx auto;
+}
+/* add */
+.item-til{
+  padding-bottom: 20rpx;
+  text-align: center;
+  color: #000;
+  font-size: 28rpx;
+}
+.withdraw{
+  margin-bottom: 20rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 10rpx;
+  padding: 20rpx 10rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+.withdraw-left{
+   color: #000;
+  font-size: 28rpx;
+  margin-right: 10rpx;
+}
+.withdraw input{
+   flex: 1;
+   padding-left: 20rpx;
+   color: #000;
+}
+.tip{
+  font-size: 26rpx;
+  color: #ccc;
+}
+.tip2{
+  color: #000;
+  font-size: 24rpx;
+  padding: 20rpx 0;
+  text-align: center;
+}

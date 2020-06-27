@@ -1,0 +1,46 @@
+page{
+  background: #fff;
+}
+.item-wrap{
+  padding: 20rpx;
+}
+.item-group{
+  padding: 20rpx 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #eee;
+}
+.item-left{
+  width: 160rpx;
+  height: 160rpx;
+}
+.item-left image{
+  width:160rpx;
+  height: 160rpx;
+  box-sizing: border-box;
+}
+.item-content{
+  width: 350rpx;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.btn{
+  margin-top: 110rpx;
+  padding: 0 20rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  background: #ff9933;
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+}
+.serve-til{
+  color: #000;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+.serve-time,.serve-tel{
+  font-size: 26rpx;
+  color: #666;
+}

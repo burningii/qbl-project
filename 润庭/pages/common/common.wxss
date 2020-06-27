@@ -1,0 +1,23 @@
+.item-meuus{
+    width: 87%;
+}
+.top-input-wrapper{
+    margin-top: 20px;
+}
+.check-time-input{
+    width: 240rpx;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 25rpx 33rpx;
+    font-size: 25rpx;
+    color: #666;
+    text-align: center;
+    margin-top: 15rpx;
+}
+.icon-arrow-menus{
+    width: 10px;
+    height: 7px;
+}
+.diy-btn{
+    width: inherit!important;
+}

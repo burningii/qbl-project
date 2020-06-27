@@ -1,0 +1,29 @@
+page {
+    /*background-color: #F2F6FC;*/
+}
+
+.info-item{
+    width: 100%;
+    margin-top: 13px;
+    padding: 15px;
+    color: #606266;
+    font-size: 30rpx;
+    background-color: #fff;
+    border-bottom: 1px solid #c2c2c2;
+}
+
+.info-list-wrapper>view.info-item:first-child{
+    margin-top: 5px;
+}
+
+.todo-class{
+    background-color: #429488;
+    padding: 8px;
+    font-size: 25rpx;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+.ma-le{
+    margin-left: 18px;
+}

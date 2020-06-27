@@ -1,0 +1,39 @@
+<view class="info-container">
+    <view class="info-list-wrapper">
+        <view class="my-flex info-item"
+              wx:for="{{infoList}}"
+              data-item="{{item}}"
+              bindtap="goInfo"
+              wx:key="index"
+        >   <block wx:if="{{item.msg_type==4}}">
+<!--            车险-->
+                <van-icon color="#429488" size="28" name="chat-o" />
+                <view class="ma-le">{{item.name}}</view>
+                <view class="ma-le">{{item.car.insurance_date}}</view>
+                <view class="ma-le todo-class">车险</view>
+             </block>
+            <block wx:if="{{item.msg_type==2}}">
+<!--                生日公历-->
+                <van-icon color="#429488" size="28" name="chat-o" />
+                <view class="ma-le">{{item.name}}</view>
+                <view class="ma-le">{{item.birth_gong_date}}</view>
+                <view class="ma-le todo-class">生日公历</view>
+            </block>
+            <block wx:if="{{item.msg_type==3}}">
+                <!--生日农历-->
+                <van-icon color="#429488" size="28" name="chat-o" />
+                <view class="ma-le">{{item.name}}</view>
+                <view class="ma-le">{{item.birth_nong_date}}</view>
+                <view class="ma-le todo-class">生日农历</view>
+            </block>
+            <block wx:if="{{item.msg_type==1}}">
+                <!--拜访事件提醒-->
+                <van-icon color="#429488" size="28" name="chat-o" />
+                <view class="ma-le">{{item.name}}</view>
+                <view class="ma-le">{{item.remind_date}}</view>
+                <view class="ma-le todo-class">事件提醒</view>
+            </block>
+        </view>
+    </view>
+    <include src="/components/tabbar/tabbar.wxml"/>
+</view>

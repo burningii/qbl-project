@@ -1,0 +1,21 @@
+
+
+.calendar {
+    --calendar-height: 300px;
+}
+
+.todo-list-container{
+    margin-top: 15px;
+    padding: 28rpx;
+    color: #303133;
+}
+
+.todo-item{
+    margin-top: 12px;
+}
+.todo-list-container>view.todo-item:first-child{
+    margin-top: 4px;
+}
+.mar-le{
+    margin-left: 10px;
+}

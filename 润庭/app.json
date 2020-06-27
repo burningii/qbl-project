@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/index/index",
+    "pages/user/register/register",
+    "pages/landlord/landlord",
+    "pages/tenant/tenant",
+    "pages/landlord/page1/page1",
+    "pages/landlord/page2/page2",
+    "pages/landlord/page3/page3",
+    "pages/landlord/page4/page4",
+    "pages/landlord/page3/change-order/change-order",
+    "pages/tenant/page1/page1",
+    "pages/tenant/page2/page2",
+    "pages/tenant/page3/page3",
+    "pages/tenant/page4/page4",
+    "pages/landlord/page2/info/info",
+    "pages/tenant/house-num/house-num",
+    "pages/tenant/page2/info/info",
+    "pages/restore-pwd/index",
+    "pages/landlord/page4/record",
+    "pages/landlord/page5/page5",
+    "pages/user/xieyi/xieyi",
+    "pages/user/info/info"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

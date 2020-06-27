@@ -1,0 +1,25 @@
+<view class="factory-wuliu-order-container">
+    <view class="order-no-container">
+        <block wx:for="{{orderList}}" wx:key="index">
+            <view class="order-no-list2">
+                <view class="order-no-list">
+                    <view>用户手机: <text>{{item.phone}}</text></view>
+                    <view>类型: <text>{{item.shopname}}</text></view>
+                    <view>条形码: <text>{{item.shape}}</text></view>
+                </view>
+               <view class="order-upload-wrapper">
+                   <van-uploader data-id="{{item.id}}" data-index="{{index}}" upload-text="{{'上传图片'}}" file-list="{{ item.fileList }}" bind:delete="deleteImg" bind:after-read="afterRead"/>
+               </view>
+            </view>
+        </block>
+        <block wx:if="{{orderList.length==0}}">
+            <view class="no-orderlist-wrapper">
+                订单已被全部取走
+            </view>
+        </block>
+    </view>
+</view>
+
+<view wx:if="{{orderList.length>0}}" class="btn-sure-wrapper">
+    <van-button bind:click="sureOrder" color="#F6504F" custom-style="border-radius: 25px;" size="large" type="default">确认</van-button>
+</view>

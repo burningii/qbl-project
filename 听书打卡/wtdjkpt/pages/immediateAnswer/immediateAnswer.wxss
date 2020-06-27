@@ -1,0 +1,138 @@
+.item-wrap{
+  padding: 20rpx;
+}
+.item-top{
+  display: flex;
+  justify-content: space-between;
+}
+/* add */
+.item-group{
+  padding: 20rpx 0;
+  border-bottom: 4rpx solid #ccc;
+  display: flex;
+  justify-content: flex-start;
+}
+.item-left{
+  width: 120rpx;
+  margin-right: 20rpx;
+}
+.item-left image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 2rpx solid red;
+}
+.item-right{
+  flex: 1;
+}
+.item-username{
+  font-size: 32rpx;
+  color: #586c95;
+}
+.item-text{
+  padding: 20rpx 0;
+  font-size: 28rpx;
+  line-height: 45rpx;
+}
+.item-image{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10rpx;
+}
+.item-image image{
+  width: 150rpx;
+  height: 150rpx;
+  border: 2rpx solid red;
+  margin-right: 20rpx;
+}
+.item-image video{
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 20rpx;
+}
+.item-time{
+  color: #666;
+  height: 60rpx;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.answerClick{
+  height: 40rpx;
+  width: 60rpx;
+  background: red;
+  border-radius: 10rpx;
+  text-align: center;
+  background: #ccc;
+  margin-top: 10rpx;
+}
+.enlarge{
+  position:absolute;
+  z-index: 100;
+  transform: scale(2.0);
+  transform-origin: left bottom;
+}
+page{
+  background: #fff;
+  position: relative;
+  width: 100%;
+  height: 1334rpx;
+}
+.modal{
+  width: 100%;
+  background: #666;
+  height: 1334rpx;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  opacity: 0.5;
+}
+.answer-box{
+  display: flex;
+  justify-content: flex-end;
+}
+.answer{
+  background: #2e2e2e;
+  border-radius: 10rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 200rpx;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+}
+.answer image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.img-box{
+  display: flex;
+  align-items: center;
+}
+.answer-txt{
+  margin: 0 30rpx 0 10rpx;
+}
+textarea{
+  width: 550rpx;
+  height: 270rpx;
+  border: 2rpx solid #ccc;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}
+.reponse-box{
+  background: #f7f7f7;
+  padding: 20rpx;
+}
+.response-top{
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #ebebeb;  
+}
+.response-txt{
+  padding: 20rpx 0;
+  line-height: 1.8;
+  font-size: 28rpx;
+}
+.response-txt .expert{
+  color: #586c95;
+}

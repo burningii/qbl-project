@@ -1,0 +1,81 @@
+@import "../../../wxParse/wxParse.wxss";
+.play-container {
+    padding: 25 rpx;
+}
+
+.player-content {
+    background-color: #fff;
+    padding: 28 rpx;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)
+}
+
+.img-wraper {
+    width: 250 rpx;
+    height: 250 rpx;
+    border-radius: 50%;
+}
+
+.active-bgc {
+    background-color: #CA0C16;
+    color: #FFFFFF;
+}
+
+.marginTop-10 {
+    margin-top: 20 rpx;
+}
+
+.posi-btn {
+    position: fixed;
+    right: 0;
+    top: 50px;
+    background-color: #CA0C16;
+    border-top-left-radius: 19px;
+    border-bottom-left-radius: 19px;
+    padding: 14 rpx 25 rpx;
+    color: #ffffff;
+    font-size: 24 rpx;
+}
+
+.player-wrapper {
+    /*text-align: center;*/
+    width: 58%;
+}
+
+.run-animation {
+    animation: run 5s linear infinite;
+}
+
+@keyframes run {
+    from {
+        -webkit-transform: rotate(360deg);
+    }
+    to {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+.play-carurl-img {
+    width: 100 rpx;
+    height: 100 rpx;
+}
+
+.left-modal-wrapper {
+    height: 100%;
+}
+
+@import "video.wxss";
+.posi-btn {
+    bottom: inherit;
+}
+.posi-share2{
+    position: fixed;
+    left: 0;
+    top: 110rpx;
+    background-color: #CA0C16;
+    border-bottom-right-radius: 19px;
+    border-top-right-radius: 19px;
+    padding: 14rpx 25rpx;
+    color: #ffffff;
+    font-size: 24rpx;
+}

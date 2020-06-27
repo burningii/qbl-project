@@ -1,0 +1,38 @@
+<view class="pay-type-container">
+    <view class="pay-price">
+        支付金额：<text>{{pay_money}}</text>
+    </view>
+    <view>
+        <van-radio-group value="{{ radio }}" bind:change="onChange">
+            <van-cell-group>
+                <van-cell
+                        title="微信支付"
+                        clickable
+                        data-name="1"
+                        size="large"
+                        icon="gold-coin-o"
+                        label="微信支付，安全可靠"
+                        center="true"
+                        bind:click="onClick"
+                >
+                    <van-radio slot="right-icon" name="1" checked-color="#EE0A24" />
+                </van-cell>
+                <van-cell
+                        title="余额支付"
+                        clickable
+                        data-name="2"
+                        size="large"
+                        center="true"
+                        label="使用您的余额支付"
+                        icon="after-sale"
+                        bind:click="onClick"
+                >
+                    <van-radio slot="right-icon" name="2" checked-color="#EE0A24" />
+                </van-cell>
+            </van-cell-group>
+        </van-radio-group>
+    </view>
+    <view class="pay-now-wrapper">
+        <van-button round bind:click="order_pay_now" size="large" type="danger">立即支付</van-button>
+    </view>
+</view>

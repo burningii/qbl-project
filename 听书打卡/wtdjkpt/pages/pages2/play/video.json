@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "播放",
+  "usingComponents": {
+    "van-popup": "/vant/popup/index",
+    "van-button": "/vant/button/index",
+    "van-count-down": "/vant/count-down/index"
+  }
+}

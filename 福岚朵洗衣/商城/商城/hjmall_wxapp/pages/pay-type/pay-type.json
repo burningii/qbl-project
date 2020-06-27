@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "支付方式",
+  "usingComponents": {
+    "van-radio": "/vant/radio/index",
+    "van-radio-group": "/vant/radio-group/index",
+    "van-cell": "/vant/cell/index",
+    "van-cell-group": "/vant/cell-group/index",
+    "van-button": "/vant/button/index"
+  }
+}

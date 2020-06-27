@@ -1,0 +1,11 @@
+<view class="factory-order-container">
+    <view class="order-no-container">
+        <block wx:for="{{orderList}}" wx:key="index">
+            <view class="order-no-list">
+                <view>用户手机: <text>{{item.phone}}</text></view>
+                <view>类型: <text>{{item.shopname}}</text></view>
+                <view>条形码: <text>{{item.shape}}</text></view>
+            </view>
+        </block>
+    </view>
+</view>

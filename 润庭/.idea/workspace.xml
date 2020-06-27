@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9a5030ab-07ad-4ce3-b293-8b1ce84c1d27" name="Default" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZIQHMZ9AnvS9Pw7qEnilDvaymi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vant" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/vant" />
+      <recent name="$PROJECT_DIR$/utils" />
+      <recent name="$PROJECT_DIR$/pages/common" />
+      <recent name="$PROJECT_DIR$/pages/landlord/page5" />
+      <recent name="$PROJECT_DIR$/pages/restore-pwd" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/vant" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9a5030ab-07ad-4ce3-b293-8b1ce84c1d27" name="Default" comment="" />
+      <created>1581403609718</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581403609718</updated>
+      <workItem from="1581403610924" duration="3905000" />
+      <workItem from="1581473166371" duration="1904000" />
+      <workItem from="1581506026620" duration="37000" />
+      <workItem from="1581506066450" duration="13000" />
+      <workItem from="1581506096008" duration="50000" />
+      <workItem from="1581506204602" duration="48000" />
+      <workItem from="1581508586090" duration="661000" />
+      <workItem from="1582513530440" duration="11791000" />
+      <workItem from="1582597520974" duration="15608000" />
+      <workItem from="1582771982582" duration="9116000" />
+      <workItem from="1583208670754" duration="19276000" />
+      <workItem from="1583716498699" duration="6450000" />
+      <workItem from="1583803528011" duration="19730000" />
+      <workItem from="1584524041029" duration="2836000" />
+      <workItem from="1584611918680" duration="689000" />
+      <workItem from="1584771326713" duration="5056000" />
+      <workItem from="1584927860172" duration="5000" />
+      <workItem from="1584934520418" duration="1645000" />
+      <workItem from="1584946095336" duration="2034000" />
+      <workItem from="1585118626680" duration="3112000" />
+      <workItem from="1585218045793" duration="13210000" />
+      <workItem from="1585532093006" duration="7383000" />
+      <workItem from="1585644301132" duration="5471000" />
+      <workItem from="1585882837265" duration="4617000" />
+      <workItem from="1586222906138" duration="264000" />
+      <workItem from="1586412467405" duration="10966000" />
+      <workItem from="1586482786696" duration="4815000" />
+      <workItem from="1587021872506" duration="13386000" />
+      <workItem from="1587348139870" duration="158000" />
+      <workItem from="1587351167540" duration="23437000" />
+      <workItem from="1587525393735" duration="93000" />
+      <workItem from="1587535573853" duration="18895000" />
+      <workItem from="1587563130952" duration="2482000" />
+      <workItem from="1587605800818" duration="1497000" />
+      <workItem from="1587714346528" duration="2570000" />
+      <workItem from="1589248462434" duration="28210000" />
+      <workItem from="1589531126712" duration="1552000" />
+      <workItem from="1589765688190" duration="306000" />
+      <workItem from="1589766617733" duration="584000" />
+      <workItem from="1589852405405" duration="217000" />
+      <workItem from="1589857792207" duration="2854000" />
+      <workItem from="1589940156264" duration="14822000" />
+      <workItem from="1590373371880" duration="55000" />
+      <workItem from="1590655479903" duration="1378000" />
+      <workItem from="1590735242504" duration="594000" />
+      <workItem from="1590993595288" duration="1225000" />
+      <workItem from="1591061365918" duration="928000" />
+      <workItem from="1591405866493" duration="3085000" />
+      <workItem from="1591600035112" duration="717000" />
+      <workItem from="1591603911886" duration="646000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="23" width="1593" height="1115" key="dock-window-1" timestamp="1587449407913">
+      <screen x="0" y="23" width="1920" height="1135" />
+    </state>
+    <state x="0" y="23" width="1593" height="1115" key="dock-window-1/0.23.1920.1135@0.23.1920.1135" timestamp="1587449407913" />
+    <state x="482" y="181" width="667" height="729" key="find.popup" timestamp="1585123475605">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="482" y="181" width="667" height="729" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1585123475605" />
+    <state x="505" y="248" key="run.anything.popup" timestamp="1584777185610">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="505" y="248" key="run.anything.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1584777185610" />
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1590134027222">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1590134027222" />
+    <state x="505" y="241" width="670" height="649" key="search.everywhere.popup/0.23.1680.985@0.23.1680.985" timestamp="1587367486097" />
+    <state x="577" y="274" width="766" height="748" key="search.everywhere.popup/0.23.1920.1135@0.23.1920.1135" timestamp="1587456966084" />
+  </component>
+</project>

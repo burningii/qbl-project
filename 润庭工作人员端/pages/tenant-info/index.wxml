@@ -1,0 +1,158 @@
+<view class="page1-container">
+    <view class="form-info">
+        <van-cell-group>
+            <van-field
+                    value="{{ data.street }}"
+                    placeholder="请输入街道名称"
+                    label="街道名称"
+                    name="streetName"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.community }}"
+                    placeholder="请输入社区名称"
+                    label="社区名称"
+                    name="communityName"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.neighborhood }}"
+                    placeholder="请输入小区名称"
+                    label="小区名称"
+                    name="houseName"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.tenantName }}"
+                    placeholder="请输入姓名"
+                    label="房主姓名"
+                    name="landlordName"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.tenantIdNo }}"
+                    placeholder="请输入房主身份证号码"
+                    label="身份证号码"
+                    name="landlordIdcard"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.tenantGender=='1' ? '男' : '女' }}"
+                    label="性别"
+                    size="large"
+                    bindtap="showModal2"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.tenantNation }}"
+                    placeholder="请输入民族"
+                    label="民族"
+                    name="landlordNation"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.tenantTel }}"
+                    placeholder="请输入联系电话"
+                    label="联系电话"
+                    type="number"
+                    name="phone"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.tenantRegType=='1' ? '农业':'非农业'}}"
+                    placeholder="请选择户口类别"
+                    label="户口类别"
+                    size="large"
+                    disabled
+            />
+            <!--<van-field-->
+                    <!--value="{{ data.houseAddr }}"-->
+                    <!--placeholder="请输入房屋详细地址"-->
+                    <!--label="现居住地址"-->
+                    <!--name="houseAddress"-->
+                    <!--size="large"-->
+                    <!--disabled-->
+            <!--/>-->
+            <!--<van-field-->
+                    <!--value="{{ data.buildNo }}"-->
+                    <!--placeholder="请输入楼号"-->
+                    <!--label="楼号"-->
+                    <!--name="houseFloorNum"-->
+                    <!--size="large"-->
+                    <!--disabled-->
+            <!--/>-->
+            <!--<van-field-->
+                    <!--value="{{ houseData.unitNo }}"-->
+                    <!--placeholder="请输入单元号"-->
+                    <!--label="单元号"-->
+                    <!--name="houseSelectionNum"-->
+                    <!--size="large"-->
+                    <!--disabled-->
+            <!--/>-->
+            <!--<van-field-->
+                    <!--value="{{ houseData.roomNo }}"-->
+                    <!--placeholder="请输入房号"-->
+                    <!--label="房号"-->
+                    <!--name="houseNum2"-->
+                    <!--size="large"-->
+                    <!--disabled-->
+            <!--/>-->
+            <van-field
+                    value="{{ data.employment=='1'?'是':'否' }}"
+                    label="是否就业"
+                    size="large"
+                    bindtap="showJiYeViable"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.companyName }}"
+                    placeholder="请输入就业单位"
+                    label="就业单位"
+                    name="jiuYeCompany"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.companyTel }}"
+                    label="就业单位电话"
+                    placeholder="请输入就业单位电话"
+                    size="large"
+                    name="jiuYeCompanyPhone"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.companyAddr }}"
+                    label="就业单位地址"
+                    placeholder="请输入就业单位地址"
+                    name="jiuYeCompanyAddr"
+                    size="large"
+                    disabled
+            />
+            <van-field
+                    value="{{ data.remark }}"
+                    label="备注"
+                    placeholder="请输入备注"
+                    name="remark"
+                    type="textarea"
+                    autosize
+                    size="large"
+                    disabled
+            />
+        </van-cell-group>
+        <view class="my-flex" style="padding: 15px 0;flex-wrap: wrap">
+            <image class="upload-image" src="{{data.idPic}}"/>
+            <image class="upload-image" src="{{data.idPicBack}}"/>
+        </view>
+        <view wx:if="{{data.tenantState==2}}" class="my-flex-spa-ar" style="padding: 50rpx;margin-bottom: 60px">
+            <van-button bind:click="checkNow" round color="#F86732">通过</van-button>
+            <van-button round bind:click="goChuShen" color="#F86732">不通过</van-button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,10 @@
+@import "../landlord/landlord.wxss";
+
+page{
+    overflow:hidden;
+    position:fixed;
+    background-image:url('https://api5.qibuluo.net/addons/zjhj_mall/bg03.png');
+    margin: 0px;
+    /*下面的是关键的设置100%显示*/
+    background-size: 100% 100%;
+}

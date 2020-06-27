@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "订单列表",
+    "usingComponents": {
+        "app-navigation": "/components/quick-navigation-components/index",
+        "van-dialog": "/vant/dialog/index",
+        "van-field": "/vant/field/index",
+        "van-icon": "/vant/icon/index"
+    }
+}

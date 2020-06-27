@@ -1,0 +1,54 @@
+.submit-now{
+    margin-top: 45rpx;
+    margin-bottom: 130rpx;
+}
+
+button:not([size='mini']) {
+    width: inherit!important;
+}
+
+
+.query-search{
+    position: absolute;
+    top: 97rpx;
+    /*left: 215rpx;*/
+    background-color: #E4E7ED;
+    height: 450rpx;
+    width: 100%;
+    z-index: 10;
+    /*padding: 18rpx;*/
+    color: #666666;
+}
+.query-search2{
+    position: absolute;
+    top: 191rpx;
+    /*left: 215rpx;*/
+    background-color: #E4E7ED;
+    height: 450rpx;
+    width: 100%;
+    z-index: 10;
+    /*padding: 18rpx;*/
+    color: #666666;
+}
+
+.person-item{
+    border: 1px solid #000;
+    padding: 25rpx;
+}
+
+.delete-person{
+    text-align: center;
+}
+
+.submit-btn{
+    color: #ffffff;
+    background-color: #F86732;
+    border-radius: 5px;
+    margin: 15rpx;
+}
+
+.query-result-item{
+    border-bottom: 1px solid #C0C4CC;
+    padding: 20rpx;
+    font-size: 26rpx;
+}

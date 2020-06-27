@@ -1,0 +1,343 @@
+<view class="page1-container">
+    <view class="form-info">
+        <form bindsubmit="formSubmit" bindreset="formReset">
+            <van-cell-group>
+                <view style="padding: 25rpx;font-size: 28rpx;height: 27px">
+                    <picker
+                            mode="multiSelector"
+                            bindchange="bindMultiPickerChange"
+                            bindcolumnchange="bindMultiPickerColumnChange"
+                            value="{{multiIndex}}"
+                            range-key="fullCname"
+                            range="{{multiArray}}">
+                        <view class="picker">
+                            选择区域：<text wx:if="{{pageFlag}}" style="color: #888888">{{multiArray[0][multiIndex[0]].fullCname}} {{multiArray[1][multiIndex[1]].fullCname}} {{multiArray[2][multiIndex[2]].fullCname}}</text>
+                            <text wx:else style="color: #888888">{{checkProvince}} {{checkCity}} {{checkArea}}</text>
+                        </view>
+                    </picker>
+                </view>
+                <van-field
+                        value="{{ streetName }}"
+                        placeholder="请输入街道名称"
+                        label="街道名称"
+                        name="streetName"
+                        size="large"
+                        bind:focus="showStreetArr"
+                        bind:change="changeone"
+                />
+                <van-field
+                        value="{{ communityName }}"
+                        placeholder="请输入社区名称"
+                        label="社区名称"
+                        name="communityName"
+                        bind:focus="showCommunityArr"
+                        size="large"
+                        bind:change="changeTwo"
+                />
+                <van-field
+                        value="{{ houseName }}"
+                        placeholder="请输入小区名称"
+                        label="小区名称"
+                        name="houseName"
+                        size="large"
+                        bind:change="changeHouseName"
+                />
+                <van-field
+                        value="{{ houseType }}"
+                        label="房屋性质"
+                        size="large"
+                        bindtap="showModal"
+                        disabled
+                />
+                <!--<van-field-->
+                        <!--value="{{ landlordName }}"-->
+                        <!--placeholder="请输入房主姓名"-->
+                        <!--label="房主姓名"-->
+                        <!--name="landlordName"-->
+                        <!--size="large"-->
+                <!--/>-->
+                <van-field
+                        value="{{ landlordName }}"
+                        placeholder="点击拍照或上传身份证照片"
+                        label="房主姓名"
+                        name="landlordName"
+                        size="large"
+                        disabled
+                        bindtap="startdd"
+                />
+                <van-field
+                        value="{{ landlordIdcard }}"
+                        placeholder="点击拍照或上传身份证照片"
+                        label="房主身份证号码"
+                        name="landlordIdcard"
+                        size="large"
+                        disabled
+                        bindtap="startdd"
+                />
+                <van-field
+                        value="{{ landlordGender }}"
+                        label="性别"
+                        placeholder='点击拍照或上传身份证照片'
+                        size="large"
+                        bindtap="showModal2"
+                        disabled
+                        bindtap="startdd"
+                />
+                <van-field
+                        value="{{ landlordNation }}"
+                        placeholder="点击拍照或上传身份证照片"
+                        label="民族"
+                        name="landlordNation"
+                        size="large"
+                        disabled
+                        bindtap="startdd"
+                />
+                <van-field
+                        value="{{ phone }}"
+                        placeholder="请输入联系电话"
+                        label="联系电话"
+                        type="number"
+                        name="phone"
+                        size="large"
+                        bind:change="changePhone"
+                />
+                <van-field
+                        value="{{ houseNumber }}"
+                        placeholder="请输入房屋产权证号"
+                        label="房屋产权证号"
+                        name="houseNumber"
+                        size="large"
+                        bind:change="changeHouseNumber"
+                />
+                <van-field
+                        value="{{ houseContract }}"
+                        placeholder="请输入购房合同编号"
+                        label="购房合同编号"
+                        name="houseContract"
+                        size="large"
+                        bind:change="changeHouseContract"
+                />
+                <van-field
+                        value="{{ houseAddress }}"
+                        placeholder="请输入房屋详细地址"
+                        label="房屋详细地址"
+                        name="houseAddress"
+                        size="large"
+                        bind:change="changeHouseAddress"
+                />
+                <van-field
+                        value="{{ houseFloorNum }}"
+                        placeholder="请输入楼号"
+                        label="楼号"
+                        name="houseFloorNum"
+                        size="large"
+                        bind:change="changeHouseFloorNum"
+                />
+                <van-field
+                        value="{{ houseSelectionNum }}"
+                        placeholder="请输入单元号"
+                        label="单元号"
+                        name="houseSelectionNum"
+                        size="large"
+                        bind:change="changeHouseSelectionNum"
+                />
+                <van-field
+                        value="{{ houseNum2 }}"
+                        placeholder="请输入房号"
+                        label="房号"
+                        name="houseNum2"
+                        size="large"
+                        bind:change="changeHouseNum2"
+                />
+                <van-field
+                        value="{{ canquanType }}"
+                        label="产权类型"
+                        size="large"
+                        bindtap="showModal3"
+                        disabled
+                />
+                <van-field
+                        value="{{ houseArea }}"
+                        placeholder="请输入房屋总面积"
+                        label="房屋总面积"
+                        name="houseArea"
+                        size="large"
+                        type="number"
+                        bind:change="changeHouseArea"
+                />
+                <van-field
+                        value="{{ houseJiegou }}"
+                        label="房屋结构"
+                        size="large"
+                        bindtap="showModal4"
+                        disabled
+                />
+                <van-field
+                        value="{{ remark }}"
+                        placeholder="请输入备注"
+                        label="备注"
+                        name="remark"
+                        size="large"
+                        autosize
+                        bind:change="changeRemark"
+                />
+                <van-field
+                        value="{{ houseNumberNo }}"
+                        label="房屋编号"
+                        name="houseNumberNo"
+                        size="large"
+                        disabled
+                />
+<!--                <van-field-->
+<!--                        value="{{ houseStatus }}"-->
+<!--                        label="房屋状态"-->
+<!--                        size="large"-->
+<!--                        bindtap="showModal5"-->
+<!--                        disabled-->
+<!--                />-->
+                <view class="upload-img">
+                    <view class="my-flex">
+                        <van-uploader
+                                max-size="10485760"
+                                max-count="1"
+                                upload-text="上传身份证正面照片"
+                                file-list="{{ fileList }}"
+                                bind:delete="deleteImg1"
+                                bind:after-read="afterRead" />
+                        <van-uploader
+                                max-size="10485760"
+                                max-count="1"
+                                upload-text="上传身份证反面照片"
+                                file-list="{{ fileList4 }}"
+                                bind:delete="deleteImg4"
+                                bind:after-read="afterRead4" />
+                    </view>
+                </view>
+                <view class="upload-img">
+                    <view class="my-flex">
+                        <van-uploader
+                                max-size="10485760"
+                                max-count="1"
+                                upload-text="上传产权证照片"
+                                file-list="{{ fileList2 }}"
+                                bind:delete="deleteImg2"
+                                bind:after-read="afterRead2" />
+                        <van-uploader
+                                max-size="10485760"
+                                max-count="1"
+                                upload-text="上传户型图照片"
+                                file-list="{{ fileList3 }}"
+                                bind:delete="deleteImg3"
+                                bind:after-read="afterRead3" />
+                    </view>
+
+                </view>
+<!--                <view class="upload-img">-->
+<!--                  -->
+<!--                </view>-->
+            </van-cell-group>
+            <view class="submit-now">
+                <button bindtap="searchHouseNo">查询</button>
+                <button style="margin-top: 18px" formType="submit">提交</button>
+            </view>
+        </form>
+    </view>
+</view>
+
+<van-popup
+        show="{{ modalVisible }}"
+        position="bottom"
+        bind:close="onCloseModal"
+>
+    <view>
+        <van-picker
+                title="房屋性质"
+                show-toolbar
+                columns="{{ houseTypeArr }}"
+                bind:cancel="onCloseModal"
+                bind:confirm="onConfirmHouseType"
+        />
+    </view>
+</van-popup>
+
+<van-popup
+        show="{{ modal2Visible }}"
+        position="bottom"
+        bind:close="onCloseModal2"
+>
+    <view>
+        <van-picker
+                title="性别"
+                show-toolbar
+                columns="{{ genderArr }}"
+                bind:cancel="onCloseModal2"
+                bind:confirm="onConfirmlandlordGender"
+        />
+    </view>
+</van-popup>
+
+<van-popup
+        show="{{ modal3Visible }}"
+        position="bottom"
+        bind:close="onCloseModal3"
+        z-index="99999"
+>
+    <view>
+        <van-picker
+                title="产权类型"
+                show-toolbar
+                columns="{{ canquanArr }}"
+                bind:cancel="onCloseModal3"
+                bind:confirm="onConfirmcanquanType"
+        />
+    </view>
+</van-popup>
+
+<van-popup
+        show="{{ modal4Visible }}"
+        position="bottom"
+        bind:close="onCloseModal4"
+>
+    <view>
+        <van-picker
+                title="房屋结构"
+                show-toolbar
+                columns="{{ houseJieGou }}"
+                bind:cancel="onCloseModal4"
+                bind:confirm="onConfirmHouseJieGou"
+        />
+    </view>
+</van-popup>
+<van-popup
+        show="{{ modal5Visible }}"
+        position="bottom"
+        bind:close="onCloseModal5"
+>
+    <view>
+        <van-picker
+                title="房屋状态"
+                show-toolbar
+                columns="{{ houseStatusArr }}"
+                bind:cancel="onCloseModal5"
+                bind:confirm="onConfirmHouseStatus"
+        />
+    </view>
+</van-popup>
+<scroll-view wx:if="{{addressVisible}}" class="query-search" scroll-y="true">
+    <view class="query-result-item" wx:for="{{sugArr}}"
+          wx:key="index"
+          data-item="{{item}}"
+          bindtap="checkAddrResult">
+        <view>{{item.title}}</view>
+    </view>
+</scroll-view>
+
+<scroll-view wx:if="{{communityVisible}}" class="query-search2" scroll-y="true">
+    <view class="query-result-item" wx:for="{{sugArr}}"
+          wx:key="index"
+          data-item="{{item}}"
+          bindtap="checkAddrResult2">
+        <view>{{item.title}}</view>
+    </view>
+</scroll-view>
+

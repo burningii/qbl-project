@@ -1,0 +1,9 @@
+.pay-price {
+    background-color: #fff;
+    padding: 65rpx;
+    font-size: 32rpx;
+}
+
+.pay-now-wrapper {
+   margin-top: 450rpx;
+}

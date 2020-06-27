@@ -1,0 +1,128 @@
+page{
+  /*padding-top: 20rpx;*/
+}
+.item-wrap{
+  /*padding: 20rpx 0;*/
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background: #fff;
+}
+.item-group{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 187.5rpx;
+  height: 187.5rpx;
+}
+.item-group image{
+  width: 120rpx;
+  height: 120rpx;
+  margin: 0 auto;
+  /* border: 1rpx dotted #ccc; */
+}
+.item-group text{
+  text-align: center;
+  font-size:28rpx;
+}
+.all-list-wrapper{
+    width: 48% !important;
+}
+.price-wrapper{
+    /*width: 50%;*/
+    line-height: 100rpx;
+    position: relative;
+}
+
+/* 课程 */
+.item-wrap1{
+  padding: 20rpx;
+  display: flex;
+  justify-content:flex-start;
+  flex-wrap: wrap; 
+}
+.lession-item{
+    width: 325rpx;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 8px;
+}
+.item-top-wrapper{
+    align-items: flex-start;
+}
+.lession-img{
+    width: 325rpx;
+    height: 100px;
+   border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    /*border-radius: 8px;*/
+}
+.nums-learn{
+    color: #c5c8ce;
+    font-size: 23rpx;
+}
+
+
+.icon-sort{
+    width: 18rpx;
+    height: 10rpx;
+}
+
+.item-wrap1 .item-group{
+  width: 223.3rpx;
+  height: 330rpx;
+  margin: 0 20rpx 20rpx 0;
+}
+.item-wrap1 .item-left{
+ text-align: center;
+}
+
+
+.lession-list-content{
+    flex-wrap: wrap;
+    visibility:hidden;
+    opacity:0;
+    transform:translateY(100px);
+    animation:show .5s forwards;
+}
+
+@keyframes show{
+    to {
+        visibility:visible;
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.item-wrap1 .item-left image{
+  width: 130rpx;
+  height: 160rpx;
+  border: 2rpx solid red;
+}
+.item-wrap1 .item-til{
+    color: #333;
+    font-size: 28rpx;
+    font-weight: bold;
+    text-align: center;
+}
+.item-wrap1 .item-author-name{
+    border-bottom: 2rpx dashed #ddd;
+    margin-bottom: 4rpx;
+    color: #777777;
+    font-size: 26rpx;
+    text-align: center;
+}
+.item-wrap1 .item-author-description{
+  padding: 10rpx 0;
+  color: #999;
+  font-size: 24rpx;
+  font-family: 宋体, Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  height: 88rpx;
+  display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+}
+.item-wrap1 .special{
+  margin-right: 0rpx!important;
+}

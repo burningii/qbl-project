@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "打卡",
+  "usingComponents": {
+    "van-field": "/vant/field/index",
+    "van-cell-group": "/vant/cell-group/index",
+    "van-uploader": "/vant/uploader/index",
+    "van-button": "/vant/button/index"
+  }
+}
